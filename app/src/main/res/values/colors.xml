@@ -12,4 +12,6 @@
     <color name="uvv_titlebar_bg">#7f000000</color>
 
     <color name="bg_blue">#427ede</color>
+    <color name="bg_gray">#919191</color>
+
 </resources>
