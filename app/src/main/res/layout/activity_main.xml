@@ -41,28 +41,28 @@
                     android:hint="@string/prompt_email"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:text="中秋"
+                    android:text="霸王别姬"
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                <!--<EditText-->
+                    <!--android:id="@+id/password"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="@string/prompt_password"-->
+                    <!--android:imeActionId="@+id/login"-->
+                    <!--android:imeActionLabel="@string/action_sign_in_short"-->
+                    <!--android:imeOptions="actionUnspecified"-->
+                    <!--android:inputType="textPassword"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:singleLine="true" />-->
 
-            </android.support.design.widget.TextInputLayout>
+            <!--</android.support.design.widget.TextInputLayout>-->
 
             <Button
                 android:id="@+id/email_sign_in_button"
@@ -73,12 +73,13 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
-            <WebView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/webView"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_url"
                 android:layout_gravity="center_horizontal"
-                tools:ignore="WebViewLayout" />
+                android:text="search"
+                />
 
 
         </LinearLayout>

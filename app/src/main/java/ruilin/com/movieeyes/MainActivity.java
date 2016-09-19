@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -15,6 +16,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Message;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -72,28 +74,17 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
-    /**
-     * Keep track of the login task to ensure we can cancel it if requested.
-     */
-    private UserLoginTask mAuthTask = null;
 
     // UI references.
     private AutoCompleteTextView mKeyView;
-    private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-    private WebView mWebView;
+    private TextView tvUrl;
 
     /**
      * 用来标志请求的what, 类似handler的what一样，这里用来区分请求
      */
     private static final int NOHTTP_WHAT_TEST = 0x001;
-
-    /**
-     * 请求队列
-     */
-    private RequestQueue requestQueue;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,20 +93,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         // Set up the login form.
         mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
         populateAutoComplete();
-        mWebView = (WebView) findViewById(R.id.webView);
-        mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
-            }
-        });
-
-        requestQueue = NoHttp.newRequestQueue();
+        tvUrl = (TextView) findViewById(R.id.tv_url);
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
@@ -131,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        parse();
+                        parse(mKeyView.getText().toString());
                     }
                 }).start();
 
@@ -142,24 +120,58 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         mProgressView = findViewById(R.id.login_progress);
     }
 
-    private void parse() {
+    private void parse(String key) {
+        StringBuffer sb = new StringBuffer();
         try {
-            Document doc = Jsoup.connect("http://www.ishadowsocks.org/").get();
+            Document doc = Jsoup.connect("http://www.quzhuanpan.com/source/search.action").data("q", key).get();
             Elements links = doc.select("a[href]");
-            StringBuffer sff = new StringBuffer();
             //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements
+            boolean go = true;
             for (Element link : links) {
-                //这里没有什么好说的。
-//                sff.append(link.attr("abs:href")).append("  ").append(link.text()).append(" ");
-                Log.e("links", link.attr("abs:href")+" "+link.text());
+                // 过滤链接
+                String tag = link.text().toString();
+                String url = link.attr("abs:href");
+                Log.e("links", tag + " " + url);
+                if (tag.contains(key) && url.contains("pan.baidu")) {
+                    sb.append(link.text() + " " + link.attr("abs:href"));
+                    sb.append("\n");
+
+                    if (go) {
+                        go = false;
+//                        WebViewActivity.startForUrl(MainActivity.this, link.attr("abs:href"));
+
+                        Intent intent= new Intent();
+                        intent.setAction("android.intent.action.VIEW");
+                        Uri content_url = Uri.parse(link.attr("abs:href"));
+                        intent.setData(content_url);
+                        startActivity(intent);
+                    }
+                }
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        Message msg = new Message();
+        msg.what = 1;
+        msg.obj = sb.toString();
+        mHandler.sendMessage(msg);
     }
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 1:
+                    String urls = (String) msg.obj;
+                    tvUrl.setText(urls);
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     /**
      * 回调对象，接受请求结果
@@ -255,69 +267,6 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
                 populateAutoComplete();
             }
         }
-    }
-
-
-    /**
-     * Attempts to sign in or register the account specified by the login form.
-     * If there are form errors (invalid email, missing fields, etc.), the
-     * errors are presented and no actual login attempt is made.
-     */
-    private void attemptLogin() {
-        if (mAuthTask != null) {
-            return;
-        }
-
-        // Reset errors.
-        mKeyView.setError(null);
-        mPasswordView.setError(null);
-
-        // Store values at the time of the login attempt.
-        String email = mKeyView.getText().toString();
-        String password = mPasswordView.getText().toString();
-
-        boolean cancel = false;
-        View focusView = null;
-
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
-
-        // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            mKeyView.setError(getString(R.string.error_field_required));
-            focusView = mKeyView;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
-            mKeyView.setError(getString(R.string.error_invalid_email));
-            focusView = mKeyView;
-            cancel = true;
-        }
-
-        if (cancel) {
-            // There was an error; don't attempt login and focus the first
-            // form field with an error.
-            focusView.requestFocus();
-        } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
-        }
-    }
-
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
-    }
-
-    private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
-        return password.length() > 4;
     }
 
     /**
@@ -449,20 +398,16 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
         @Override
         protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
             showProgress(false);
 
             if (success) {
                 finish();
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
             }
         }
 
         @Override
         protected void onCancelled() {
-            mAuthTask = null;
             showProgress(false);
         }
     }
