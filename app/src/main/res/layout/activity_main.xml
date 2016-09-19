@@ -80,7 +80,7 @@
                     android:id="@+id/tv_url"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:minHeight="100dp"
+                    android:minHeight="200dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
                     android:background="@color/bg_gray"
