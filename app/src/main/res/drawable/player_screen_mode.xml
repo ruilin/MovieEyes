@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/video_room_chuanping_icon_p" android:state_selected="false" android:state_focused="true"/>
+    <item android:drawable="@drawable/video_room_chuanping_icon_p" android:state_selected="false" android:state_pressed="true"/>
+    <item android:drawable="@drawable/video_room_chuanping_icon_n" android:state_selected="false"/>
+    
+    <item android:drawable="@drawable/video_room_xiaoping_icon_p" android:state_selected="true" android:state_focused="true"/>
+    <item android:drawable="@drawable/video_room_xiaoping_icon_p" android:state_selected="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/video_room_xiaoping_icon_n" android:state_selected="true"/>
+
+</selector>
