@@ -32,6 +32,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
+import java.util.ArrayList;
+
+import ruilin.com.movieeyes.modle.MovieUrl;
 
 /**
  * @author Ruilin
@@ -84,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private String parse(String key) {
+    private SearchResult parse(String key) {
+        SearchResult result = new SearchResult();
         StringBuffer sb = new StringBuffer();
         try {
             Document doc = Jsoup.connect("http://www.quzhuanpan.com/source/search.action").data("q", key).get();
@@ -99,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 if (tag.contains(key) && url.contains("pan.baidu")) {
                     sb.append(link.text() + " " + link.attr("abs:href"));
                     sb.append("\n");
+                    MovieUrl movie = new MovieUrl();
+                    movie.url = url;
+                    movie.tag = tag;
+                    result.addUrl(movie);
                     if (go) {
                         go = false;
 //                        Intent intent= new Intent();
@@ -121,8 +129,8 @@ public class MainActivity extends AppCompatActivity {
 //        msg.what = 1;
 //        msg.obj = sb.toString();
 //        mHandler.sendMessage(msg);
-
-        return sb.toString();
+        result.setMessage(sb.toString());
+        return result;
     }
 
     private Handler mHandler = new Handler() {
@@ -232,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      *
      */
-    public class LoadUrlTask extends AsyncTask<Void, Void, String> {
+    public class LoadUrlTask extends AsyncTask<Void, Void, SearchResult> {
         String key;
 
         LoadUrlTask(String key) {
@@ -246,15 +254,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected String doInBackground(Void... params) {
+        protected SearchResult doInBackground(Void... params) {
             return parse(key);
         }
 
         @Override
-        protected void onPostExecute(final String urls) {
+        protected void onPostExecute(final SearchResult result) {
             showProgress(false);
-            if (urls != null) {
-                tvUrl.setText(urls);
+            if (result != null) {
+                tvUrl.setText(result.msg);
             } else {
                 Toast.makeText(MainActivity.this, getResources().getString(R.string.main_timeout_tips), Toast.LENGTH_SHORT).show();
             }
@@ -263,6 +271,27 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onCancelled() {
             showProgress(false);
+        }
+    }
+
+
+    /**
+     * 搜索结果数据
+     */
+    private class SearchResult {
+        ArrayList<MovieUrl> urls;
+        String msg = "";
+
+        public SearchResult() {
+            urls = new ArrayList<MovieUrl>();
+        }
+
+        public void addUrl(MovieUrl url) {
+            urls.add(url);
+        }
+
+        public void setMessage(String msg) {
+            this.msg = msg;
         }
     }
 }
