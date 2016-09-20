@@ -41,6 +41,7 @@ import ruilin.com.movieeyes.modle.MovieUrl;
  */
 public class MainActivity extends AppCompatActivity {
     private final static String TAG = MainActivity.class.getSimpleName();
+    private final static String BAIDU_PAN_HOST = "pan.baidu";
     // UI references.
     private AutoCompleteTextView mKeyView;
     private View mProgressView;
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 String tag = link.text().toString();
                 String url = link.attr("abs:href");
                 Log.e("links", tag + " " + url);
-                if (tag.contains(key) && url.contains("pan.baidu")) {
+                if (tag.contains(key) && url.contains(BAIDU_PAN_HOST)) {
                     sb.append(link.text() + " " + link.attr("abs:href"));
                     sb.append("\n");
                     MovieUrl movie = new MovieUrl();
