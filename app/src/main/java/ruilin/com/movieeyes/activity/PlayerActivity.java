@@ -1,4 +1,4 @@
-package ruilin.com.movieeyes;
+package ruilin.com.movieeyes.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.WindowManager;
 
+import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.widget.UniversalVideoView.UniversalMediaController;
 import ruilin.com.movieeyes.widget.UniversalVideoView.UniversalVideoView;
 import tv.danmaku.ijk.media.player.IMediaPlayer;

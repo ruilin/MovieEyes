@@ -10,7 +10,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="main_search_result_tips">输入关键字搜索</string>
+    <string name="main_search_result_tips">搜索结果：</string>
     <string name="main_timeout_tips">连接超时</string>
 
     <string name="title_activity_player">PlayerActivity</string>

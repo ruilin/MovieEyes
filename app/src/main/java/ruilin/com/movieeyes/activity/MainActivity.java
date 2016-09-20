@@ -1,20 +1,25 @@
-package ruilin.com.movieeyes;
+package ruilin.com.movieeyes.activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,20 +37,24 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
-import java.util.ArrayList;
 
+import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.MovieUrl;
+import ruilin.com.movieeyes.modle.SearchResult;
 
 /**
  * @author Ruilin
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static String BAIDU_PAN_HOST = "pan.baidu";
     // UI references.
     private AutoCompleteTextView mKeyView;
     private View mProgressView;
     private View mContentView;
+    private LinearLayout mFragmentLayout;
+    private MovieListFragment mMovieFra;
     private TextView tvUrl;
 
     /**
@@ -59,7 +68,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Set up the login form.
         mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
-        tvUrl = (TextView) findViewById(R.id.tv_url);
+        tvUrl = (TextView) findViewById(R.id.tv_tips);
+        mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
+
+        mMovieFra = new MovieListFragment();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.ll_result, mMovieFra);
+        ft.commit();
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
@@ -89,7 +105,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private SearchResult parse(String key) {
-        SearchResult result = new SearchResult();
+        Log.i(TAG, "start loading");
+        SearchResult result = SearchResult.getInstance();
+        result.clean();
         StringBuffer sb = new StringBuffer();
         try {
             Document doc = Jsoup.connect("http://www.quzhuanpan.com/source/search.action").data("q", key).get();
@@ -238,6 +256,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+    }
+
+    @Override
+    public void onListFragmentInteraction(MovieUrl item) {
+        Intent intent= new Intent();
+        intent.setAction("android.intent.action.VIEW");
+        Uri content_url = Uri.parse(item.url);
+        intent.setData(content_url);
+        startActivity(intent);
+
+//      PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
+    }
+
     /**
      *
      */
@@ -263,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(final SearchResult result) {
             showProgress(false);
             if (result != null) {
-                tvUrl.setText(result.msg);
+                mMovieFra.update();
             } else {
                 Toast.makeText(MainActivity.this, getResources().getString(R.string.main_timeout_tips), Toast.LENGTH_SHORT).show();
             }
@@ -276,24 +309,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /**
-     * 搜索结果数据
-     */
-    private class SearchResult {
-        ArrayList<MovieUrl> urls;
-        String msg = "";
-
-        public SearchResult() {
-            urls = new ArrayList<MovieUrl>();
-        }
-
-        public void addUrl(MovieUrl url) {
-            urls.add(url);
-        }
-
-        public void setMessage(String msg) {
-            this.msg = msg;
-        }
-    }
 }
 

@@ -1,4 +1,4 @@
-package ruilin.com.movieeyes;
+package ruilin.com.movieeyes.base;
 
 import android.app.Application;
 

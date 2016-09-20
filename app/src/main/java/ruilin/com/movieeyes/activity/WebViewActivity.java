@@ -1,4 +1,4 @@
-package ruilin.com.movieeyes;
+package ruilin.com.movieeyes.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.webkit.WebHistoryItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import ruilin.com.movieeyes.R;
 
 /**
  * @author Ruilin

@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ruilin.com.movieeyes.MainActivity">
+    tools:context=".activity.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -77,16 +77,21 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/tv_url"
+                    android:id="@+id/tv_tips"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:minHeight="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
-                    android:background="@color/bg_gray"
                     android:lineSpacingExtra="4dp"
                     android:padding="5dp"
                     android:text="@string/main_search_result_tips" />
+                
+                <LinearLayout
+                    android:id="@+id/ll_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    />
 
             </LinearLayout>
         </ScrollView>
