@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -41,6 +40,7 @@ import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     public static final int RESULT_CODE_SUCCESS = 0;
     public static final int RESULT_CODE_ERROR = 1;
     public static final int RESULT_CODE_TIMEOUT = 2;
-    public int resultCode;
 
     // UI references.
     private AutoCompleteTextView mKeyView;
@@ -66,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private MovieListFragment mMovieFra;
     private TextView tvUrl;
     private ArrayList<MovieUrl> mMovieList;
-
     /**
      * 用来标志请求的what, 类似handler的what一样，这里用来区分请求
      */
@@ -76,14 +74,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
-
         mMovieFra = MovieListFragment.newInstance();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.ll_result, mMovieFra);
         ft.commit();
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.button_search);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,7 +88,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     Log.i(TAG, "cannot operate");
                     return;
                 }
-                if (mKeyView.getText().toString().length() == 0) {
+                String key = mKeyView.getText().toString();
+                if (key.length() == 0) {
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.main_search_null_tips), Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -107,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 //                        parse(mKeyView.getText().toString());
 //                    }
 //                }).start();
-                new LoadUrlTask(mKeyView.getText().toString()).execute();
+                new LoadUrlTask(key).execute();
             }
         });
 
@@ -121,20 +119,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         tvUrl = (TextView) findViewById(R.id.tv_tips);
         mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
 
-        String[] arr = new String[]{"生化危机", "霸王别姬", "越狱"};
-        SearchAdapter adapter = new SearchAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, arr,
-                SearchAdapter.ALL);//速度优先
-        mKeyView.setAdapter(adapter);
+        updateKeyTips();
         mKeyView.setThreshold(1);
-
         mKeyView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                /* 关闭键盘 */
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, InputMethodManager.HIDE_NOT_ALWAYS);
             }
         });
+    }
+
+    private void updateKeyTips() {
+        SearchAdapter adapter = new SearchAdapter<>(MainActivity.this,
+                android.R.layout.simple_dropdown_item_1line, SearchKeyHelper.getInstance().getList(),
+                SearchAdapter.ALL);//速度优先
+        mKeyView.setAdapter(adapter);
     }
 
     private int parse(String key) {
@@ -171,14 +172,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 }
             }
         } catch (SocketTimeoutException e) {
-            resultCode = RESULT_CODE_TIMEOUT;
             e.printStackTrace();
+            return RESULT_CODE_TIMEOUT;
         } catch (Exception e) {
-            resultCode = RESULT_CODE_ERROR;
             e.printStackTrace();
+            return RESULT_CODE_ERROR;
         }
 
-        return resultCode;
+        return RESULT_CODE_SUCCESS;
     }
 
     /**
@@ -276,13 +277,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     @Override
     public void onListFragmentInteraction(MovieUrl item) {
-        Intent intent = new Intent();
-        intent.setAction("android.intent.action.VIEW");
-        Uri content_url = Uri.parse(item.url);
-        intent.setData(content_url);
-        startActivity(intent);
+//        Intent intent = new Intent();
+//        intent.setAction("android.intent.action.VIEW");
+//        Uri content_url = Uri.parse(item.url);
+//        intent.setData(content_url);
+//        startActivity(intent);
 
-//      PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
+//        PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
+        WebViewActivity.startForUrl(this, item.url);
     }
 
     @Override
@@ -316,7 +318,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             showProgress(false);
             switch (resultCode) {
                 case RESULT_CODE_SUCCESS:
+                    Log.i(TAG, "success!!!");
                     mMovieFra.update();
+                    SearchKeyHelper.getInstance().add(key);
+                    updateKeyTips();
                     break;
                 case RESULT_CODE_TIMEOUT:
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.main_net_timeout_tips), Toast.LENGTH_SHORT).show();

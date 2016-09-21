@@ -3,6 +3,7 @@ package ruilin.com.movieeyes.adapter;
 /**
  * Created by Ruilin on 2016/9/21.
  */
+
 import java.util.*;
 
 import android.content.Context;
@@ -33,24 +34,25 @@ public class SearchAdapter<T> extends BaseAdapter implements Filterable {
 
     public static final int ALL = -1;//全部
     private int maxMatch = 8;//最多显示多少个可能选项
+
     /**
      * 支持多音字
      */
-    public SearchAdapter(Context context,int textViewResourceId, T[] objects,int maxMatch) {
+    public SearchAdapter(Context context, int textViewResourceId, T[] objects, int maxMatch) {
         // TODO Auto-generated constructor stub
         init(context, textViewResourceId, 0, Arrays.asList(objects));
         this.pinyinList = getHanziSpellList(objects);
-        this.maxMatch=maxMatch;
+        this.maxMatch = maxMatch;
     }
 
-    public SearchAdapter(Context context,int textViewResourceId, List<T> objects,int maxMatch) {
+    public SearchAdapter(Context context, int textViewResourceId, List<T> objects, int maxMatch) {
         // TODO Auto-generated constructor stub
         init(context, textViewResourceId, 0, objects);
         this.pinyinList = getHanziSpellList(objects);
-        this.maxMatch=maxMatch;
+        this.maxMatch = maxMatch;
     }
 
-    private void init(Context context, int resource, int textViewResourceId,List<T> objects) {
+    private void init(Context context, int resource, int textViewResourceId, List<T> objects) {
         mContext = context;
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mResource = resource;
@@ -62,21 +64,22 @@ public class SearchAdapter<T> extends BaseAdapter implements Filterable {
     /**
      * 获得汉字拼音首字母列表
      */
-    private List<Set<String>> getHanziSpellList(T[] hanzi){
-        List<Set<String>> listSet=new ArrayList<Set<String>>();
-        PinYin4j pinyin=new PinYin4j();
-        for(int i=0;i<hanzi.length;i++){
+    private List<Set<String>> getHanziSpellList(T[] hanzi) {
+        List<Set<String>> listSet = new ArrayList<Set<String>>();
+        PinYin4j pinyin = new PinYin4j();
+        for (int i = 0; i < hanzi.length; i++) {
             listSet.add(pinyin.getPinyin(hanzi[i].toString()));
         }
         return listSet;
     }
+
     /**
      * 获得汉字拼音首字母列表
      */
-    private List<Set<String>> getHanziSpellList(List<T> hanzi){
-        List<Set<String>> listSet=new ArrayList<Set<String>>();
-        PinYin4j pinyin=new PinYin4j();
-        for(int i=0;i<hanzi.size();i++){
+    private List<Set<String>> getHanziSpellList(List<T> hanzi) {
+        List<Set<String>> listSet = new ArrayList<Set<String>>();
+        PinYin4j pinyin = new PinYin4j();
+        for (int i = 0; i < hanzi.size(); i++) {
             listSet.add(pinyin.getPinyin(hanzi.get(i).toString()));
         }
         return listSet;
@@ -167,33 +170,32 @@ public class SearchAdapter<T> extends BaseAdapter implements Filterable {
                 for (int i = 0; i < count; i++) {
                     final T value = hanzi.get(i);//汉字String
                     final String valueText = value.toString().toLowerCase();//汉字String
-                    final Set<String> pinyinSet=pinyinList.get(i);//支持多音字,类似:{z,c}
-                    Iterator iterator= pinyinSet.iterator();//支持多音字
+                    final Set<String> pinyinSet = pinyinList.get(i);//支持多音字,类似:{z,c}
+                    Iterator iterator = pinyinSet.iterator();//支持多音字
                     while (iterator.hasNext()) {//支持多音字
                         final String pinyin = iterator.next().toString().toLowerCase();//取出多音字里的一个字母
 
-                        if (pinyin.indexOf(prefixString)!=-1) {//任意匹配
+                        if (pinyin.indexOf(prefixString) != -1) {//任意匹配
                             newValues.add(value);
-                        }
-                        else if (valueText.indexOf(prefixString)!=-1) {//如果是汉字则直接添加
+                        } else if (valueText.indexOf(prefixString) != -1) {//如果是汉字则直接添加
                             newValues.add(value);
                         }
                     }
-                    if(maxMatch>0){//有数量限制
-                        if(newValues.size()>maxMatch-1){//不要太多
+                    if (maxMatch > 0) {//有数量限制
+                        if (newValues.size() > maxMatch - 1) {//不要太多
                             break;
                         }
                     }
 
                 }
-                List<T> list=Set2List(newValues);//转成List
+                List<T> list = Set2List(newValues);//转成List
                 results.values = list;
                 results.count = list.size();
             }
             return results;
         }
 
-        protected void publishResults(CharSequence constraint,FilterResults results) {
+        protected void publishResults(CharSequence constraint, FilterResults results) {
 
             mObjects = (List<T>) results.values;
             if (results.count > 0) {
@@ -210,6 +212,7 @@ public class SearchAdapter<T> extends BaseAdapter implements Filterable {
         //TODO 具体实现看需求转换成不同的Set的子类。
         return tSet;
     }
+
     public <T extends Object> List<T> Set2List(Set<T> oSet) {
         List<T> tList = new ArrayList<T>(oSet);
         // TODO 需要在用到的时候另外写构造，根据需要生成List的对应子类。
