@@ -9,8 +9,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -37,11 +35,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
+import java.util.ArrayList;
 
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.MovieUrl;
-import ruilin.com.movieeyes.modle.SearchResult;
 
 /**
  * @author Ruilin
@@ -49,6 +47,12 @@ import ruilin.com.movieeyes.modle.SearchResult;
 public class MainActivity extends AppCompatActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static String BAIDU_PAN_HOST = "pan.baidu";
+
+    public static final int RESULT_CODE_SUCCESS = 0;
+    public static final int RESULT_CODE_ERROR = 1;
+    public static final int RESULT_CODE_TIMEOUT = 2;
+    public int resultCode;
+
     // UI references.
     private AutoCompleteTextView mKeyView;
     private View mProgressView;
@@ -56,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private LinearLayout mFragmentLayout;
     private MovieListFragment mMovieFra;
     private TextView tvUrl;
+    private ArrayList<MovieUrl> mMovieList;
 
     /**
      * 用来标志请求的what, 类似handler的what一样，这里用来区分请求
@@ -66,12 +71,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // Set up the login form.
         mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
         tvUrl = (TextView) findViewById(R.id.tv_tips);
         mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
 
-        mMovieFra = new MovieListFragment();
+        mMovieFra = MovieListFragment.newInstance();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.ll_result, mMovieFra);
@@ -99,15 +105,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             }
         });
 
-        mContentView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+        mContentView = findViewById(R.id.fl_content);
+        mProgressView = findViewById(R.id.pv_loading);
 
     }
 
-    private SearchResult parse(String key) {
+    private int parse(String key) {
         Log.i(TAG, "start loading");
-        SearchResult result = SearchResult.getInstance();
-        result.clean();
+        mMovieList.clear();
         StringBuffer sb = new StringBuffer();
         try {
             Document doc = Jsoup.connect("http://www.quzhuanpan.com/source/search.action").data("q", key).get();
@@ -125,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     MovieUrl movie = new MovieUrl();
                     movie.url = url;
                     movie.tag = tag;
-                    result.addUrl(movie);
+                    mMovieList.add(movie);
                     if (go) {
                         go = false;
 //                        Intent intent= new Intent();
@@ -139,33 +144,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 }
             }
         } catch (SocketTimeoutException e) {
-            return null;
+            resultCode = RESULT_CODE_TIMEOUT;
+            e.printStackTrace();
         } catch (Exception e) {
+            resultCode = RESULT_CODE_ERROR;
             e.printStackTrace();
         }
 
-//        Message msg = new Message();
-//        msg.what = 1;
-//        msg.obj = sb.toString();
-//        mHandler.sendMessage(msg);
-        result.setMessage(sb.toString());
-        return result;
+        return resultCode;
     }
-
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what) {
-                case 1:
-                    String urls = (String) msg.obj;
-                    tvUrl.setText(urls);
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
 
     /**
      * 回调对象，接受请求结果
@@ -183,9 +170,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
                 Toast.makeText(MainActivity.this, "ok", Toast.LENGTH_SHORT).show();
 
-                Log.e("http", "result: "+result);
-                Log.i("http", "msg: "+response.responseMessage());
-                Log.i("http", "time: "+time);
+                Log.e("http", "result: " + result);
+                Log.i("http", "msg: " + response.responseMessage());
+                Log.i("http", "time: " + time);
 //                mWebView.loadData(result, "text/html", "UTF-8");
                 try {
                     File f = new File(Environment.getExternalStorageDirectory(), "result.html");
@@ -262,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     @Override
     public void onListFragmentInteraction(MovieUrl item) {
-        Intent intent= new Intent();
+        Intent intent = new Intent();
         intent.setAction("android.intent.action.VIEW");
         Uri content_url = Uri.parse(item.url);
         intent.setData(content_url);
@@ -271,10 +258,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 //      PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
     }
 
+    @Override
+    public void onMovieListCreated(ArrayList<MovieUrl> list) {
+        mMovieList = list;
+    }
+
     /**
      *
      */
-    public class LoadUrlTask extends AsyncTask<Void, Void, SearchResult> {
+    public class LoadUrlTask extends AsyncTask<Void, Void, Integer> {
         String key;
 
         LoadUrlTask(String key) {
@@ -288,17 +280,24 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         }
 
         @Override
-        protected SearchResult doInBackground(Void... params) {
+        protected Integer doInBackground(Void... params) {
             return parse(key);
         }
 
         @Override
-        protected void onPostExecute(final SearchResult result) {
+        protected void onPostExecute(final Integer resultCode) {
             showProgress(false);
-            if (result != null) {
-                mMovieFra.update();
-            } else {
-                Toast.makeText(MainActivity.this, getResources().getString(R.string.main_timeout_tips), Toast.LENGTH_SHORT).show();
+            switch (resultCode) {
+                case RESULT_CODE_SUCCESS:
+                    mMovieFra.update();
+                    break;
+                case RESULT_CODE_TIMEOUT:
+                    Toast.makeText(MainActivity.this, getResources().getString(R.string.main_net_timeout_tips), Toast.LENGTH_SHORT).show();
+                    break;
+                case RESULT_CODE_ERROR:
+                default:
+                    Toast.makeText(MainActivity.this, getResources().getString(R.string.main_net_error_tips), Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
 

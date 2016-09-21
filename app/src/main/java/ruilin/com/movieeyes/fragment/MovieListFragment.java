@@ -10,9 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.modle.MovieUrl;
-import ruilin.com.movieeyes.modle.SearchResult;
 
 /**
  * A fragment representing a list of Items.
@@ -23,12 +24,12 @@ import ruilin.com.movieeyes.modle.SearchResult;
 public class MovieListFragment extends Fragment {
 
     // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
+    private static final String ARG_MOVIES = "ARG_MOVIES";
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
     private MovieListRecyclerViewAdapter mAdapter;
-
+    private ArrayList<MovieUrl>mItems;
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -38,27 +39,26 @@ public class MovieListFragment extends Fragment {
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static MovieListFragment newInstance(int columnCount) {
+    public static MovieListFragment newInstance() {
         MovieListFragment fragment = new MovieListFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
+//        Bundle args = new Bundle();
+//        args.putParcelableArrayList(ARG_MOVIES, mItems);
+//        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
+//            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_movielist_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_movielist, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -69,7 +69,7 @@ public class MovieListFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            mAdapter = new MovieListRecyclerViewAdapter(SearchResult.getInstance().getMovieList(), mListener);
+            mAdapter = new MovieListRecyclerViewAdapter(mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
         return view;
@@ -80,7 +80,9 @@ public class MovieListFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnListFragmentInteractionListener) {
+            mItems = new ArrayList<>();
             mListener = (OnListFragmentInteractionListener) context;
+            mListener.onMovieListCreated(mItems);
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");
@@ -110,5 +112,6 @@ public class MovieListFragment extends Fragment {
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
         void onListFragmentInteraction(MovieUrl item);
+        void onMovieListCreated(ArrayList<MovieUrl> list);
     }
 }

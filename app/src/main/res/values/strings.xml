@@ -11,7 +11,8 @@
         completions."
     </string>
     <string name="main_search_result_tips">搜索结果：</string>
-    <string name="main_timeout_tips">连接超时</string>
+    <string name="main_net_timeout_tips">连接超时</string>
+    <string name="main_net_error_tips">连接失败</string>
 
     <string name="title_activity_player">PlayerActivity</string>
     <string name="dummy_button">Dummy Button</string>

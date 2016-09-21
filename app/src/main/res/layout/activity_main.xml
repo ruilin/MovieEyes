@@ -11,93 +11,87 @@
     tools:context=".activity.MainActivity">
 
     <FrameLayout
+        android:id="@+id/fl_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
-            android:id="@+id/login_form"
+        <LinearLayout
+            android:id="@+id/ll_key"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="1">
 
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="0dp"
+                    <AutoCompleteTextView
+                        android:id="@+id/key"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        android:hint="@string/prompt_email"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="生化危机" />
 
-                        <AutoCompleteTextView
-                            android:id="@+id/key"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/prompt_email"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:singleLine="true"
-                            android:text="生化危机" />
+                </android.support.design.widget.TextInputLayout>
 
-                    </android.support.design.widget.TextInputLayout>
+                <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
 
-                    <!--<android.support.design.widget.TextInputLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content">-->
+                <!--<EditText-->
+                <!--android:id="@+id/password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="@string/prompt_password"-->
+                <!--android:imeActionId="@+id/login"-->
+                <!--android:imeActionLabel="@string/action_sign_in_short"-->
+                <!--android:imeOptions="actionUnspecified"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:maxLines="1"-->
+                <!--android:singleLine="true" />-->
 
-                    <!--<EditText-->
-                    <!--android:id="@+id/password"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:hint="@string/prompt_password"-->
-                    <!--android:imeActionId="@+id/login"-->
-                    <!--android:imeActionLabel="@string/action_sign_in_short"-->
-                    <!--android:imeOptions="actionUnspecified"-->
-                    <!--android:inputType="textPassword"-->
-                    <!--android:maxLines="1"-->
-                    <!--android:singleLine="true" />-->
+                <!--</android.support.design.widget.TextInputLayout>-->
 
-                    <!--</android.support.design.widget.TextInputLayout>-->
-
-                    <Button
-                        android:id="@+id/email_sign_in_button"
-                        style="?android:textAppearanceSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:minWidth="100dp"
-                        android:text="@string/action_search"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/tv_tips"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    android:lineSpacingExtra="4dp"
-                    android:padding="5dp"
-                    android:text="@string/main_search_result_tips" />
-                
-                <LinearLayout
-                    android:id="@+id/ll_result"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    />
-
+                    android:layout_gravity="bottom"
+                    android:minWidth="100dp"
+                    android:text="@string/action_search"
+                    android:textStyle="bold" />
             </LinearLayout>
-        </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:padding="5dp"
+                android:text="@string/main_search_result_tips" />
+
+            <LinearLayout
+                android:id="@+id/ll_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+        </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/login_progress"
+            android:id="@+id/pv_loading"
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

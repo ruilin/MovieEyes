@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.fragment.MovieListFragment.OnListFragmentInteractionListener;
@@ -30,7 +29,7 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_movielist, parent, false);
+                .inflate(R.layout.item_movielist, parent, false);
         return new ViewHolder(view);
     }
 
