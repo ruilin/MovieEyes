@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="6dp"
-                android:padding="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="@string/main_search_result_tips" />
 
             <LinearLayout
@@ -41,6 +41,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="5dp"
                 android:orientation="horizontal">
 
                 <android.support.design.widget.TextInputLayout

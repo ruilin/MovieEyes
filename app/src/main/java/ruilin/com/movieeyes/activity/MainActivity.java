@@ -141,34 +141,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private int parse(String key) {
         Log.i(TAG, "start loading");
         mMovieList.clear();
-        StringBuffer sb = new StringBuffer();
         try {
             Document doc = Jsoup.connect("http://www.quzhuanpan.com/source/search.action").data("q", key).get();
             Elements links = doc.select("a[href]");
             //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements
-            boolean go = true;
             for (Element link : links) {
                 // 过滤链接
                 String tag = link.text().toString();
                 String url = link.attr("abs:href");
-                Log.e("links", tag + " " + url);
+//                Log.e("links", tag + " " + url);
                 if (tag.contains(key) && url.contains(BAIDU_PAN_HOST)) {
-                    sb.append(link.text() + " " + link.attr("abs:href"));
-                    sb.append("\n");
                     MovieUrl movie = new MovieUrl();
                     movie.url = url;
                     movie.tag = tag;
                     mMovieList.add(movie);
-                    if (go) {
-                        go = false;
-//                        Intent intent= new Intent();
-//                        intent.setAction("android.intent.action.VIEW");
-//                        Uri content_url = Uri.parse(link.attr("abs:href"));
-//                        intent.setData(content_url);
-//                        startActivity(intent);
-
-//                        PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
-                    }
                 }
             }
         } catch (SocketTimeoutException e) {
@@ -277,14 +263,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     @Override
     public void onListFragmentInteraction(MovieUrl item) {
-//        Intent intent = new Intent();
-//        intent.setAction("android.intent.action.VIEW");
-//        Uri content_url = Uri.parse(item.url);
-//        intent.setData(content_url);
-//        startActivity(intent);
+        Intent intent = new Intent();
+        intent.setAction("android.intent.action.VIEW");
+        Uri content_url = Uri.parse(item.url);
+        intent.setData(content_url);
+        startActivity(intent);
 
 //        PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
-        WebViewActivity.startForUrl(this, item.url);
+//        WebViewActivity.startForUrl(this, item.url);
     }
 
     @Override
@@ -318,7 +304,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             showProgress(false);
             switch (resultCode) {
                 case RESULT_CODE_SUCCESS:
-                    Log.i(TAG, "success!!!");
+                    Log.i(TAG, "success!!! "+ mMovieList.size());
                     mMovieFra.update();
                     SearchKeyHelper.getInstance().add(key);
                     updateKeyTips();

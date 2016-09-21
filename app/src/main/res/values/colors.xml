@@ -14,4 +14,7 @@
     <color name="bg_blue">#427ede</color>
     <color name="bg_gray">#919191</color>
 
+    <color name="white">#ffffff</color>
+    <color name="line_list">#e5e5e5</color>
+    <color name="button_gray_pressed">#e5e5e5</color>
 </resources>
