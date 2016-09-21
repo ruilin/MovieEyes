@@ -31,8 +31,8 @@ public class SearchAdapter<T> extends BaseAdapter implements Filterable {
 
     private LayoutInflater mInflater;
 
-    public static final int ALL=-1;//全部
-    private int maxMatch=10;//最多显示多少个可能选项
+    public static final int ALL = -1;//全部
+    private int maxMatch = 8;//最多显示多少个可能选项
     /**
      * 支持多音字
      */
