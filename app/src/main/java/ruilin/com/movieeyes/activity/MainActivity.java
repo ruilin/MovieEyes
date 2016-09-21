@@ -4,12 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -24,19 +21,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.yolanda.nohttp.Headers;
-import com.yolanda.nohttp.rest.OnResponseListener;
-import com.yolanda.nohttp.rest.Response;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
@@ -65,23 +54,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private MovieListFragment mMovieFra;
     private TextView tvUrl;
     private ArrayList<MovieUrl> mMovieList;
-    /**
-     * 用来标志请求的what, 类似handler的what一样，这里用来区分请求
-     */
-    private static final int NOHTTP_WHAT_TEST = 0x001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
-        mMovieFra = MovieListFragment.newInstance();
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.ll_result, mMovieFra);
-        ft.commit();
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.button_search);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+        Button searchButton = (Button) findViewById(R.id.button_search);
+        searchButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mProgressView.getVisibility() == View.VISIBLE) {
@@ -95,16 +75,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 }
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //强制隐藏键盘
-//                Request<String> request = NoHttp.createStringRequest("http://www.quzhuanpan.com/source/search.action", RequestMethod.GET);
-//                request.add("q", mKeyView.getText().toString());
-//                requestQueue.add(NOHTTP_WHAT_TEST, request, onResponseListener);
-//                Log.e("url", request.url());
-//                new Thread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        parse(mKeyView.getText().toString());
-//                    }
-//                }).start();
                 new LoadUrlTask(key).execute();
             }
         });
@@ -129,6 +99,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, InputMethodManager.HIDE_NOT_ALWAYS);
             }
         });
+
+        mMovieFra = MovieListFragment.newInstance();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.ll_result, mMovieFra);
+        ft.commit();
     }
 
     private void updateKeyTips() {
@@ -138,18 +114,37 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mKeyView.setAdapter(adapter);
     }
 
+
+
+//    <div class="search-classic" style="margin-bottom:0px;" id="1892274" typeid="-1">
+//        <h4 class="result4"><a title="<span style='color:red'>大话西游</span>三" id="607871276" data="2416252861" data1="1ntF0mEl" style="color:#3244ea" class="source-title" href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank"><span class=""><span style="color:red">大话西游</span>三</span>&nbsp;&nbsp;</a></h4>
+//        <div class="result">文件链接：<a title="<span style='color:red'>大话西游</span>三" class="source-title2" href="https://pan.baidu.com/share/link?uk=2416252861&amp;shareid=607871276" target="_blank"><span style="color:red">大话西游</span>三&nbsp;&nbsp;</a>| 所在位置：<span style="color:#3244ea">度盘&nbsp;&nbsp;</span>|分享者：
+//            <a href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank">
+//                495211374
+//            </a>
+//            <a href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank" style="color:#62636B;">
+//                他的贡献
+//            </a>
+//        </div>
+//        <div class="result">提示：<span>来自搜索引擎.</span> |分享时间：2015-09-08 15:35</div>
+//    </div>
+
     private int parse(String key) {
         Log.i(TAG, "start loading");
         mMovieList.clear();
         try {
             Document doc = Jsoup.connect("http://www.quzhuanpan.com/source/search.action").data("q", key).get();
-            Elements links = doc.select("a[href]");
+//            Elements links = doc.select("a[href]");
+            Elements links = doc.select("div[class=search-classic]");
             //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements
             for (Element link : links) {
                 // 过滤链接
-                String tag = link.text().toString();
-                String url = link.attr("abs:href");
-//                Log.e("links", tag + " " + url);
+//                String tag = link.text().toString();
+                Elements authorEle = link.select("h4[class=result4]");
+                Elements urlEle = authorEle.select("a[href]");
+                String url = urlEle.attr("href");
+                String tag = authorEle.text();
+                Log.e("links", tag + " ***** " + url);
                 if (tag.contains(key) && url.contains(BAIDU_PAN_HOST)) {
                     MovieUrl movie = new MovieUrl();
                     movie.url = url;
@@ -167,59 +162,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         return RESULT_CODE_SUCCESS;
     }
-
-    /**
-     * 回调对象，接受请求结果
-     */
-    private OnResponseListener<String> onResponseListener = new OnResponseListener<String>() {
-        @Override
-        public void onSucceed(int what, Response<String> response) {
-            if (what == NOHTTP_WHAT_TEST) {// 判断what是否是刚才指定的请求
-                // 请求成功
-                final String result = response.get();// 响应结果
-                // 响应头
-                Headers headers = response.getHeaders();
-                int code = headers.getResponseCode();// 响应码
-                long time = response.getNetworkMillis();// 请求花费的时间
-
-                Toast.makeText(MainActivity.this, "ok", Toast.LENGTH_SHORT).show();
-
-                Log.e("http", "result: " + result);
-                Log.i("http", "msg: " + response.responseMessage());
-                Log.i("http", "time: " + time);
-//                mWebView.loadData(result, "text/html", "UTF-8");
-                try {
-                    File f = new File(Environment.getExternalStorageDirectory(), "result.html");
-                    if (f.exists()) {
-                        f.delete();
-                    }
-                    FileOutputStream fos = new FileOutputStream(f, true);
-                    fos.write(result.getBytes());
-                    fos.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                WebViewActivity.startForLocalFile(MainActivity.this, "result.html");
-            }
-        }
-
-        @Override
-        public void onStart(int what) {
-            // 请求开始，显示dialog
-        }
-
-        @Override
-        public void onFinish(int what) {
-            // 请求结束，关闭dialog
-        }
-
-        @Override
-        public void onFailed(int what, Response response) {
-            // 请求失败
-        }
-    };
 
     /**
      * Shows the progress UI and hides the login form.
@@ -263,14 +205,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     @Override
     public void onListFragmentInteraction(MovieUrl item) {
-        Intent intent = new Intent();
-        intent.setAction("android.intent.action.VIEW");
-        Uri content_url = Uri.parse(item.url);
-        intent.setData(content_url);
-        startActivity(intent);
+//        Intent intent = new Intent();
+//        intent.setAction("android.intent.action.VIEW");
+//        Uri content_url = Uri.parse(item.url);
+//        intent.setData(content_url);
+//        startActivity(intent);
 
 //        PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
-//        WebViewActivity.startForUrl(this, item.url);
+        WebViewActivity.startForUrl(this, item.url);
     }
 
     @Override
