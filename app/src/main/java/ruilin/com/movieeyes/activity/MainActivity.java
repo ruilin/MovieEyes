@@ -41,6 +41,7 @@ import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
@@ -116,8 +117,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
 
         String[] arr = new String[]{"生化危机", "霸王别姬", "越狱"};
-        ArrayAdapter<String> tipsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
-        mKeyView.setAdapter(tipsAdapter);
+        SearchAdapter adapter = new SearchAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, arr,
+                SearchAdapter.ALL);//速度优先
+        mKeyView.setAdapter(adapter);
+        mKeyView.setThreshold(1);
     }
 
     private int parse(String key) {
