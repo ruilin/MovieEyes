@@ -91,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     Log.i(TAG, "cannot operate");
                     return;
                 }
+                if (mKeyView.getText().toString().length() == 0) {
+                    Toast.makeText(MainActivity.this, getResources().getString(R.string.main_search_null_tips), Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //强制隐藏键盘
 //                Request<String> request = NoHttp.createStringRequest("http://www.quzhuanpan.com/source/search.action", RequestMethod.GET);
