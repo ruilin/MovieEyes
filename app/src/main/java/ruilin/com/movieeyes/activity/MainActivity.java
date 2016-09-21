@@ -3,6 +3,7 @@ package ruilin.com.movieeyes.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -15,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -70,12 +73,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Set up the login form.
-        mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
-        tvUrl = (TextView) findViewById(R.id.tv_tips);
-        mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
+        initView();
 
         mMovieFra = MovieListFragment.newInstance();
         FragmentManager fm = getSupportFragmentManager();
@@ -91,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     Log.i(TAG, "cannot operate");
                     return;
                 }
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //强制隐藏键盘
 //                Request<String> request = NoHttp.createStringRequest("http://www.quzhuanpan.com/source/search.action", RequestMethod.GET);
 //                request.add("q", mKeyView.getText().toString());
 //                requestQueue.add(NOHTTP_WHAT_TEST, request, onResponseListener);
@@ -105,9 +105,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             }
         });
 
+    }
+
+    private void initView() {
+        setContentView(R.layout.activity_main);
         mContentView = findViewById(R.id.fl_content);
         mProgressView = findViewById(R.id.pv_loading);
+        mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
+        tvUrl = (TextView) findViewById(R.id.tv_tips);
+        mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
 
+        String[] arr = new String[]{"生化危机", "霸王别姬", "越狱"};
+        ArrayAdapter<String> tipsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
+        mKeyView.setAdapter(tipsAdapter);
     }
 
     private int parse(String key) {
