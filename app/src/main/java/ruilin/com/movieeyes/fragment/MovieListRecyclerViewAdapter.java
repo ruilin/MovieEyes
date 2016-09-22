@@ -1,6 +1,8 @@
 package ruilin.com.movieeyes.fragment;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +44,12 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
         holder.mIdView.setText(mValues.get(position).tag);
         holder.mContentView.setText(String.format(mContext.getString(R.string.movie_item_author), mValues.get(position).author));
         holder.mDateView.setText(mValues.get(position).date);
+        holder.mContentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doUrl(holder.mItem.authorUrl);
+            }
+        });
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,8 +58,17 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
                     // fragment is attached to one) that an item has been selected.
                     mListener.onListFragmentInteraction(holder.mItem);
                 }
+                doUrl(holder.mItem.url);
             }
         });
+    }
+
+    private void doUrl(String url) {
+        Intent intent = new Intent();
+        intent.setAction("android.intent.action.VIEW");
+        Uri content_url = Uri.parse(url);
+        intent.setData(content_url);
+        mContext.startActivity(intent);
     }
 
     @Override

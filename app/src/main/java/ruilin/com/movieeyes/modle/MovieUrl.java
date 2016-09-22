@@ -9,6 +9,7 @@ public class MovieUrl {
     public String tag;
     public String url;
     public String author;
+    public String authorUrl;
     public String date;
 
     public void print() {
