@@ -80,6 +80,14 @@ public class MovieListFragment extends Fragment {
             mAdapter = new MovieListRecyclerViewAdapter(getContext(), mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
+        contentView.findViewById(R.id.bt_close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null) {
+                    mListener.onMovielistClose();
+                }
+            }
+        });
         return contentView;
     }
 
@@ -126,5 +134,6 @@ public class MovieListFragment extends Fragment {
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
         void onListFragmentInteraction(MovieUrl item);
+        void onMovielistClose();
     }
 }

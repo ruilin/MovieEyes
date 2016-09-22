@@ -171,6 +171,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 //        WebViewActivity.startForUrl(this, item.url);
     }
 
+    @Override
+    public void onMovielistClose() {
+        setFragment(mHotFra);
+    }
+
     /**
      *
      */
