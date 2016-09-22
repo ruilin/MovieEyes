@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list"
-    android:name="ruilin.com.movieeyes.fragment.MovieListFragment"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layoutManager="LinearLayoutManager"
-    tools:context="ruilin.com.movieeyes.fragment.MovieListFragment"
-    tools:listitem="@layout/item_movielist" />
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:textSize="@dimen/text_size_2"
+        android:textColor="@color/text_black"
+        android:text="@string/main_search_result_tips" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:name="ruilin.com.movieeyes.fragment.MovieListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="ruilin.com.movieeyes.fragment.MovieListFragment"
+        tools:listitem="@layout/item_movielist" />
+</LinearLayout>

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,7 @@ import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
+import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
@@ -43,14 +45,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private View mProgressView;
     private View mContentView;
     private LinearLayout mFragmentLayout;
+    private HotFragment mHotFra;
     private MovieListFragment mMovieFra;
-    private TextView tvUrl;
+    private Fragment mCurrentFra;
     private ArrayList<MovieUrl> mMovieList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
+        mMovieList = new ArrayList<>();
 
         Button searchButton = (Button) findViewById(R.id.button_search);
         searchButton.setOnClickListener(new OnClickListener() {
@@ -78,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mContentView = findViewById(R.id.fl_content);
         mProgressView = findViewById(R.id.pv_loading);
         mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
-        tvUrl = (TextView) findViewById(R.id.tv_tips);
         mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
 
         updateKeyTips();
@@ -92,11 +95,27 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             }
         });
 
+        mHotFra = HotFragment.newInstance();
         mMovieFra = MovieListFragment.newInstance();
+        setFragment(mHotFra);
+    }
+
+    public void setFragment(Fragment fra) {
+        if (mCurrentFra == fra) {
+            Log.e(TAG, "fra already seted");
+            return;
+        }
+        mCurrentFra = fra;
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.ll_result, mMovieFra);
+        ft.setCustomAnimations(R.anim.push_bottom_in, R.anim.push_bottom_out);
+        ft.replace(R.id.ll_result, fra);
+//        ft.addToBackStack(null);
         ft.commit();
+    }
+
+    public ArrayList<MovieUrl> getMovieList() {
+        return mMovieList;
     }
 
     private void updateKeyTips() {
@@ -152,11 +171,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 //        WebViewActivity.startForUrl(this, item.url);
     }
 
-    @Override
-    public void onMovieListCreated(ArrayList<MovieUrl> list) {
-        mMovieList = list;
-    }
-
     /**
      *
      */
@@ -184,7 +198,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             switch (resultCode) {
                 case JsoupHelper.RESULT_CODE_SUCCESS:
                     Log.i(TAG, "success!!! "+ mMovieList.size());
-                    mMovieFra.update();
+                    if (mCurrentFra == mMovieFra) {
+                        mMovieFra.update();
+                    } else {
+                        setFragment(mMovieFra);
+                    }
                     SearchKeyHelper.getInstance().add(key);
                     updateKeyTips();
                     break;

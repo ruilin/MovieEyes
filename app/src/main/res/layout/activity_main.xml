@@ -21,15 +21,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_tips"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/main_search_result_tips" />
-
             <LinearLayout
                 android:id="@+id/ll_result"
                 android:layout_width="match_parent"

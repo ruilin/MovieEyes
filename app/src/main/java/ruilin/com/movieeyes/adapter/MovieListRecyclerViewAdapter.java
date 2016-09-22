@@ -1,4 +1,4 @@
-package ruilin.com.movieeyes.fragment;
+package ruilin.com.movieeyes.adapter;
 
 import android.content.Context;
 import android.content.Intent;

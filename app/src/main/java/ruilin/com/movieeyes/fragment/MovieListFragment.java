@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.activity.MainActivity;
+import ruilin.com.movieeyes.adapter.MovieListRecyclerViewAdapter;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
 /**
@@ -61,8 +62,8 @@ public class MovieListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_movielist, container, false);
-
+        View contentView = inflater.inflate(R.layout.fragment_movielist, container, false);
+        View view = contentView.findViewById(R.id.list);
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
@@ -79,17 +80,19 @@ public class MovieListFragment extends Fragment {
             mAdapter = new MovieListRecyclerViewAdapter(getContext(), mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
-        return view;
+        return contentView;
     }
 
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        if (context instanceof MainActivity) {
+            MainActivity main = (MainActivity) context;
+            mItems = main.getMovieList();
+        }
         if (context instanceof OnListFragmentInteractionListener) {
-            mItems = new ArrayList<>(20);
             mListener = (OnListFragmentInteractionListener) context;
-            mListener.onMovieListCreated(mItems);
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");
@@ -120,20 +123,8 @@ public class MovieListFragment extends Fragment {
         }
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
         void onListFragmentInteraction(MovieUrl item);
-
-        void onMovieListCreated(ArrayList<MovieUrl> list);
     }
 }
