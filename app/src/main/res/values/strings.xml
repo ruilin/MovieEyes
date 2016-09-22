@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieEyes</string>
+    <string name="app_name">度盘搜索</string>
 
     <string name="prompt_email">Key</string>
     <string name="action_search">搜索</string>
