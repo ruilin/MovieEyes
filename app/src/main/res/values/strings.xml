@@ -22,4 +22,7 @@
 
     <string name="data_loding_err">出错啦</string>
     <string name="back">返回</string>
+
+    <string name="movie_item_author">分享人：%1$s</string>
+    <string name="movie_item_date">分享日期：%1$s</string>
 </resources>

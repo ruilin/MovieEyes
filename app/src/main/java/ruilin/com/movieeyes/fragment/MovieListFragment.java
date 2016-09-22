@@ -76,7 +76,7 @@ public class MovieListFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            mAdapter = new MovieListRecyclerViewAdapter(mItems, mListener);
+            mAdapter = new MovieListRecyclerViewAdapter(getContext(), mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
         return view;

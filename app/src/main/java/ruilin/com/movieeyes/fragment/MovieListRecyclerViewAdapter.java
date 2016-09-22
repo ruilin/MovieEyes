@@ -1,5 +1,6 @@
 package ruilin.com.movieeyes.fragment;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +21,10 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
 
     private final ArrayList<MovieUrl> mValues;
     private final OnListFragmentInteractionListener mListener;
+    private Context mContext;
 
-    public MovieListRecyclerViewAdapter(ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
+    public MovieListRecyclerViewAdapter(Context context, ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
+        mContext = context;
         mValues = items;
         mListener = listener;
     }
@@ -37,7 +40,7 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).tag);
-        holder.mContentView.setText(mValues.get(position).author);
+        holder.mContentView.setText(String.format(mContext.getString(R.string.movie_item_author), mValues.get(position).author));
         holder.mDateView.setText(mValues.get(position).date);
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
