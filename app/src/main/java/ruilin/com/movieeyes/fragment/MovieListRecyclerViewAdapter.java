@@ -37,8 +37,8 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).tag);
-        holder.mContentView.setText(mValues.get(position).url);
-
+        holder.mContentView.setText(mValues.get(position).author);
+        holder.mDateView.setText(mValues.get(position).date);
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,13 +60,15 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<MovieList
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
+        public final TextView mDateView;
         public MovieUrl mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            mIdView = (TextView) view.findViewById(R.id.tv_name);
+            mContentView = (TextView) view.findViewById(R.id.tv_author);
+            mDateView = (TextView) view.findViewById(R.id.tv_date);
         }
 
         @Override
