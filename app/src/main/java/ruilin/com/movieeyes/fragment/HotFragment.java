@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,13 +25,14 @@ import ruilin.com.movieeyes.widget.TagView.Tag;
 import ruilin.com.movieeyes.widget.TagView.TagListView;
 import ruilin.com.movieeyes.widget.TagView.TagView;
 
-public class HotFragment extends Fragment {
+public class HotFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
     private OnHotKeyClickedListener mListener;
+    private SwipeRefreshLayout mSwipeLayout;
     private TagListView mTagListView;
     private TextView mTitleTv;
     private ArrayList<HotKey> mHotkeyList;
@@ -61,9 +63,15 @@ public class HotFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
+        mSwipeLayout = (SwipeRefreshLayout) contentView.findViewById(R.id.rl_update);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
         mTitleTv = (TextView) contentView.findViewById(R.id.tv_title);
         mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
+
+        mSwipeLayout.setOnRefreshListener(this);
+        mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
+                android.R.color.holo_orange_light, android.R.color.holo_red_light);
+
         new LoadHotKeyTask().execute();
 
         mTagListView.setOnTagClickListener(new TagListView.OnTagClickListener() {
@@ -92,7 +100,13 @@ public class HotFragment extends Fragment {
         mListener = null;
     }
 
+    @Override
+    public void onRefresh() {
+        new LoadHotKeyTask().execute();
+    }
+
     private void showProgress(boolean show) {
+        mSwipeLayout.setRefreshing(show);
     }
 
     public class LoadHotKeyTask extends AsyncTask<Void, Void, Integer> {

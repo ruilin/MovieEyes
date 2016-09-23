@@ -30,10 +30,11 @@ public class MovieListFragment extends Fragment {
     private static final String ARG_KEY = "ARG_KEY";
     private static final String ARG_PAGE = "ARG_PAGE";
     // TODO: Customize parameters
-    private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
     private MovieListRecyclerViewAdapter mAdapter;
     private ArrayList<MovieUrl> mItems;
+    private View mContentView;
+    private View mEmptyView;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -66,6 +67,8 @@ public class MovieListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View contentView = inflater.inflate(R.layout.fragment_movielist, container, false);
+        mContentView = contentView.findViewById(R.id.ll_content);
+        mEmptyView = contentView.findViewById(R.id.tv_empty);
         View view = contentView.findViewById(R.id.list);
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -73,12 +76,7 @@ public class MovieListFragment extends Fragment {
             RecyclerView recyclerView = (RecyclerView) view;
             int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.list_item_space);
             recyclerView.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
-
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
             mAdapter = new MovieListRecyclerViewAdapter(getContext(), mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
@@ -118,6 +116,17 @@ public class MovieListFragment extends Fragment {
     public void update(String key, int page) {
         mAdapter.setInfo(key, page);
         mAdapter.notifyDataSetChanged();
+        showEmpty(mItems.size() == 0);
+    }
+
+    private void showEmpty(boolean isEmpty) {
+        if (isEmpty) {
+            mContentView.setVisibility(View.GONE);
+            mEmptyView.setVisibility(View.VISIBLE);
+        } else {
+            mContentView.setVisibility(View.VISIBLE);
+            mEmptyView.setVisibility(View.GONE);
+        }
     }
 
     public class SpaceItemDecoration extends RecyclerView.ItemDecoration {

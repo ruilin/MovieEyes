@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         LoadUrlTask(String key, int page) {
             this.key = key;
             this.page = page;
-            if (this.page <= 0) this.page = 1;
+            if (this.page <= 0) this.page = JsoupHelper.FIRST_PAGE_NUM;
             mKeyView.setText(key);
         }
 
@@ -245,12 +245,22 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     if (mCurrentFraType == FRAGMENT_TYPE_MOVIE_SEARCH) {
                         mMovieFra.update(key, page);
                     } else {
-                        page = 1;
+                        page = JsoupHelper.FIRST_PAGE_NUM;
                         setFragment(FRAGMENT_TYPE_MOVIE_SEARCH);
                         mMovieFra.update(key, page);
                     }
                     SearchKeyHelper.getInstance().add(key);
                     updateKeyTips();
+                    break;
+                case JsoupHelper.RESULT_CODE_EMPTY:
+                    if (page == JsoupHelper.FIRST_PAGE_NUM) {
+                        ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_empty));
+                    } else {
+                        ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_no_next_page));
+                    }
+                    if (mCurrentFraType == FRAGMENT_TYPE_MOVIE_SEARCH) {
+                        mMovieFra.update(key, page);
+                    }
                     break;
                 case JsoupHelper.RESULT_CODE_TIMEOUT:
                     ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_timeout_tips));

@@ -24,7 +24,8 @@ public class JsoupHelper {
     public static final int RESULT_CODE_SUCCESS = 0;
     public static final int RESULT_CODE_ERROR = 1;
     public static final int RESULT_CODE_TIMEOUT = 2;
-
+    public static final int RESULT_CODE_EMPTY = 3;
+    public static final int FIRST_PAGE_NUM = 1;
 
 //    <div class="search-classic" style="margin-bottom:0px;" id="1892274" typeid="-1">
 //        <h4 class="result4">
@@ -46,9 +47,10 @@ public class JsoupHelper {
         if (movieList == null) {
             throw new IllegalArgumentException("arrayList can not be null!");
         }
-        if (page <= 1) {
+        if (page <= JsoupHelper.FIRST_PAGE_NUM) {
             movieList.clear();
         }
+        int count = 0;
         try {
             Document doc = Jsoup.connect(ZHUAN_PAN_HOST + "/source/search.action").data("q", key).data("currentPage", String.valueOf(page)).get();
 //            Elements links = doc.select("a[href]");
@@ -93,6 +95,7 @@ public class JsoupHelper {
                     }
                     if (movie.url != null && movie.url.startsWith("http")) {
                         movieList.add(movie);
+                        count++;
                     }
                 }
             }
@@ -103,7 +106,9 @@ public class JsoupHelper {
             e.printStackTrace();
             return RESULT_CODE_ERROR;
         }
-
+        if (count == 0) {
+            return RESULT_CODE_EMPTY;
+        }
         return RESULT_CODE_SUCCESS;
     }
 
