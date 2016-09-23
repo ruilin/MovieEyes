@@ -1,5 +1,6 @@
 package ruilin.com.movieeyes.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,7 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
 import ruilin.com.movieeyes.fragment.MovieListFragment.OnListFragmentInteractionListener;
@@ -24,12 +24,12 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     private static final int ITEM_TYPE_FOOTER = 1;
     private final ArrayList<MovieUrl> mValues;
     private final OnListFragmentInteractionListener mListener;
-    private Context mContext;
+    private Activity mActivity;
     private String mKey;
     private int mPage;
 
-    public MovieListRecyclerViewAdapter(Context context, ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
-        mContext = context;
+    public MovieListRecyclerViewAdapter(Activity context, ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
+        mActivity = context;
         mValues = items;
         mListener = listener;
     }
@@ -58,12 +58,12 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             final ContentViewHolder holder = (ContentViewHolder)viewHolder;
             holder.mItem = mValues.get(position);
             holder.mIdView.setText(mValues.get(position).tag);
-            holder.mContentView.setText(String.format(mContext.getString(R.string.movie_item_author), mValues.get(position).author));
+            holder.mContentView.setText(String.format(mActivity.getString(R.string.movie_item_author), mValues.get(position).author));
             holder.mDateView.setText(mValues.get(position).date);
             holder.mContentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MainActivity.doUrl(mContext, holder.mItem.authorUrl);
+                    MainActivity.doUrl(mActivity, holder.mItem.authorUrl);
                 }
             });
             holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -74,12 +74,12 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         // fragment is attached to one) that an item has been selected.
                         mListener.onListFragmentInteraction(holder.mItem);
                     }
-                    MainActivity.doUrl(mContext, holder.mItem.url);
+                    MainActivity.doUrl(mActivity, holder.mItem.url);
                 }
             });
         } else {
             final FooterViewHolder holder = (FooterViewHolder)viewHolder;
-            holder.mTvName.setText(mContext.getString(R.string.movie_next_page));
+            holder.mTvName.setText(mActivity.getString(R.string.movie_next_page));
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

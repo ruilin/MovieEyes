@@ -36,6 +36,7 @@ public class HotFragment extends Fragment implements SwipeRefreshLayout.OnRefres
     private TagListView mTagListView;
     private TextView mTitleTv;
     private ArrayList<HotKey> mHotkeyList;
+    private boolean isFirst = true;
 
     public HotFragment() {
     }
@@ -62,6 +63,7 @@ public class HotFragment extends Fragment implements SwipeRefreshLayout.OnRefres
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        isFirst = true;
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
         mSwipeLayout = (SwipeRefreshLayout) contentView.findViewById(R.id.rl_update);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
@@ -132,6 +134,11 @@ public class HotFragment extends Fragment implements SwipeRefreshLayout.OnRefres
                 case JsoupHelper.RESULT_CODE_SUCCESS:
                     mTagListView.setTags(mHotkeyList);
                     mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
+                    if (!isFirst) {
+                        ToastHelper.show(getActivity(), getResources().getString(R.string.hot_search_load_finish));
+                    } else {
+                        isFirst = false;
+                    }
                     break;
                 case JsoupHelper.RESULT_CODE_TIMEOUT:
                     ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_timeout_tips));

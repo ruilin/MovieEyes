@@ -3,6 +3,7 @@ package ruilin.com.movieeyes.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,6 +13,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -71,8 +74,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.main_search_null_tips), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //强制隐藏键盘
                 new LoadUrlTask(key, 1).execute();
             }
         });
@@ -91,15 +92,33 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mKeyView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                /* 关闭键盘 */
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, InputMethodManager.HIDE_NOT_ALWAYS);
             }
         });
+        mKeyView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (mKeyView.getThreshold() > 10) {
+                    mKeyView.setThreshold(1);
+                }
+            }
+        });
         mHotFra = HotFragment.newInstance();
         mMovieFra = MovieListFragment.newInstance();
         setFragment(FRAGMENT_TYPE_HOT_KEY);
+    }
+
+    public static void closeImm(Activity activity) {
+        /* 关闭键盘 */
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
 
     public void setFragment(int type) {
@@ -136,16 +155,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mKeyView.setAdapter(adapter);
     }
 
-    public static void doUrl(Context context, String url) {
+    public static void doUrl(Activity activity, String url) {
+        closeImm(activity);
         try {
             Intent intent = new Intent();
             intent.setAction("android.intent.action.VIEW");
             Uri content_url = Uri.parse(url);
             intent.setData(content_url);
-            context.startActivity(intent);
+            activity.startActivity(intent);
         } catch (Exception e) {
             Log.e(TAG, "url>"+url);
-            ToastHelper.show(context, "链接失效");
+            ToastHelper.show(activity, "链接失效");
             e.printStackTrace();
         }
     }
@@ -199,6 +219,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     @Override
     public void onMovielistClose() {
         setFragment(FRAGMENT_TYPE_HOT_KEY);
+        closeImm(this);
     }
 
     @Override
@@ -211,6 +232,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         new LoadUrlTask(key.getKey(), 1).execute();
     }
 
+    public void setKeyToEditText(String key) {
+        mKeyView.setText(key);
+        mKeyView.setThreshold(99);
+    }
     /**
      *
      */
@@ -222,13 +247,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             this.key = key;
             this.page = page;
             if (this.page <= 0) this.page = JsoupHelper.FIRST_PAGE_NUM;
-            mKeyView.setText(key);
+            setKeyToEditText(key);
         }
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             showProgress(true);
+            closeImm(MainActivity.this);
         }
 
         @Override

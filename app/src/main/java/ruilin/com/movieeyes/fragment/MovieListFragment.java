@@ -77,7 +77,7 @@ public class MovieListFragment extends Fragment {
             int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.list_item_space);
             recyclerView.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            mAdapter = new MovieListRecyclerViewAdapter(getContext(), mItems, mListener);
+            mAdapter = new MovieListRecyclerViewAdapter(getActivity(), mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
         contentView.findViewById(R.id.bt_close).setOnClickListener(new View.OnClickListener() {
