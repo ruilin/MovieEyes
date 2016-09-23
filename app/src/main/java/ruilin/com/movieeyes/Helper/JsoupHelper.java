@@ -10,7 +10,10 @@ import org.jsoup.select.Elements;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
+
+import static android.media.CamcorderProfile.get;
 
 /**
  * Created by Administrator on 2016/9/22.
@@ -39,7 +42,10 @@ public class JsoupHelper {
 //        <div class="result">提示：<span>来自搜索引擎.</span> |分享时间：2015-09-08 15:35</div>
 //    </div>
 
-    public static int parseHtml(String key, ArrayList<MovieUrl> movieList) {
+    public static int parseHtmlForSearch(String key, ArrayList<MovieUrl> movieList) {
+        if (movieList == null) {
+            throw new IllegalArgumentException("arrayList can not be null!");
+        }
         movieList.clear();
         try {
             Document doc = Jsoup.connect(ZHUAN_PAN_HOST + "/source/search.action").data("q", key).get();
@@ -106,5 +112,43 @@ public class JsoupHelper {
             }
         }
         return "";
+    }
+
+    public static int parseHtmlForHotKey(ArrayList<HotKey> keyList) {
+        if (keyList == null) {
+            throw new IllegalArgumentException("arrayList can not be null!");
+        }
+        keyList.clear();
+        try {
+            Document doc = Jsoup.connect(ZHUAN_PAN_HOST).get();
+            Elements topElents = doc.select("div[class=hot]");
+            if (topElents.size() > 0) {
+                Elements ulEles = topElents.get(0).getElementsByTag("ul");
+                if (ulEles.size() > 0) {
+                    Elements liEles = ulEles.get(0).getElementsByTag("li");
+                    int index = 0;
+                    for (Element element : liEles) {
+                        Elements eles = element.select("a[href]");
+                        if (eles.size() > 0) {
+                            Element ele = eles.get(0);
+                            HotKey key = new HotKey();
+                            key.setKey(ele.text());
+                            key.setUrl(ZHUAN_PAN_HOST + ele.attr("href"));
+                            key.setId(index);
+                            keyList.add(key);
+                            index++;
+                        }
+                    }
+                }
+            }
+
+        } catch (SocketTimeoutException e) {
+            e.printStackTrace();
+            return RESULT_CODE_TIMEOUT;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return RESULT_CODE_ERROR;
+        }
+        return RESULT_CODE_SUCCESS;
     }
 }

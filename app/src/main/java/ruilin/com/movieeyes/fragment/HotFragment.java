@@ -1,18 +1,26 @@
 package ruilin.com.movieeyes.fragment;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ruilin.com.movieeyes.Helper.JsoupHelper;
+import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.activity.MainActivity;
+import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.widget.TagView.Tag;
 import ruilin.com.movieeyes.widget.TagView.TagListView;
+import ruilin.com.movieeyes.widget.TagView.TagView;
 
 public class HotFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -20,12 +28,9 @@ public class HotFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
-
-    private final String[] titles = { "安全必备", "音乐", "父母学", "上班族必备", "音乐", "父母学", "上班族必备",
-            "360手机卫士", "QQ","输入法", "微信", "最美应用", "AndevUI", "蘑菇街" };
-    private final List<Tag> mTags = new ArrayList<>();
-    TagListView mTagListView;
-
+    private OnHotKeyClickedListener mListener;
+    private TagListView mTagListView;
+    private ArrayList<HotKey> mHotkeyList;
 
     public HotFragment() {
     }
@@ -46,36 +51,85 @@ public class HotFragment extends Fragment {
 //            mParam1 = getArguments().getString(ARG_PARAM1);
 //            mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        setUpData();
     }
 
-    private void setUpData() {
-        mTags.clear();
-        for (int i = 0; i < titles.length; i++) {
-            Tag tag = new Tag();
-            tag.setId(i);
-            tag.setChecked(true);
-            tag.setTitle(titles[i]);
-            mTags.add(tag);
-        }
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
-        mTagListView.setTags(mTags);
+        mHotkeyList = new ArrayList<>();
+        new LoadHotKeyTask().execute();
+
+        mTagListView.setOnTagClickListener(new TagListView.OnTagClickListener() {
+            @Override
+            public void onTagClick(TagView tagView, Tag tag) {
+                HotKey key = (HotKey)tag;
+                if (mListener != null) {
+                    mListener.onHotKeyClicked(key);
+                }
+            }
+        });
         return contentView;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        if (context instanceof OnHotKeyClickedListener) {
+            mListener = (OnHotKeyClickedListener)context;
+        }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
+        mListener = null;
     }
 
+    private void showProgress(boolean show) {
+    }
+
+    public class LoadHotKeyTask extends AsyncTask<Void, Void, Integer> {
+
+        LoadHotKeyTask() {
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            showProgress(true);
+        }
+
+        @Override
+        protected Integer doInBackground(Void... params) {
+            return JsoupHelper.parseHtmlForHotKey(mHotkeyList);
+        }
+
+        @Override
+        protected void onPostExecute(final Integer resultCode) {
+            showProgress(false);
+            switch (resultCode) {
+                case JsoupHelper.RESULT_CODE_SUCCESS:
+                    mTagListView.setTags(mHotkeyList);
+                    break;
+                case JsoupHelper.RESULT_CODE_TIMEOUT:
+                    Toast.makeText(getActivity(), getResources().getString(R.string.main_net_timeout_tips), Toast.LENGTH_SHORT).show();
+                    break;
+                case JsoupHelper.RESULT_CODE_ERROR:
+                default:
+                    Toast.makeText(getActivity(), getResources().getString(R.string.main_net_error_tips), Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+            showProgress(false);
+        }
+    }
+
+    public interface OnHotKeyClickedListener {
+        public void onHotKeyClicked(HotKey key);
+    }
 }

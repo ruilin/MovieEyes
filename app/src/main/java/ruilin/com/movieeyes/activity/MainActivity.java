@@ -4,6 +4,8 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,16 +26,18 @@ import java.util.ArrayList;
 
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
+import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
+import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
 /**
  * @author Ruilin
  */
-public class MainActivity extends AppCompatActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
     private final static int FRAGMENT_TYPE_HOT_KEY = 1;
@@ -132,6 +136,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mKeyView.setAdapter(adapter);
     }
 
+    public static void doUrl(Context context, String url) {
+        try {
+            Intent intent = new Intent();
+            intent.setAction("android.intent.action.VIEW");
+            Uri content_url = Uri.parse(url);
+            intent.setData(content_url);
+            context.startActivity(intent);
+        } catch (Exception e) {
+            Log.e(TAG, "url>"+url);
+            ToastHelper.show(context, "链接失效");
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Shows the progress UI and hides the login form.
      */
@@ -183,6 +201,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         setFragment(FRAGMENT_TYPE_HOT_KEY);
     }
 
+    @Override
+    public void onHotKeyClicked(HotKey key) {
+        new LoadUrlTask(key.getKey()).execute();
+    }
+
     /**
      *
      */
@@ -201,7 +224,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         @Override
         protected Integer doInBackground(Void... params) {
-            return JsoupHelper.parseHtml(key, mMovieList);
+            return JsoupHelper.parseHtmlForSearch(key, mMovieList);
         }
 
         @Override
@@ -219,11 +242,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     updateKeyTips();
                     break;
                 case JsoupHelper.RESULT_CODE_TIMEOUT:
-                    Toast.makeText(MainActivity.this, getResources().getString(R.string.main_net_timeout_tips), Toast.LENGTH_SHORT).show();
+                    ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_timeout_tips));
                     break;
                 case JsoupHelper.RESULT_CODE_ERROR:
                 default:
-                    Toast.makeText(MainActivity.this, getResources().getString(R.string.main_net_error_tips), Toast.LENGTH_SHORT).show();
+                    ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_error_tips));
                     break;
             }
         }
