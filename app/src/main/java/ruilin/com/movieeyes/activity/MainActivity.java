@@ -16,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
@@ -24,10 +26,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.Helper.JsoupHelper;
+import ruilin.com.movieeyes.Helper.PreferenceHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
@@ -113,6 +117,31 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mHotFra = HotFragment.newInstance();
         mMovieFra = MovieListFragment.newInstance();
         setFragment(FRAGMENT_TYPE_HOT_KEY);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                ToastHelper.show(this, "settings");
+                break;
+            case R.id.action_clear_record:
+                /* 清除记录 */
+                ToastHelper.show(this, getResources().getString(R.string.setting_clear_finish));
+                SearchKeyHelper.getInstance().clear();
+                updateKeyTips();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public static void closeImm(Activity activity) {
