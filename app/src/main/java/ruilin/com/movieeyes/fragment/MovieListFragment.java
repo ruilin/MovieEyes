@@ -27,7 +27,8 @@ import ruilin.com.movieeyes.modle.MovieUrl;
 public class MovieListFragment extends Fragment {
 
     // TODO: Customize parameter argument names
-    private static final String ARG_MOVIES = "ARG_MOVIES";
+    private static final String ARG_KEY = "ARG_KEY";
+    private static final String ARG_PAGE = "ARG_PAGE";
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
@@ -46,7 +47,8 @@ public class MovieListFragment extends Fragment {
     public static MovieListFragment newInstance() {
         MovieListFragment fragment = new MovieListFragment();
 //        Bundle args = new Bundle();
-//        args.putParcelableArrayList(ARG_MOVIES, mItems);
+//        args.putString(ARG_KEY, key);
+//        args.putInt(ARG_PAGE, page);
 //        fragment.setArguments(args);
         return fragment;
     }
@@ -54,9 +56,10 @@ public class MovieListFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-//            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
+//        if (getArguments() != null) {
+//            mKey = getArguments().getString(ARG_KEY);
+//            mPage = getArguments().getInt(ARG_PAGE);
+//        }
     }
 
     @Override
@@ -68,7 +71,6 @@ public class MovieListFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-
             int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.list_item_space);
             recyclerView.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
 
@@ -113,7 +115,8 @@ public class MovieListFragment extends Fragment {
         mListener = null;
     }
 
-    public void update() {
+    public void update(String key, int page) {
+        mAdapter.setInfo(key, page);
         mAdapter.notifyDataSetChanged();
     }
 
@@ -135,5 +138,6 @@ public class MovieListFragment extends Fragment {
         // TODO: Update argument type and name
         void onListFragmentInteraction(MovieUrl item);
         void onMovielistClose();
+        void onNextPage(String key, int currentPage);
     }
 }

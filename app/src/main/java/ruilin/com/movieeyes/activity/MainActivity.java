@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 }
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //强制隐藏键盘
-                new LoadUrlTask(key).execute();
+                new LoadUrlTask(key, 1).execute();
             }
         });
 
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 break;
         }
 //        ft.addToBackStack(null);
-        ft.commit();
+        ft.commitNow();
     }
 
     public ArrayList<MovieUrl> getMovieList() {
@@ -202,18 +202,26 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     }
 
     @Override
+    public void onNextPage(String key, int currentPage) {
+        new LoadUrlTask(key, currentPage + 1).execute();
+    }
+
+    @Override
     public void onHotKeyClicked(HotKey key) {
-        new LoadUrlTask(key.getKey()).execute();
+        new LoadUrlTask(key.getKey(), 1).execute();
     }
 
     /**
      *
      */
     public class LoadUrlTask extends AsyncTask<Void, Void, Integer> {
-        String key;
+        private String key;
+        private int page;
 
-        LoadUrlTask(String key) {
+        LoadUrlTask(String key, int page) {
             this.key = key;
+            this.page = page;
+            if (this.page <= 0) this.page = 1;
             mKeyView.setText(key);
         }
 
@@ -225,7 +233,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         @Override
         protected Integer doInBackground(Void... params) {
-            return JsoupHelper.parseHtmlForSearch(key, mMovieList);
+            return JsoupHelper.parseHtmlForSearch(key, page, mMovieList);
         }
 
         @Override
@@ -235,9 +243,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 case JsoupHelper.RESULT_CODE_SUCCESS:
                     Log.i(TAG, "success!!! "+ mMovieList.size());
                     if (mCurrentFraType == FRAGMENT_TYPE_MOVIE_SEARCH) {
-                        mMovieFra.update();
+                        mMovieFra.update(key, page);
                     } else {
+                        page = 1;
                         setFragment(FRAGMENT_TYPE_MOVIE_SEARCH);
+                        mMovieFra.update(key, page);
                     }
                     SearchKeyHelper.getInstance().add(key);
                     updateKeyTips();

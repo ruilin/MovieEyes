@@ -42,13 +42,15 @@ public class JsoupHelper {
 //        <div class="result">提示：<span>来自搜索引擎.</span> |分享时间：2015-09-08 15:35</div>
 //    </div>
 
-    public static int parseHtmlForSearch(String key, ArrayList<MovieUrl> movieList) {
+    public static int parseHtmlForSearch(String key, int page, ArrayList<MovieUrl> movieList) {
         if (movieList == null) {
             throw new IllegalArgumentException("arrayList can not be null!");
         }
-        movieList.clear();
+        if (page <= 1) {
+            movieList.clear();
+        }
         try {
-            Document doc = Jsoup.connect(ZHUAN_PAN_HOST + "/source/search.action").data("q", key).get();
+            Document doc = Jsoup.connect(ZHUAN_PAN_HOST + "/source/search.action").data("q", key).data("currentPage", String.valueOf(page)).get();
 //            Elements links = doc.select("a[href]");
             Elements links = doc.select("div[class=search-classic]");
             //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements

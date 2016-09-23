@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">度盘搜索</string>
 
-    <string name="prompt_email">关键字</string>
-    <string name="action_search">搜 索</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -10,6 +8,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!--主页 -->
+    <string name="prompt_email">关键字</string>
+    <string name="action_search">搜 索</string>
     <string name="main_search_result_tips">搜索结果：</string>
     <string name="main_net_timeout_tips">连接超时</string>
     <string name="main_net_error_tips">连接失败,请检查网络</string>
@@ -26,8 +27,10 @@
     <string name="data_loding_err">出错啦</string>
     <string name="back">返回</string>
 
+    <!-- 搜索列表 -->
     <string name="movie_item_author">分享人：%1$s</string>
     <string name="movie_item_date">分享日期：%1$s</string>
+    <string name="movie_next_page">下一页</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
