@@ -83,7 +83,6 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ToastHelper.show(mContext, "下一页");
                     if (null != mListener) {
                         mListener.onNextPage(mKey, mPage);
                     }

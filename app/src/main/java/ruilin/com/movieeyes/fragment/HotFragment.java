@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
+import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
 import ruilin.com.movieeyes.modle.HotKey;
@@ -30,6 +32,7 @@ public class HotFragment extends Fragment {
     private String mParam2;
     private OnHotKeyClickedListener mListener;
     private TagListView mTagListView;
+    private TextView mTitleTv;
     private ArrayList<HotKey> mHotkeyList;
 
     public HotFragment() {
@@ -47,6 +50,7 @@ public class HotFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mHotkeyList = new ArrayList<>();
         if (getArguments() != null) {
 //            mParam1 = getArguments().getString(ARG_PARAM1);
 //            mParam2 = getArguments().getString(ARG_PARAM2);
@@ -58,7 +62,8 @@ public class HotFragment extends Fragment {
                              Bundle savedInstanceState) {
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
-        mHotkeyList = new ArrayList<>();
+        mTitleTv = (TextView) contentView.findViewById(R.id.tv_title);
+        mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
         new LoadHotKeyTask().execute();
 
         mTagListView.setOnTagClickListener(new TagListView.OnTagClickListener() {
@@ -112,13 +117,14 @@ public class HotFragment extends Fragment {
             switch (resultCode) {
                 case JsoupHelper.RESULT_CODE_SUCCESS:
                     mTagListView.setTags(mHotkeyList);
+                    mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
                     break;
                 case JsoupHelper.RESULT_CODE_TIMEOUT:
-                    Toast.makeText(getActivity(), getResources().getString(R.string.main_net_timeout_tips), Toast.LENGTH_SHORT).show();
+                    ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_timeout_tips));
                     break;
                 case JsoupHelper.RESULT_CODE_ERROR:
                 default:
-                    Toast.makeText(getActivity(), getResources().getString(R.string.main_net_error_tips), Toast.LENGTH_SHORT).show();
+                    ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_error_tips));
                     break;
             }
         }

@@ -17,7 +17,7 @@
     <string name="main_search_null_tips">请输入关键字搜索</string>
 
     <!-- 热门搜索 -->
-    <string name="hot_search_key">热门标签</string>
+    <string name="hot_search_key">热门标签(%1$d)</string>
     <string name="hot_search_tips">一键获取海量的免费资源</string>
 
     <string name="title_activity_player">PlayerActivity</string>

@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/selector_movie_item"
     android:orientation="vertical"
+    android:layout_marginBottom="10dp"
     android:padding="10dp">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="下一页"
+        android:text="@string/movie_next_page"
         android:textColor="@color/text_gray"
         android:textSize="@dimen/text_size_4"
         android:textAppearance="?attr/textAppearanceListItem" />
