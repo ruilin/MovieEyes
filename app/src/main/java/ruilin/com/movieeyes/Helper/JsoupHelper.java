@@ -89,7 +89,9 @@ public class JsoupHelper {
                             movie.print();
                         }
                     }
-                    movieList.add(movie);
+                    if (movie.url != null && movie.url.startsWith("http")) {
+                        movieList.add(movie);
+                    }
                 }
             }
         } catch (SocketTimeoutException e) {

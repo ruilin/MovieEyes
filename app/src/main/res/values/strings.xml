@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">度盘搜索</string>
 
-    <string name="prompt_email">Key</string>
-    <string name="action_search">搜索</string>
+    <string name="prompt_email">关键字</string>
+    <string name="action_search">搜 索</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>

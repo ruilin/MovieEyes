@@ -214,6 +214,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         LoadUrlTask(String key) {
             this.key = key;
+            mKeyView.setText(key);
         }
 
         @Override
