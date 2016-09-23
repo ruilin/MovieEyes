@@ -21,9 +21,9 @@ public class HotFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private final String[] titles = { "安全必备", "音乐", "父母学", "上班族必备",
+    private final String[] titles = { "安全必备", "音乐", "父母学", "上班族必备", "音乐", "父母学", "上班族必备",
             "360手机卫士", "QQ","输入法", "微信", "最美应用", "AndevUI", "蘑菇街" };
-    private final List<Tag> mTags = new ArrayList<Tag>();
+    private final List<Tag> mTags = new ArrayList<>();
     TagListView mTagListView;
 
 
@@ -46,10 +46,12 @@ public class HotFragment extends Fragment {
 //            mParam1 = getArguments().getString(ARG_PARAM1);
 //            mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        setUpData();
     }
 
     private void setUpData() {
-        for (int i = 0; i < 10; i++) {
+        mTags.clear();
+        for (int i = 0; i < titles.length; i++) {
             Tag tag = new Tag();
             tag.setId(i);
             tag.setChecked(true);
@@ -62,7 +64,6 @@ public class HotFragment extends Fragment {
                              Bundle savedInstanceState) {
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
-        setUpData();
         mTagListView.setTags(mTags);
         return contentView;
     }

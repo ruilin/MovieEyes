@@ -4,12 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +18,6 @@ import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -39,6 +35,8 @@ import ruilin.com.movieeyes.modle.MovieUrl;
  */
 public class MainActivity extends AppCompatActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener {
     private final static String TAG = MainActivity.class.getSimpleName();
+    private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
+    private final static int FRAGMENT_TYPE_HOT_KEY = 1;
 
     // UI references.
     private AutoCompleteTextView mKeyView;
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private LinearLayout mFragmentLayout;
     private HotFragment mHotFra;
     private MovieListFragment mMovieFra;
-    private Fragment mCurrentFra;
+    private int mCurrentFraType;
     private ArrayList<MovieUrl> mMovieList;
 
     @Override
@@ -97,19 +95,28 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         mHotFra = HotFragment.newInstance();
         mMovieFra = MovieListFragment.newInstance();
-        setFragment(mHotFra);
+        setFragment(FRAGMENT_TYPE_HOT_KEY);
     }
 
-    public void setFragment(Fragment fra) {
-        if (mCurrentFra == fra) {
+    public void setFragment(int type) {
+        if (mCurrentFraType == type) {
             Log.e(TAG, "fra already seted");
             return;
         }
-        mCurrentFra = fra;
+        mCurrentFraType = type;
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.setCustomAnimations(R.anim.push_bottom_in, R.anim.push_bottom_out);
-        ft.replace(R.id.ll_result, fra);
+        switch (type) {
+            case FRAGMENT_TYPE_MOVIE_SEARCH:
+                ft.setCustomAnimations(R.anim.push_bottom_in, R.anim.push_top_out);
+                ft.replace(R.id.ll_result, mMovieFra);
+                break;
+            case FRAGMENT_TYPE_HOT_KEY:
+            default:
+                ft.setCustomAnimations(R.anim.push_top_in, R.anim.push_bottom_out);
+                ft.replace(R.id.ll_result, mHotFra);
+                break;
+        }
 //        ft.addToBackStack(null);
         ft.commit();
     }
@@ -173,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     @Override
     public void onMovielistClose() {
-        setFragment(mHotFra);
+        setFragment(FRAGMENT_TYPE_HOT_KEY);
     }
 
     /**
@@ -203,10 +210,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             switch (resultCode) {
                 case JsoupHelper.RESULT_CODE_SUCCESS:
                     Log.i(TAG, "success!!! "+ mMovieList.size());
-                    if (mCurrentFra == mMovieFra) {
+                    if (mCurrentFraType == FRAGMENT_TYPE_MOVIE_SEARCH) {
                         mMovieFra.update();
                     } else {
-                        setFragment(mMovieFra);
+                        setFragment(FRAGMENT_TYPE_MOVIE_SEARCH);
                     }
                     SearchKeyHelper.getInstance().add(key);
                     updateKeyTips();
