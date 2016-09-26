@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">度盘搜索</string>
 
+    <!-- Admob -->
+    <!--应用 ID：ca-app-pub-7146181069155443~2564899613-->
+    <!--广告单元 ID：ca-app-pub-7146181069155443/5518366011-->
+    <string name="banner_ad_unit_id">ca-app-pub-7146181069155443/5518366011</string>
+
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
