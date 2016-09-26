@@ -9,8 +9,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +74,8 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
         mSwipeLayout = (SwipeRefreshLayout) contentView.findViewById(R.id.rl_update);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
+        final SwipeRefreshLayout srLayout = (SwipeRefreshLayout) contentView.findViewById(R.id.rl_update);
+        final ScrollView scrollView = (ScrollView) contentView.findViewById(R.id.sv_content);
         mTitleTv = (TextView) contentView.findViewById(R.id.tv_title);
         mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
 
@@ -86,6 +94,24 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
                 }
             }
         });
+
+        AdView mAdView = (AdView) contentView.findViewById(R.id.adView);
+//        mAdView.setAdUnitId(getString(R.string.banner_ad_unit_id));
+//        mAdView.setAdSize(AdSize.WIDE_SKYSCRAPER);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        /* 解决scrollview 与 SwipeRefreshLayout 滚动冲突 */
+        if (scrollView != null) {
+            scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+                @Override
+                public void onScrollChanged() {
+                    if (srLayout != null) {
+                        srLayout.setEnabled(scrollView.getScrollY() == 0);
+                    }
+                }
+            });
+        }
         return contentView;
     }
 

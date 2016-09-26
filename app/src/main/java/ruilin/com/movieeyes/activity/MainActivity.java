@@ -122,11 +122,6 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
         mHotFra = HotFragment.newInstance();
         mMovieFra = MovieListFragment.newInstance();
         setFragment(FRAGMENT_TYPE_HOT_KEY);
-
-
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
     }
 
     @Override
