@@ -40,6 +40,12 @@
     <string name="movie_item_date">分享日期：%1$s</string>
     <string name="movie_next_page">下一页</string>
 
+    <!-- 提示 -->
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_title_delete">删除记录</string>
+    <string name="dialog_message_delete">确定删除所有搜索记录吗？</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

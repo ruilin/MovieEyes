@@ -13,10 +13,11 @@ import java.util.ArrayList;
 import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
+import static android.R.attr.id;
 import static android.media.CamcorderProfile.get;
 
 /**
- * Created by Administrator on 2016/9/22.
+ * Created by Ruilin on 2016/9/22.
  */
 public class JsoupHelper {
     private final static String BAIDU_PAN_HOST = "pan.baidu";
@@ -26,23 +27,23 @@ public class JsoupHelper {
     public static final int RESULT_CODE_TIMEOUT = 2;
     public static final int RESULT_CODE_EMPTY = 3;
     public static final int FIRST_PAGE_NUM = 1;
-
-//    <div class="search-classic" style="margin-bottom:0px;" id="1892274" typeid="-1">
-//        <h4 class="result4">
-//          <a title="<span style='color:red'>大话西游</span>三" id="607871276" data="2416252861" data1="1ntF0mEl" style="color:#3244ea" class="source-title" href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank"><span class=""><span style="color:red">大话西游</span>三</span>&nbsp;&nbsp;
-//          </a>
-//        </h4>
-//        <div class="result">文件链接：<a title="<span style='color:red'>大话西游</span>三" class="source-title2" href="https://pan.baidu.com/share/link?uk=2416252861&amp;shareid=607871276" target="_blank"><span style="color:red">大话西游</span>三&nbsp;&nbsp;</a>| 所在位置：<span style="color:#3244ea">度盘&nbsp;&nbsp;</span>|分享者：
-//            <a href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank">
-//                495211374
-//            </a>
-//            <a href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank" style="color:#62636B;">
-//                他的贡献
-//            </a>
-//        </div>
-//        <div class="result">提示：<span>来自搜索引擎.</span> |分享时间：2015-09-08 15:35</div>
-//    </div>
-
+/*
+    <div class="search-classic" style="margin-bottom:0px;" id="1892274" typeid="-1">
+        <h4 class="result4">
+          <a title="<span style='color:red'>大话西游</span>三" id="607871276" data="2416252861" data1="1ntF0mEl" style="color:#3244ea" class="source-title" href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank"><span class=""><span style="color:red">大话西游</span>三</span>&nbsp;&nbsp;
+          </a>
+        </h4>
+        <div class="result">文件链接：<a title="<span style='color:red'>大话西游</span>三" class="source-title2" href="https://pan.baidu.com/share/link?uk=2416252861&amp;shareid=607871276" target="_blank"><span style="color:red">大话西游</span>三&nbsp;&nbsp;</a>| 所在位置：<span style="color:#3244ea">度盘&nbsp;&nbsp;</span>|分享者：
+            <a href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank">
+                495211374
+            </a>
+            <a href="https://pan.baidu.com/share/home?uk=2416252861" target="_blank" style="color:#62636B;">
+                他的贡献
+            </a>
+        </div>
+        <div class="result">提示：<span>来自搜索引擎.</span> |分享时间：2015-09-08 15:35</div>
+    </div>
+*/
     public static int parseHtmlForSearch(String key, int page, ArrayList<MovieUrl> movieList) {
         if (movieList == null) {
             throw new IllegalArgumentException("arrayList can not be null!");
@@ -64,39 +65,37 @@ public class JsoupHelper {
                 Elements urlEle = authorEle.select("a[href]");
                 String url = urlEle.attr("href");
                 String tag = authorEle.text();
-                if (tag.contains(key)) {
-                    MovieUrl movie = new MovieUrl();
-                    movie.tag = tag;
-                    movie.url = "";
-                    if (url.contains(BAIDU_PAN_HOST)) {
-                        movie.url = url;
-                    } else {
+                MovieUrl movie = new MovieUrl();
+                movie.tag = tag;
+                movie.url = "";
+                if (url.contains(BAIDU_PAN_HOST)) {
+                    movie.url = url;
+                } else {
                         /* 载入详情页 */
-                        Document subHtml = Jsoup.connect(ZHUAN_PAN_HOST + url).get();
-                        Elements subLinks = subHtml.select("li[class=list-group-item]");
-                        final String TAG_BAIDU_URL = "下载链接";
-                        final String TAG_AUTHOR = "分享人：";
-                        final String TAG_DATE = "分享日期：";
-                        final String TAG_AUTHOR_URL = "分享人贡献";
+                    Document subHtml = Jsoup.connect(ZHUAN_PAN_HOST + url).get();
+                    Elements subLinks = subHtml.select("li[class=list-group-item]");
+                    final String TAG_BAIDU_URL = "下载链接";
+                    final String TAG_AUTHOR = "分享人：";
+                    final String TAG_DATE = "分享日期：";
+                    final String TAG_AUTHOR_URL = "分享人贡献";
 
-                        for (Element subLink : subLinks) {
-                            String text = subLink.text();
-                            if (text.contains(TAG_BAIDU_URL)) {
-                                movie.url = getBaiduPanUrl(subLink);
-                            } else if (text.startsWith(TAG_AUTHOR)) {
-                                movie.author = text.substring(TAG_AUTHOR.length());
-                            } else if (text.startsWith(TAG_AUTHOR_URL)) {
-                                movie.authorUrl = getBaiduPanUrl(subLink);
-                            } else if (text.startsWith(TAG_DATE)) {
-                                movie.date = text.substring(TAG_DATE.length());
-                            }
-                            movie.print();
+                    for (Element subLink : subLinks) {
+                        String text = subLink.text();
+                        if (text.contains(TAG_BAIDU_URL)) {
+                            movie.url = getBaiduPanUrl(subLink);
+                        } else if (text.startsWith(TAG_AUTHOR)) {
+                            movie.author = text.substring(TAG_AUTHOR.length());
+                        } else if (text.startsWith(TAG_AUTHOR_URL)) {
+                            movie.authorUrl = getBaiduPanUrl(subLink);
+                        } else if (text.startsWith(TAG_DATE)) {
+                            movie.date = text.substring(TAG_DATE.length());
                         }
+                        movie.print();
                     }
-                    if (movie.url != null && movie.url.startsWith("http")) {
-                        movieList.add(movie);
-                        count++;
-                    }
+                }
+                if (movie.url != null && movie.url.startsWith("http")) {
+                    movieList.add(movie);
+                    count++;
                 }
             }
         } catch (SocketTimeoutException e) {

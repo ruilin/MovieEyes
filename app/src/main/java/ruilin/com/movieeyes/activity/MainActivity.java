@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -26,12 +27,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
-import ruilin.com.movieeyes.Helper.PreferenceHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
@@ -123,7 +124,24 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+        setIconsVisible(menu, true);
         return true;
+    }
+
+    private void setIconsVisible(Menu menu, boolean flag) {
+        //判断menu是否为空
+        if(menu != null) {
+            try {
+                //如果不为空,就反射拿到menu的setOptionalIconsVisible方法
+                Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                //暴力访问该方法
+                method.setAccessible(true);
+                //调用该方法显示icon
+                method.invoke(menu, flag);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -133,10 +151,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 ToastHelper.show(this, "settings");
                 break;
             case R.id.action_clear_record:
-                /* 清除记录 */
-                ToastHelper.show(this, getResources().getString(R.string.setting_clear_finish));
-                SearchKeyHelper.getInstance().clear();
-                updateKeyTips();
+                Resources res = getResources();
+                DialogHelper.show(this, res.getString(R.string.dialog_title_delete), res.getString(R.string.dialog_message_delete),
+                        new DialogHelper.OnClickListener() {
+                    @Override
+                    public void onConfirm() {
+                        /* 清除记录 */
+                        ToastHelper.show(MainActivity.this, getResources().getString(R.string.setting_clear_finish));
+                        SearchKeyHelper.getInstance().clear();
+                        updateKeyTips();
+                    }
+                });
                 break;
             default:
                 break;
@@ -193,7 +218,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             intent.setData(content_url);
             activity.startActivity(intent);
         } catch (Exception e) {
-            Log.e(TAG, "url>"+url);
+            Log.e(TAG, "url>" + url);
             ToastHelper.show(activity, "链接失效");
             e.printStackTrace();
         }
@@ -265,6 +290,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mKeyView.setText(key);
         mKeyView.setThreshold(99);
     }
+
     /**
      *
      */
@@ -296,7 +322,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             showProgress(false);
             switch (resultCode) {
                 case JsoupHelper.RESULT_CODE_SUCCESS:
-                    Log.i(TAG, "success!!! "+ mMovieList.size());
+                    Log.i(TAG, "success!!! " + mMovieList.size());
                     if (mCurrentFraType == FRAGMENT_TYPE_MOVIE_SEARCH) {
                         mMovieFra.update(key, page);
                     } else {
