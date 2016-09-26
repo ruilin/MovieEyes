@@ -65,7 +65,6 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e("","xxx "+DeviceHelper.getDeviceInfo(this));
         initView();
         mMovieList = new ArrayList<>();
         Button searchButton = (Button) findViewById(R.id.button_search);
@@ -130,6 +129,18 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
         getMenuInflater().inflate(R.menu.main, menu);
         setIconsVisible(menu, true);
         return true;
+    }
+
+    long mFirstClickTime;
+    @Override
+    public void onBackPressed() {
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - mFirstClickTime < 1500) {
+            super.onBackPressed();
+        } else {
+            mFirstClickTime = System.currentTimeMillis();
+            ToastHelper.show(this, getResources().getString(R.string.toast_exit_again));
+        }
     }
 
     private void setIconsVisible(Menu menu, boolean flag) {

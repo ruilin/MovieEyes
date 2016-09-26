@@ -45,6 +45,7 @@
     <string name="dialog_cancel">取消</string>
     <string name="dialog_title_delete">删除记录</string>
     <string name="dialog_message_delete">搜索记录可以在输入时弹出提示，要清除所有记录吗？</string>
+    <string name="toast_exit_again">再点击一次退出</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
