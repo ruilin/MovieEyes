@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".base.MovieApplication"
@@ -37,6 +38,9 @@
             android:name=".activity.PlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape" />
+
+        <meta-data android:value="57e8915267e58eccde000122" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="10000" android:name="UMENG_CHANNEL"/>
     </application>
 
 </manifest>

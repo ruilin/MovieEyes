@@ -8,12 +8,13 @@ import android.util.Log;
 import android.view.WindowManager;
 
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.base.BaseActivity;
 import ruilin.com.movieeyes.widget.UniversalVideoView.UniversalMediaController;
 import ruilin.com.movieeyes.widget.UniversalVideoView.UniversalVideoView;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
-public class PlayerActivity extends AppCompatActivity implements UniversalVideoView.VideoViewCallback {
+public class PlayerActivity extends BaseActivity implements UniversalVideoView.VideoViewCallback {
     private final String TAG = PlayerActivity.class.getSimpleName();
     private final static String EXTRA_NAME_TITLE = "title";
     private final static String EXTRA_NAME_URL = "url";

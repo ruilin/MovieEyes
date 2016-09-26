@@ -20,12 +20,13 @@ import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
+import ruilin.com.movieeyes.base.BaseFragment;
 import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.widget.TagView.Tag;
 import ruilin.com.movieeyes.widget.TagView.TagListView;
 import ruilin.com.movieeyes.widget.TagView.TagView;
 
-public class HotFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 

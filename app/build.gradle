@@ -31,4 +31,5 @@ dependencies {
     compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.5.1'
     compile 'com.android.support:support-v4:24.2.0'
     compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }

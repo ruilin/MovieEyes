@@ -11,11 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.umeng.analytics.MobclickAgent;
+
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
 import ruilin.com.movieeyes.adapter.MovieListRecyclerViewAdapter;
+import ruilin.com.movieeyes.base.BaseFragment;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
 /**
@@ -24,8 +27,7 @@ import ruilin.com.movieeyes.modle.MovieUrl;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class MovieListFragment extends Fragment {
-
+public class MovieListFragment extends BaseFragment {
     // TODO: Customize parameter argument names
     private static final String ARG_KEY = "ARG_KEY";
     private static final String ARG_PAGE = "ARG_PAGE";

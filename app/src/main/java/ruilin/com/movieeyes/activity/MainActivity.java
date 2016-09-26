@@ -13,7 +13,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -31,12 +30,15 @@ import android.widget.Toast;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Helper.DeviceHelper;
 import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
+import ruilin.com.movieeyes.Helper.UMHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
+import ruilin.com.movieeyes.base.BaseActivity;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.HotKey;
@@ -45,7 +47,7 @@ import ruilin.com.movieeyes.modle.MovieUrl;
 /**
  * @author Ruilin
  */
-public class MainActivity extends AppCompatActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
+public class MainActivity extends BaseActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
     private final static int FRAGMENT_TYPE_HOT_KEY = 1;
@@ -63,9 +65,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("","xxx "+DeviceHelper.getDeviceInfo(this));
         initView();
         mMovieList = new ArrayList<>();
-
         Button searchButton = (Button) findViewById(R.id.button_search);
         searchButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     return;
                 }
                 new LoadUrlTask(key, 1).execute();
+
+                UMHelper.onSearchButton(MainActivity.this);
             }
         });
 
@@ -288,7 +292,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     public void setKeyToEditText(String key) {
         mKeyView.setText(key);
+        mKeyView.setSelection(key.length());
         mKeyView.setThreshold(99);
+        UMHelper.onSearchKey(this, key);
     }
 
     /**
@@ -345,10 +351,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                     break;
                 case JsoupHelper.RESULT_CODE_TIMEOUT:
                     ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_timeout_tips));
+                    UMHelper.reportError(MainActivity.this, "timeout");
                     break;
                 case JsoupHelper.RESULT_CODE_ERROR:
                 default:
                     ToastHelper.show(MainActivity.this, getResources().getString(R.string.main_net_error_tips));
+                    UMHelper.reportError(MainActivity.this, "http error");
                     break;
             }
         }

@@ -10,12 +10,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.base.BaseActivity;
 
 /**
  * @author Ruilin
  *       网页
  */
-public class WebViewActivity extends Activity {
+public class WebViewActivity extends BaseActivity {
     private static final String PARAM_URL = "PARAM_URL";
     private static final String PARAM_HTML = "PARAM_HTML";
 
