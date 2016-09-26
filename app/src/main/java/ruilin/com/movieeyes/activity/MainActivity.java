@@ -26,7 +26,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
@@ -122,6 +123,10 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
         mMovieFra = MovieListFragment.newInstance();
         setFragment(FRAGMENT_TYPE_HOT_KEY);
 
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override
@@ -377,7 +382,6 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
             showProgress(false);
         }
     }
-
 
 }
 
