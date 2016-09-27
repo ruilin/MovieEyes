@@ -10,4 +10,5 @@ public class LibJni {
     }
 
     public static native String getHost();
+    public static native String getBaiduHost();
 }

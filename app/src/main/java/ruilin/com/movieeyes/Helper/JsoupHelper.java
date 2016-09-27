@@ -1,7 +1,5 @@
 package ruilin.com.movieeyes.Helper;
 
-import android.util.Log;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,27 +12,33 @@ import ruilin.com.movieeyes.Jni.LibJni;
 import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
-import static android.R.attr.id;
 import static android.media.CamcorderProfile.get;
 
 /**
  * Created by Ruilin on 2016/9/22.
  */
 public class JsoupHelper {
-    private final static String BAIDU_PAN_HOST = "pan.baidu";
     public static final int RESULT_CODE_SUCCESS = 0;
     public static final int RESULT_CODE_ERROR = 1;
     public static final int RESULT_CODE_TIMEOUT = 2;
     public static final int RESULT_CODE_EMPTY = 3;
     public static final int FIRST_PAGE_NUM = 1;
 
-    private static String mHost;
+    private static String sHost;
+    private static String sBadiduHost;
 
     public static String getHost() {
-        if (mHost == null) {
-            mHost = LibJni.getHost();
+        if (sHost == null) {
+            sHost = LibJni.getHost();
         }
-        return mHost;
+        return sHost;
+    }
+
+    public static String getBadiduHost() {
+        if (sBadiduHost == null) {
+            sBadiduHost = LibJni.getBaiduHost();
+        }
+        return sBadiduHost;
     }
 /*
     <div class="search-classic" style="margin-bottom:0px;" id="1892274" typeid="-1">
@@ -61,6 +65,7 @@ public class JsoupHelper {
             movieList.clear();
         }
         int count = 0;
+        String baiduHost = getBadiduHost();
         try {
             Document doc = Jsoup.connect(getHost() + "/source/search.action").data("q", key).data("currentPage", String.valueOf(page)).get();
 //            Elements links = doc.select("a[href]");
@@ -77,7 +82,7 @@ public class JsoupHelper {
                 MovieUrl movie = new MovieUrl();
                 movie.tag = tag;
                 movie.url = "";
-                if (url.contains(BAIDU_PAN_HOST)) {
+                if (url.contains(baiduHost)) {
                     movie.url = url;
                 } else {
                         /* 载入详情页 */
@@ -121,10 +126,11 @@ public class JsoupHelper {
     }
 
     private static String getBaiduPanUrl(Element subLink) {
+        String baiduHost = getBadiduHost();
         Elements baiduLinks = subLink.getElementsByAttribute("href");
         for (Element baiduLink : baiduLinks) {
             String baiduUrl = baiduLink.attr("href");
-            if (baiduUrl != null && baiduUrl.contains(BAIDU_PAN_HOST)) {
+            if (baiduUrl != null && baiduUrl.contains(baiduHost)) {
                 return baiduUrl;
             }
         }

@@ -9,3 +9,8 @@ JNIEXPORT jstring JNICALL
 Java_ruilin_com_movieeyes_Jni_LibJni_getHost(JNIEnv *env, jobject instance) {
     return (*env)->NewStringUTF(env, "http://www.quzhuanpan.com");
 }
+
+JNIEXPORT jstring JNICALL
+Java_ruilin_com_movieeyes_Jni_LibJni_getBaiduHost(JNIEnv *env, jobject instance) {
+    return (*env)->NewStringUTF(env, "pan.baidu");
+}
