@@ -28,7 +28,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryLight"
+                        android:background="@color/main_bg_top"
                         >
 
                         <ProgressBar
@@ -46,6 +46,8 @@
                             ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
 
                     </FrameLayout>
+
+                    <View style="@style/line_horizontal"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"

@@ -161,12 +161,12 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Resources res = getResources();
         switch (item.getItemId()) {
             case R.id.action_settings:
-                ToastHelper.show(this, "settings");
+                ToastHelper.show(this, res.getString(R.string.toast_setting));
                 break;
             case R.id.action_clear_record:
-                Resources res = getResources();
                 DialogHelper.show(this, res.getString(R.string.dialog_title_delete), res.getString(R.string.dialog_message_delete),
                         new DialogHelper.OnClickListener() {
                     @Override

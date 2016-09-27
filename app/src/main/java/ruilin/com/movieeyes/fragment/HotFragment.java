@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
@@ -98,6 +99,20 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         AdView mAdView = (AdView) contentView.findViewById(R.id.adView);
 //        mAdView.setAdUnitId(getString(R.string.banner_ad_unit_id));
 //        mAdView.setAdSize(AdSize.WIDE_SKYSCRAPER);
+        final View progressBar = contentView.findViewById(R.id.pb_ad);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                super.onAdFailedToLoad(errorCode);
+                progressBar.setVisibility(View.GONE);
+            }
+        });
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
