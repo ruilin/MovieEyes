@@ -11,8 +11,13 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -26,18 +31,15 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-import ruilin.com.movieeyes.Helper.DeviceHelper;
 import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
-import ruilin.com.movieeyes.Jni.LibJni;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.base.BaseActivity;
@@ -49,7 +51,7 @@ import ruilin.com.movieeyes.modle.MovieUrl;
 /**
  * @author Ruilin
  */
-public class MainActivity extends BaseActivity implements OnClickListener, MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
+public class MainActivity extends BaseActivity implements OnClickListener, NavigationView.OnNavigationItemSelectedListener, MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
     private final static int FRAGMENT_TYPE_HOT_KEY = 1;
@@ -87,6 +89,8 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
 
     private void initView() {
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         mContentView = findViewById(R.id.fl_content);
         mProgressView = findViewById(R.id.pv_loading);
         mKeyView = (AutoCompleteTextView) findViewById(R.id.key);
@@ -118,6 +122,16 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
         mHotFra = HotFragment.newInstance();
         mMovieFra = MovieListFragment.newInstance();
         setFragment(FRAGMENT_TYPE_HOT_KEY);
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -130,12 +144,17 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
     long mFirstClickTime;
     @Override
     public void onBackPressed() {
-        long currentTime = System.currentTimeMillis();
-        if (currentTime - mFirstClickTime < 1500) {
-            super.onBackPressed();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
         } else {
-            mFirstClickTime = System.currentTimeMillis();
-            ToastHelper.show(this, getResources().getString(R.string.toast_exit_again));
+            long currentTime = System.currentTimeMillis();
+            if (currentTime - mFirstClickTime < 1500) {
+                super.onBackPressed();
+            } else {
+                mFirstClickTime = System.currentTimeMillis();
+                ToastHelper.show(this, getResources().getString(R.string.toast_exit_again));
+            }
         }
     }
 
@@ -178,6 +197,31 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     public static void closeImm(Activity activity) {

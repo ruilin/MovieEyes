@@ -3,6 +3,7 @@ package ruilin.com.movieeyes.fragment;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
@@ -126,6 +127,12 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
                     }
                 }
             });
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    scrollView.fullScroll(ScrollView.FOCUS_DOWN);
+                }
+            }, 1500);
         }
         return contentView;
     }
