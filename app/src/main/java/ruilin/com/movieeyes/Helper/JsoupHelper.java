@@ -10,6 +10,7 @@ import org.jsoup.select.Elements;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Jni.LibJni;
 import ruilin.com.movieeyes.modle.HotKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
@@ -21,12 +22,20 @@ import static android.media.CamcorderProfile.get;
  */
 public class JsoupHelper {
     private final static String BAIDU_PAN_HOST = "pan.baidu";
-    private final static String ZHUAN_PAN_HOST = "http://www.quzhuanpan.com";
     public static final int RESULT_CODE_SUCCESS = 0;
     public static final int RESULT_CODE_ERROR = 1;
     public static final int RESULT_CODE_TIMEOUT = 2;
     public static final int RESULT_CODE_EMPTY = 3;
     public static final int FIRST_PAGE_NUM = 1;
+
+    private static String mHost;
+
+    public static String getHost() {
+        if (mHost == null) {
+            mHost = LibJni.getHost();
+        }
+        return mHost;
+    }
 /*
     <div class="search-classic" style="margin-bottom:0px;" id="1892274" typeid="-1">
         <h4 class="result4">
@@ -53,7 +62,7 @@ public class JsoupHelper {
         }
         int count = 0;
         try {
-            Document doc = Jsoup.connect(ZHUAN_PAN_HOST + "/source/search.action").data("q", key).data("currentPage", String.valueOf(page)).get();
+            Document doc = Jsoup.connect(getHost() + "/source/search.action").data("q", key).data("currentPage", String.valueOf(page)).get();
 //            Elements links = doc.select("a[href]");
             Elements links = doc.select("div[class=search-classic]");
             //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements
@@ -72,7 +81,7 @@ public class JsoupHelper {
                     movie.url = url;
                 } else {
                         /* 载入详情页 */
-                    Document subHtml = Jsoup.connect(ZHUAN_PAN_HOST + url).get();
+                    Document subHtml = Jsoup.connect(getHost() + url).get();
                     Elements subLinks = subHtml.select("li[class=list-group-item]");
                     final String TAG_BAIDU_URL = "下载链接";
                     final String TAG_AUTHOR = "分享人：";
@@ -128,7 +137,7 @@ public class JsoupHelper {
         }
         keyList.clear();
         try {
-            Document doc = Jsoup.connect(ZHUAN_PAN_HOST).get();
+            Document doc = Jsoup.connect(getHost()).get();
             Elements topElents = doc.select("div[class=hot]");
             if (topElents.size() > 0) {
                 Elements ulEles = topElents.get(0).getElementsByTag("ul");
@@ -141,7 +150,7 @@ public class JsoupHelper {
                             Element ele = eles.get(0);
                             HotKey key = new HotKey();
                             key.setKey(ele.text());
-                            key.setUrl(ZHUAN_PAN_HOST + ele.attr("href"));
+                            key.setUrl(getHost() + ele.attr("href"));
                             key.setId(index);
                             keyList.add(key);
                             index++;

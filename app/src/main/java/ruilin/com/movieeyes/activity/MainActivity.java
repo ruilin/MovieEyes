@@ -37,6 +37,7 @@ import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
+import ruilin.com.movieeyes.Jni.LibJni;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.base.BaseActivity;
