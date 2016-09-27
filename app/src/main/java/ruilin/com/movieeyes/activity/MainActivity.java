@@ -72,17 +72,12 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
         searchButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mProgressView.getVisibility() == View.VISIBLE) {
-                    Log.i(TAG, "cannot operate");
-                    return;
-                }
                 String key = mKeyView.getText().toString();
                 if (key.length() == 0) {
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.main_search_null_tips), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                new LoadUrlTask(key, 1).execute();
-
+                doSearch(key, 1);
                 UMHelper.onSearchButton(MainActivity.this);
             }
         });
@@ -293,12 +288,20 @@ public class MainActivity extends BaseActivity implements OnClickListener, Movie
 
     @Override
     public void onNextPage(String key, int currentPage) {
-        new LoadUrlTask(key, currentPage + 1).execute();
+        doSearch(key, currentPage + 1);
     }
 
     @Override
     public void onHotKeyClicked(HotKey key) {
-        new LoadUrlTask(key.getKey(), 1).execute();
+        doSearch(key.getKey(), 1);
+    }
+
+    public void doSearch(String key, int page) {
+        if (mProgressView.getVisibility() == View.VISIBLE) {
+            Log.i(TAG, "cannot operate");
+            return;
+        }
+        new LoadUrlTask(key, page).execute();
     }
 
     public void setKeyToEditText(String key) {
