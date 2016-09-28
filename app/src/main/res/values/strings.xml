@@ -28,6 +28,12 @@
     <string name="menu_settings_clear">删除搜索记录</string>
     <string name="setting_clear_finish">删除完成</string>
 
+    <string name="menu_favorite">收藏夹</string>
+    <string name="menu_record">搜索记录</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_about">关于</string>
+
+
     <!-- 热门搜索 -->
     <string name="hot_search_key">热门标签(%1$d)</string>
     <string name="hot_search_tips">一键获取海量的免费资源</string>

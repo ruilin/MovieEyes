@@ -3,7 +3,7 @@
     <color name="write">#ffffff</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#3F51B5</color>
-    <color name="main_bg_top">#000000</color>
+    <color name="main_bg_top">#ffffff</color>
     <color name="main_bg_bottom">#dddddd</color>
     <color name="colorAccent">#FF4081</color>
 
