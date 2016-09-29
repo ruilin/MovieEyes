@@ -28,10 +28,8 @@ public class MovieApplication extends Application implements Application.Activit
 
 //        MobclickAgent.setScenarioType(this, EScenarioType.E_UM_NORMAL);
 
-        MobclickAgent.UMAnalyticsConfig config = new MobclickAgent.UMAnalyticsConfig(this, "57e8915267e58eccde000122", "10000", MobclickAgent.EScenarioType.E_UM_NORMAL);
-        MobclickAgent. startWithConfigure(config);
-
-        registUMPush();
+        initUMStatistics();
+        initUMPush();
     }
 
     @Override
@@ -69,7 +67,13 @@ public class MovieApplication extends Application implements Application.Activit
 
     }
 
-    public void registUMPush() {
+    /* 统计 */
+    private void initUMStatistics() {
+        MobclickAgent.UMAnalyticsConfig config = new MobclickAgent.UMAnalyticsConfig(this, "57e8915267e58eccde000122", "10000", MobclickAgent.EScenarioType.E_UM_NORMAL);
+        MobclickAgent. startWithConfigure(config);
+    }
+    /* 推送 */
+    public void initUMPush() {
         final PushAgent mPushAgent = PushAgent.getInstance(this);
         mPushAgent.setDebugMode(false);
         new Thread(new Runnable() {
