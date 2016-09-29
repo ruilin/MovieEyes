@@ -38,4 +38,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.2.0'
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.google.android.gms:play-services:6.+'
+    compile project(':PushSDK')
 }

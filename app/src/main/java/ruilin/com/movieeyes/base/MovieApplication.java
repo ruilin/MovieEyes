@@ -3,12 +3,11 @@ package ruilin.com.movieeyes.base;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.IUmengRegisterCallback;
+import com.umeng.message.PushAgent;
 import com.yolanda.nohttp.NoHttp;
-
-import ruilin.com.movieeyes.Helper.DeviceHelper;
 
 /**
  * Created by Ruilin on 2016/9/13.
@@ -16,6 +15,10 @@ import ruilin.com.movieeyes.Helper.DeviceHelper;
 public class MovieApplication extends Application implements Application.ActivityLifecycleCallbacks {
 
     private static MovieApplication mInstance;
+
+    public static MovieApplication getInstance() {
+        return mInstance;
+    }
 
     @Override
     public void onCreate() {
@@ -27,10 +30,8 @@ public class MovieApplication extends Application implements Application.Activit
 
         MobclickAgent.UMAnalyticsConfig config = new MobclickAgent.UMAnalyticsConfig(this, "57e8915267e58eccde000122", "10000", MobclickAgent.EScenarioType.E_UM_NORMAL);
         MobclickAgent. startWithConfigure(config);
-    }
 
-    public static MovieApplication getInstance() {
-        return mInstance;
+        registUMPush();
     }
 
     @Override
@@ -65,6 +66,30 @@ public class MovieApplication extends Application implements Application.Activit
 
     @Override
     public void onActivityDestroyed(Activity activity) {
+
+    }
+
+    public void registUMPush() {
+        final PushAgent mPushAgent = PushAgent.getInstance(this);
+        mPushAgent.setDebugMode(false);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //注册推送服务，每次调用register方法都会回调该接口
+                mPushAgent.register(new IUmengRegisterCallback() {
+
+                    @Override
+                    public void onSuccess(String deviceToken) {
+                        //注册成功会返回device token
+                    }
+
+                    @Override
+                    public void onFailure(String s, String s1) {
+
+                    }
+                });
+            }
+        }).start();
 
     }
 }

@@ -13,6 +13,8 @@
     <!-- 位置 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".base.MovieApplication"
@@ -22,13 +24,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- 友盟 -->
+        <!-- 友盟统计 -->
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="57e8915267e58eccde000122" />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="10000" />
+        <!-- 友盟推送 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57e8915267e58eccde000122">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="ce3b2f2347787b72c0ae287a570d6359">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="10000" >
+        </meta-data>
         <!-- Admob: Google Play Services. -->
         <meta-data
             android:name="com.google.android.gms.version"
