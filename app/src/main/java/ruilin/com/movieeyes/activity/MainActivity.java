@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
+import ruilin.com.movieeyes.Helper.ShareHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
 import ruilin.com.movieeyes.R;
@@ -210,7 +211,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Navig
         } else if (id == R.id.nav_record) {
 
         } else if (id == R.id.nav_share) {
-
+            ShareHelper.share(this, getResources().getString(R.string.hot_search_tips)+"WWW");
         } else if (id == R.id.nav_about) {
 
         }
