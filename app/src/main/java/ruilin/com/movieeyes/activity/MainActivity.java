@@ -209,7 +209,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Navig
         if (id == R.id.nav_favorite) {
             // Handle the camera action
         } else if (id == R.id.nav_record) {
-
+            RecordActivity.start(this);
         } else if (id == R.id.nav_share) {
             ShareHelper.share(this, getResources().getString(R.string.hot_search_tips)+"WWW");
         } else if (id == R.id.nav_about) {
