@@ -3,21 +3,17 @@ package ruilin.com.movieeyes.fragment;
 import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.umeng.analytics.MobclickAgent;
-
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
-import ruilin.com.movieeyes.adapter.MovieListRecyclerViewAdapter;
+import ruilin.com.movieeyes.adapter.MovieListAdapter;
 import ruilin.com.movieeyes.base.BaseFragment;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
@@ -33,7 +29,7 @@ public class MovieListFragment extends BaseFragment {
     private static final String ARG_PAGE = "ARG_PAGE";
     // TODO: Customize parameters
     private OnListFragmentInteractionListener mListener;
-    private MovieListRecyclerViewAdapter mAdapter;
+    private MovieListAdapter mAdapter;
     private ArrayList<MovieUrl> mItems;
     private View mContentView;
     private View mEmptyView;
@@ -79,7 +75,7 @@ public class MovieListFragment extends BaseFragment {
             int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.list_item_space);
             recyclerView.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            mAdapter = new MovieListRecyclerViewAdapter(getActivity(), mItems, mListener);
+            mAdapter = new MovieListAdapter(getActivity(), mItems, mListener);
             recyclerView.setAdapter(mAdapter);
         }
         contentView.findViewById(R.id.bt_close).setOnClickListener(new View.OnClickListener() {
@@ -118,7 +114,7 @@ public class MovieListFragment extends BaseFragment {
     public void update(String key, int page) {
         mAdapter.setInfo(key, page);
         mAdapter.notifyDataSetChanged();
-        showEmpty(mItems.size() == 0);
+        showEmpty(mItems.size() == 1);
     }
 
     private void showEmpty(boolean isEmpty) {

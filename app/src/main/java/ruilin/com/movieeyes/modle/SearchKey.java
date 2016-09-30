@@ -6,7 +6,7 @@ import ruilin.com.movieeyes.widget.TagView.Tag;
  * Created by Ruilin on 2016/9/23.
  */
 
-public class HotKey extends Tag {
+public class SearchKey extends Tag {
     private String key;
     private String url;
 

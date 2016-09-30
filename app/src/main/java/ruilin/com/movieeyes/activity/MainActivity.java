@@ -42,17 +42,21 @@ import ruilin.com.movieeyes.Helper.ShareHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.adapter.RecordAdapter;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.base.BaseActivity;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
-import ruilin.com.movieeyes.modle.HotKey;
+import ruilin.com.movieeyes.fragment.RecordFagment;
+import ruilin.com.movieeyes.modle.SearchKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
 /**
  * @author Ruilin
  */
-public class MainActivity extends BaseActivity implements OnClickListener, NavigationView.OnNavigationItemSelectedListener, MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
+public class MainActivity extends BaseActivity implements OnClickListener,
+        NavigationView.OnNavigationItemSelectedListener,
+        MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
     private final static int FRAGMENT_TYPE_HOT_KEY = 1;
@@ -334,7 +338,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, Navig
     }
 
     @Override
-    public void onHotKeyClicked(HotKey key) {
+    public void onHotKeyClicked(SearchKey key) {
         doSearch(key.getKey(), 1);
     }
 

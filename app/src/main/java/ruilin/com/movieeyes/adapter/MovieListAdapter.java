@@ -19,7 +19,7 @@ import ruilin.com.movieeyes.modle.MovieUrl;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int ITEM_TYPE_CONTENT = 0;
     private static final int ITEM_TYPE_FOOTER = 1;
     private final ArrayList<MovieUrl> mValues;
@@ -28,7 +28,7 @@ public class MovieListRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     private String mKey;
     private int mPage;
 
-    public MovieListRecyclerViewAdapter(Activity context, ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
+    public MovieListAdapter(Activity context, ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
         mActivity = context;
         mValues = items;
         mListener = listener;

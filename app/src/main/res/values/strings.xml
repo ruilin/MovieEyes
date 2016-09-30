@@ -37,7 +37,7 @@
     <!-- 热门搜索 -->
     <string name="hot_search_key">热门标签(%1$d)</string>
     <string name="hot_search_tips">海量的免费资源一键获取</string>
-    <string name="hot_search_load_finish">数据已更新</string>
+    <string name="hot_search_load_finish">标签已刷新</string>
 
     <string name="title_activity_player">PlayerActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -50,6 +50,9 @@
     <string name="movie_item_author">分享人：%1$s</string>
     <string name="movie_item_date">分享日期：%1$s</string>
     <string name="movie_next_page">下一页</string>
+
+    <!-- 搜索记录 -->
+    <string name="record_title">搜索历史</string>
 
     <!-- 提示 -->
     <string name="dialog_ok">确定</string>

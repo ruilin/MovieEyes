@@ -40,8 +40,11 @@ public class SearchKeyHelper {
 
     public List<String> getList() {
         if (mKeys == null) {
+            mKeys = new LinkedList<>();
             String keyString = PreferenceHelper.getInstance().getSearchKeys();
-            mKeys = new LinkedList<>(Arrays.asList(keyString.split(FRAG)));
+            if (keyString != null && !keyString.equals("")) {
+                mKeys.addAll(Arrays.asList(keyString.split(FRAG)));
+            }
         }
         return mKeys;
     }

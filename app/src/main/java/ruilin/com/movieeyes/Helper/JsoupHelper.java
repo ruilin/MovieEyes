@@ -9,10 +9,11 @@ import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.Jni.LibJni;
-import ruilin.com.movieeyes.modle.HotKey;
+import ruilin.com.movieeyes.modle.SearchKey;
 import ruilin.com.movieeyes.modle.MovieUrl;
 
 import static android.media.CamcorderProfile.get;
+import static android.net.sip.SipErrorCode.TIME_OUT;
 
 /**
  * Created by Ruilin on 2016/9/22.
@@ -26,6 +27,8 @@ public class JsoupHelper {
 
     private static String sHost;
     private static String sBadiduHost;
+
+    public static final int TIME_OUT_MS = 5000;
 
     public static String getHost() {
         if (sHost == null) {
@@ -67,7 +70,7 @@ public class JsoupHelper {
         int count = 0;
         String baiduHost = getBadiduHost();
         try {
-            Document doc = Jsoup.connect(getHost() + "/source/search.action").data("q", key).data("currentPage", String.valueOf(page)).get();
+            Document doc = Jsoup.connect(getHost() + "/source/search.action").timeout(TIME_OUT_MS).data("q", key).data("currentPage", String.valueOf(page)).get();
 //            Elements links = doc.select("a[href]");
             Elements links = doc.select("div[class=search-classic]");
             //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements
@@ -86,7 +89,7 @@ public class JsoupHelper {
                     movie.url = url;
                 } else {
                         /* 载入详情页 */
-                    Document subHtml = Jsoup.connect(getHost() + url).get();
+                    Document subHtml = Jsoup.connect(getHost() + url).timeout(TIME_OUT_MS).get();
                     Elements subLinks = subHtml.select("li[class=list-group-item]");
                     final String TAG_BAIDU_URL = "下载链接";
                     final String TAG_AUTHOR = "分享人：";
@@ -137,7 +140,7 @@ public class JsoupHelper {
         return "";
     }
 
-    public static int parseHtmlForHotKey(ArrayList<HotKey> keyList) {
+    public static int parseHtmlForHotKey(ArrayList<SearchKey> keyList) {
         if (keyList == null) {
             throw new IllegalArgumentException("arrayList can not be null!");
         }
@@ -154,7 +157,7 @@ public class JsoupHelper {
                         Elements eles = element.select("a[href]");
                         if (eles.size() > 0) {
                             Element ele = eles.get(0);
-                            HotKey key = new HotKey();
+                            SearchKey key = new SearchKey();
                             key.setKey(ele.text());
                             key.setUrl(getHost() + ele.attr("href"));
                             key.setId(index);

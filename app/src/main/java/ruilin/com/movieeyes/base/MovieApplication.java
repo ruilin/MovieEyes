@@ -7,7 +7,6 @@ import android.os.Bundle;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
-import com.yolanda.nohttp.NoHttp;
 
 /**
  * Created by Ruilin on 2016/9/13.
@@ -24,7 +23,7 @@ public class MovieApplication extends Application implements Application.Activit
     public void onCreate() {
         super.onCreate();
         mInstance = this;
-        NoHttp.initialize(this);
+//        NoHttp.initialize(this);
 
 //        MobclickAgent.setScenarioType(this, EScenarioType.E_UM_NORMAL);
 

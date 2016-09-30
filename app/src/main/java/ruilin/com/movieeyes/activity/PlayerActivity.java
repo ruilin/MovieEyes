@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.base.BaseActivity;
+import ruilin.com.movieeyes.base.BasePageActivity;
 import ruilin.com.movieeyes.widget.UniversalVideoView.UniversalMediaController;
 import ruilin.com.movieeyes.widget.UniversalVideoView.UniversalVideoView;
 import tv.danmaku.ijk.media.player.IMediaPlayer;

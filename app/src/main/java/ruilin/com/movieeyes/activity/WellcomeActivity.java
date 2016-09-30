@@ -10,8 +10,9 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.base.BaseActivity;
 
-public class WellcomeActivity extends Activity {
+public class WellcomeActivity extends BaseActivity {
 
     InterstitialAd mInterstitialAd;
     Button mNewGameButton;

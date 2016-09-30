@@ -14,6 +14,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import ruilin.com.movieeyes.Helper.PinYin4j;
+
 public class SearchAdapter<T> extends BaseAdapter implements Filterable {
     private List<T> mObjects;
 

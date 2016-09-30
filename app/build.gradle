@@ -10,6 +10,7 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -26,17 +27,16 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:design:24.2.0'
-    compile 'com.yolanda.nohttp:nohttp:+'
+    compile project(':PushSDK')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
     compile 'org.jsoup:jsoup:1.9.2'
-    compile 'com.squareup.picasso:picasso:2.5.2'
+//    compile 'com.yolanda.nohttp:nohttp:+'
+//    compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'tv.danmaku.ijk.media:ijkplayer-java:0.5.1'
     compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.5.1'
-    compile 'com.android.support:support-v4:24.2.0'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.umeng.analytics:analytics:latest.integration'
-    compile 'com.google.android.gms:play-services:6.+'
-    compile project(':PushSDK')
+    compile 'com.google.android.gms:play-services:9.4.0'
 }

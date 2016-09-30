@@ -1,4 +1,4 @@
-package ruilin.com.movieeyes.adapter;
+package ruilin.com.movieeyes.Helper;
 
 /**
  * Created by Ruilin on 2016/9/21.

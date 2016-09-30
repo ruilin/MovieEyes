@@ -4,32 +4,25 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import ruilin.com.movieeyes.Helper.JsoupHelper;
-import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
-import ruilin.com.movieeyes.activity.MainActivity;
 import ruilin.com.movieeyes.base.BaseFragment;
-import ruilin.com.movieeyes.modle.HotKey;
+import ruilin.com.movieeyes.modle.SearchKey;
 import ruilin.com.movieeyes.widget.TagView.Tag;
 import ruilin.com.movieeyes.widget.TagView.TagListView;
 import ruilin.com.movieeyes.widget.TagView.TagView;
@@ -44,7 +37,7 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     private SwipeRefreshLayout mSwipeLayout;
     private TagListView mTagListView;
     private TextView mTitleTv;
-    private ArrayList<HotKey> mHotkeyList;
+    private ArrayList<SearchKey> mHotkeyList;
     private boolean isFirst = true;
 
     public HotFragment() {
@@ -90,7 +83,7 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         mTagListView.setOnTagClickListener(new TagListView.OnTagClickListener() {
             @Override
             public void onTagClick(TagView tagView, Tag tag) {
-                HotKey key = (HotKey)tag;
+                SearchKey key = (SearchKey)tag;
                 if (mListener != null) {
                     mListener.onHotKeyClicked(key);
                 }
@@ -206,6 +199,6 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     }
 
     public interface OnHotKeyClickedListener {
-        public void onHotKeyClicked(HotKey key);
+        public void onHotKeyClicked(SearchKey key);
     }
 }
