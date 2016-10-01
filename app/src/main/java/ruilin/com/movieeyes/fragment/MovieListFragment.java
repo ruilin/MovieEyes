@@ -65,9 +65,9 @@ public class MovieListFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View contentView = inflater.inflate(R.layout.fragment_movielist, container, false);
-        mContentView = contentView.findViewById(R.id.ll_content);
         mEmptyView = contentView.findViewById(R.id.tv_empty);
         View view = contentView.findViewById(R.id.list);
+        mContentView = view;
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();

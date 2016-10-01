@@ -21,12 +21,12 @@ public abstract class BasePageActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_title_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        initToolBar(toolbar);
         String title = setTitle();
         if (title != null) {
             toolbar.setTitle(title);
         }
+        setSupportActionBar(toolbar);
+        initToolBar(toolbar);
         if (android.os.Build.VERSION.SDK_INT >= 21) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
         }
@@ -43,9 +43,14 @@ public abstract class BasePageActivity extends BaseActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                close();
             }
         });
     }
     protected abstract @LayoutRes int setContentView();
+
+    public void close() {
+        finish();
+    }
 }
+

@@ -1,5 +1,7 @@
-md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\debug\lib\mips" >NUL 2>NUL || rem
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [mips] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\debug\lib/mips/libmovieeyes.so"
-copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\debug\obj\local\mips\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\debug\lib\mips\libmovieeyes.so" > NUL
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/bin/mipsel-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\debug\lib/mips/libmovieeyes.so
-process_begin: CreateProcess(NULL, "", ...) failed.
+rm -f /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips/lib*.so
+rm -f /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips/gdbserver
+rm -f /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips/gdb.setup
+mkdir -p /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips
+echo [mips] "Install        ": "libmovieeyes.so => /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips/libmovieeyes.so"
+install -p /Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/debug/obj/local/mips/libmovieeyes.so /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips/libmovieeyes.so
+/Users/ruilin/Program/Tools/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-strip --strip-unneeded  /Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/debug/lib/mips/libmovieeyes.so

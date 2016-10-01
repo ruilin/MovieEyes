@@ -2,17 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/write"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/selector_record_item"
     >
 
     <TextView
         android:id="@+id/tv_key"
         android:layout_gravity="center_vertical"
         android:text="TextView"
-        android:layout_margin="10dp"
-        android:textSize="@dimen/text_size_3"
+        android:padding="8dp"
+        android:textSize="@dimen/text_size_4"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_search"
+        />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_delete"
         />
 </LinearLayout>

@@ -2,14 +2,18 @@ package ruilin.com.movieeyes.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
+import ruilin.com.movieeyes.Helper.SearchKeyHelper;
 import ruilin.com.movieeyes.R;
+import ruilin.com.movieeyes.db.bean.SearchRecordDb;
 import ruilin.com.movieeyes.fragment.RecordFagment.OnRecordItemListener;
 
 /**
@@ -17,13 +21,13 @@ import ruilin.com.movieeyes.fragment.RecordFagment.OnRecordItemListener;
  * TODO: Replace the implementation with code for your data type.
  */
 public class RecordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private final List<String> mValues;
     private final OnRecordItemListener mListener;
     private Activity mActivity;
+    private List<SearchRecordDb> mValues;
 
-    public RecordAdapter(Activity context, List<String> items, OnRecordItemListener listener) {
+    public RecordAdapter(Activity context, OnRecordItemListener listener) {
         mActivity = context;
-        mValues = items;
+        mValues = SearchKeyHelper.getInstance().getList();
         mListener = listener;
     }
 
@@ -40,13 +44,21 @@ public class RecordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder, final int position) {
         final ContentViewHolder holder = (ContentViewHolder) viewHolder;
         holder.mItem = mValues.get(position);
-        holder.mKeyTv.setText(mValues.get(position));
+        holder.mKeyTv.setText(mValues.get(position).getKey());
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mListener.onRecordItemClicked(holder.mItem, position);
+            }
+        });
+        holder.mDeleteView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SearchKeyHelper.getInstance().delete(holder.mItem);
+                notifyDataSetChanged();
             }
         });
     }
@@ -56,15 +68,26 @@ public class RecordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return mValues.size();
     }
 
+
+    public void deleteAllItem() {
+        SearchKeyHelper.getInstance().clear();
+        mValues = SearchKeyHelper.getInstance().getList();
+        notifyDataSetChanged();
+    }
+
     public class ContentViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mKeyTv;
-        public String mItem;
+        public final ImageView mSelectView;
+        public final ImageView mDeleteView;
+        public SearchRecordDb mItem;
 
         public ContentViewHolder(View view) {
             super(view);
             mView = view;
             mKeyTv = (TextView) view.findViewById(R.id.tv_key);
+            mSelectView = (ImageView) view.findViewById(R.id.iv_select);
+            mDeleteView = (ImageView) view.findViewById(R.id.iv_delete);
         }
 
         @Override

@@ -1,18 +1,24 @@
 package ruilin.com.movieeyes.Helper;
 
+import android.database.sqlite.SQLiteException;
+
+import com.orm.SugarRecord;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import ruilin.com.movieeyes.db.bean.SearchRecordDb;
+
 /**
  * Created by Ruilin on 2016/9/21.
  */
 public class SearchKeyHelper {
-    private static final String FRAG = "#";
+
     private static SearchKeyHelper mInstance = null;
-    private LinkedList<String> mKeys = null;
+    private List<SearchRecordDb> mList;
 
     private SearchKeyHelper() {
     }
@@ -25,32 +31,37 @@ public class SearchKeyHelper {
     }
 
     public void add(String key) {
-        List<String> keys = getList();
-        if (keys.size() >= 50) {
-            keys.remove(0);
+        SearchRecordDb record = new SearchRecordDb(key, null, System.currentTimeMillis());
+        if (mList != null) {
+            mList.add(record);
         }
-        keys.add(keys.size(), key);
-        StringBuffer sb = new StringBuffer();
-        for (String item : keys) {
-            sb.append(item);
-            sb.append(FRAG);
-        }
-        PreferenceHelper.getInstance().saveSearchKeys(sb.toString());
+        record.save();
     }
 
-    public List<String> getList() {
-        if (mKeys == null) {
-            mKeys = new LinkedList<>();
-            String keyString = PreferenceHelper.getInstance().getSearchKeys();
-            if (keyString != null && !keyString.equals("")) {
-                mKeys.addAll(Arrays.asList(keyString.split(FRAG)));
+    public List<SearchRecordDb> getList() {
+        if (mList == null) {
+            mList = new ArrayList<>();
+            try {
+                mList.addAll(SugarRecord.listAll(SearchRecordDb.class));
+            } catch (SQLiteException e) {
+                e.printStackTrace();
             }
         }
-        return mKeys;
+        return mList;
+    }
+
+    public boolean delete(SearchRecordDb item) {
+        if (mList != null) {
+            mList.remove(item);
+        }
+        return SugarRecord.delete(item);
     }
 
     public void clear() {
-        mKeys.clear();
-        PreferenceHelper.getInstance().clearSearchKeys();
+        if (mList != null) {
+            mList.clear();
+            mList = null;
+        }
+        SugarRecord.deleteAll(SearchRecordDb.class);
     }
 }

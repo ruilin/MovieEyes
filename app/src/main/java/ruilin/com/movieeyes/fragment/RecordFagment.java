@@ -1,21 +1,27 @@
 package ruilin.com.movieeyes.fragment;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
 
+import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
+import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.RecordAdapter;
 import ruilin.com.movieeyes.base.BaseFragment;
+import ruilin.com.movieeyes.db.bean.SearchRecordDb;
 import ruilin.com.movieeyes.modle.SearchKey;
 
 import static anetwork.channel.http.NetworkSdkSetting.context;
@@ -35,7 +41,6 @@ public class RecordFagment extends BaseFragment {
     private OnRecordItemListener mListener;
 
     private RecordAdapter mAdapter;
-    private List<String> mItems;
 
     public RecordFagment() {
     }
@@ -60,18 +65,11 @@ public class RecordFagment extends BaseFragment {
         recyclerView.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mItems = SearchKeyHelper.getInstance().getList();
-        mAdapter = new RecordAdapter(getActivity(), mItems, mListener);
+        mAdapter = new RecordAdapter(getActivity(), mListener);
         recyclerView.setAdapter(mAdapter);
         return contentView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onRecordItemClicked(uri);
-        }
-    }
 
     @Override
     public void onAttach(Context context) {
@@ -90,6 +88,11 @@ public class RecordFagment extends BaseFragment {
         mListener = null;
     }
 
+
+    public void deleteItem() {
+        mAdapter.deleteAllItem();
+    }
+
     public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
         private int space;
 
@@ -104,6 +107,7 @@ public class RecordFagment extends BaseFragment {
         }
     }
 
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -116,6 +120,7 @@ public class RecordFagment extends BaseFragment {
      */
     public interface OnRecordItemListener {
         // TODO: Update argument type and name
-        void onRecordItemClicked(Uri uri);
+        void onRecordItemClicked(SearchRecordDb key, int index);
+        void onRecordItemSelected(SearchRecordDb key, int index, boolean isSelected);
     }
 }

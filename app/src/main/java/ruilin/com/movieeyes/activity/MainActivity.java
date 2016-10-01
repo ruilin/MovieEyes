@@ -32,6 +32,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.orm.SugarRecord;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
@@ -45,6 +47,7 @@ import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.RecordAdapter;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.base.BaseActivity;
+import ruilin.com.movieeyes.db.bean.SearchRecordDb;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.fragment.RecordFagment;
@@ -70,6 +73,12 @@ public class MainActivity extends BaseActivity implements OnClickListener,
     private MovieListFragment mMovieFra;
     private int mCurrentFraType;
     private ArrayList<MovieUrl> mMovieList;
+
+    public static void start(Activity activity, SearchRecordDb key) {
+        Intent intent = new Intent(activity, MainActivity.class);
+        intent.putExtra("key", key);
+        activity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

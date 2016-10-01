@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
+import com.orm.SugarContext;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
@@ -23,12 +24,20 @@ public class MovieApplication extends Application implements Application.Activit
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+
+        SugarContext.init(this);
 //        NoHttp.initialize(this);
 
 //        MobclickAgent.setScenarioType(this, EScenarioType.E_UM_NORMAL);
 
         initUMStatistics();
         initUMPush();
+    }
+
+    @Override
+    public void onTerminate() {
+        SugarContext.terminate();
+        super.onTerminate();
     }
 
     @Override
