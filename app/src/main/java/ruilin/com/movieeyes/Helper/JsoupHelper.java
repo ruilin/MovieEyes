@@ -9,11 +9,8 @@ import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.Jni.LibJni;
+import ruilin.com.movieeyes.db.bean.SearchResultDb;
 import ruilin.com.movieeyes.modle.SearchKey;
-import ruilin.com.movieeyes.modle.MovieUrl;
-
-import static android.media.CamcorderProfile.get;
-import static android.net.sip.SipErrorCode.TIME_OUT;
 
 /**
  * Created by Ruilin on 2016/9/22.
@@ -60,7 +57,7 @@ public class JsoupHelper {
         <div class="result">提示：<span>来自搜索引擎.</span> |分享时间：2015-09-08 15:35</div>
     </div>
 */
-    public static int parseHtmlForSearch(String key, int page, ArrayList<MovieUrl> movieList) {
+    public static int parseHtmlForSearch(String key, int page, ArrayList<SearchResultDb> movieList) {
         if (movieList == null) {
             throw new IllegalArgumentException("arrayList can not be null!");
         }
@@ -82,11 +79,11 @@ public class JsoupHelper {
                 Elements urlEle = authorEle.select("a[href]");
                 String url = urlEle.attr("href");
                 String tag = authorEle.text();
-                MovieUrl movie = new MovieUrl();
-                movie.tag = tag;
-                movie.url = "";
+                SearchResultDb movie = new SearchResultDb();
+                movie.setTag(tag);
+                movie.setUrl("");
                 if (url.contains(baiduHost)) {
-                    movie.url = url;
+                    movie.setUrl(url);
                 } else {
                         /* 载入详情页 */
                     Document subHtml = Jsoup.connect(getHost() + url).timeout(TIME_OUT_MS).get();
@@ -99,18 +96,17 @@ public class JsoupHelper {
                     for (Element subLink : subLinks) {
                         String text = subLink.text();
                         if (text.contains(TAG_BAIDU_URL)) {
-                            movie.url = getBaiduPanUrl(subLink);
+                            movie.setUrl(getBaiduPanUrl(subLink));
                         } else if (text.startsWith(TAG_AUTHOR)) {
-                            movie.author = text.substring(TAG_AUTHOR.length());
+                            movie.setAuthor(text.substring(TAG_AUTHOR.length()));
                         } else if (text.startsWith(TAG_AUTHOR_URL)) {
-                            movie.authorUrl = getBaiduPanUrl(subLink);
+                            movie.setAuthorUrl(getBaiduPanUrl(subLink));
                         } else if (text.startsWith(TAG_DATE)) {
-                            movie.date = text.substring(TAG_DATE.length());
+                            movie.setDate(text.substring(TAG_DATE.length()));
                         }
-                        movie.print();
                     }
                 }
-                if (movie.url != null && movie.url.startsWith("http")) {
+                if (movie.getUrl() != null && movie.getUrl().startsWith("http")) {
                     movieList.add(movie);
                     count++;
                 }

@@ -32,8 +32,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.orm.SugarRecord;
-
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
@@ -44,15 +42,13 @@ import ruilin.com.movieeyes.Helper.ShareHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
 import ruilin.com.movieeyes.R;
-import ruilin.com.movieeyes.adapter.RecordAdapter;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
 import ruilin.com.movieeyes.base.BaseActivity;
 import ruilin.com.movieeyes.db.bean.SearchRecordDb;
+import ruilin.com.movieeyes.db.bean.SearchResultDb;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
-import ruilin.com.movieeyes.fragment.RecordFagment;
 import ruilin.com.movieeyes.modle.SearchKey;
-import ruilin.com.movieeyes.modle.MovieUrl;
 
 /**
  * @author Ruilin
@@ -61,6 +57,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
         NavigationView.OnNavigationItemSelectedListener,
         MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
+    private final static String PARAM_KEY = "PARAM_KEY";
     private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
     private final static int FRAGMENT_TYPE_HOT_KEY = 1;
 
@@ -72,11 +69,11 @@ public class MainActivity extends BaseActivity implements OnClickListener,
     private HotFragment mHotFra;
     private MovieListFragment mMovieFra;
     private int mCurrentFraType;
-    private ArrayList<MovieUrl> mMovieList;
+    private ArrayList<SearchResultDb> mMovieList;
 
     public static void start(Activity activity, SearchRecordDb key) {
         Intent intent = new Intent(activity, MainActivity.class);
-        intent.putExtra("key", key);
+        intent.putExtra(PARAM_KEY, key);
         activity.startActivity(intent);
     }
 
@@ -146,6 +143,25 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = getIntent();
+        if (intent != null) {
+            SearchRecordDb key = (SearchRecordDb) intent.getSerializableExtra(PARAM_KEY);
+            if (key != null) {
+                doSearch(key.getKey(), 1);
+            }
+        }
+        setIntent(null);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
     }
 
     @Override
@@ -221,6 +237,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 
         if (id == R.id.nav_favorite) {
             // Handle the camera action
+            FavoriteActivity.start(this);
         } else if (id == R.id.nav_record) {
             RecordActivity.start(this);
         } else if (id == R.id.nav_share) {
@@ -263,7 +280,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
         ft.commitNow();
     }
 
-    public ArrayList<MovieUrl> getMovieList() {
+    public ArrayList<SearchResultDb> getMovieList() {
         return mMovieList;
     }
 
@@ -330,7 +347,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
     }
 
     @Override
-    public void onListFragmentInteraction(MovieUrl item) {
+    public void onListFragmentInteraction(SearchResultDb item) {
 //        PlayerActivity.start(MainActivity.this, "ok", "http://pan.baidu.com/share/link?shareid=1039547194&uk=3943590444&fid=542233410763175");
 //        WebViewActivity.startForUrl(this, item.url);
     }

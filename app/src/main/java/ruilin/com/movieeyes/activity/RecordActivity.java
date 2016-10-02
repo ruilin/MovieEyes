@@ -48,6 +48,7 @@ public class RecordActivity extends BasePageActivity implements RecordFagment.On
                                 /* 清除记录 */
                                 ToastHelper.show(RecordActivity.this, getResources().getString(R.string.setting_clear_finish));
                                 SearchKeyHelper.getInstance().clear();
+                                close();
                             }
                         });
                 break;

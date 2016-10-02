@@ -78,30 +78,26 @@ public class MovieApplication extends Application implements Application.Activit
     /* 统计 */
     private void initUMStatistics() {
         MobclickAgent.UMAnalyticsConfig config = new MobclickAgent.UMAnalyticsConfig(this, "57e8915267e58eccde000122", "10000", MobclickAgent.EScenarioType.E_UM_NORMAL);
-        MobclickAgent. startWithConfigure(config);
+        MobclickAgent.startWithConfigure(config);
     }
+
     /* 推送 */
     public void initUMPush() {
         final PushAgent mPushAgent = PushAgent.getInstance(this);
         mPushAgent.setDebugMode(false);
-        new Thread(new Runnable() {
+        //注册推送服务，每次调用register方法都会回调该接口
+        mPushAgent.register(new IUmengRegisterCallback() {
+
             @Override
-            public void run() {
-                //注册推送服务，每次调用register方法都会回调该接口
-                mPushAgent.register(new IUmengRegisterCallback() {
-
-                    @Override
-                    public void onSuccess(String deviceToken) {
-                        //注册成功会返回device token
-                    }
-
-                    @Override
-                    public void onFailure(String s, String s1) {
-
-                    }
-                });
+            public void onSuccess(String deviceToken) {
+                //注册成功会返回device token
             }
-        }).start();
 
+            @Override
+            public void onFailure(String s, String s1) {
+
+            }
+        });
     }
+
 }

@@ -15,7 +15,7 @@ import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
 import ruilin.com.movieeyes.adapter.MovieListAdapter;
 import ruilin.com.movieeyes.base.BaseFragment;
-import ruilin.com.movieeyes.modle.MovieUrl;
+import ruilin.com.movieeyes.db.bean.SearchResultDb;
 
 /**
  * A fragment representing a list of Items.
@@ -30,7 +30,7 @@ public class MovieListFragment extends BaseFragment {
     // TODO: Customize parameters
     private OnListFragmentInteractionListener mListener;
     private MovieListAdapter mAdapter;
-    private ArrayList<MovieUrl> mItems;
+    private ArrayList<SearchResultDb> mItems;
     private View mContentView;
     private View mEmptyView;
 
@@ -143,7 +143,7 @@ public class MovieListFragment extends BaseFragment {
 
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(MovieUrl item);
+        void onListFragmentInteraction(SearchResultDb item);
         void onMovielistClose();
         void onNextPage(String key, int currentPage);
     }

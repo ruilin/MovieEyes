@@ -1,19 +1,22 @@
 package ruilin.com.movieeyes.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Helper.SearchResultHelper;
+import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
+import ruilin.com.movieeyes.db.bean.SearchResultDb;
 import ruilin.com.movieeyes.fragment.MovieListFragment.OnListFragmentInteractionListener;
-import ruilin.com.movieeyes.modle.MovieUrl;
+import ruilin.com.movieeyes.util.DateUtil;
 
 /**
  * specified {@link OnListFragmentInteractionListener}.
@@ -22,13 +25,13 @@ import ruilin.com.movieeyes.modle.MovieUrl;
 public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int ITEM_TYPE_CONTENT = 0;
     private static final int ITEM_TYPE_FOOTER = 1;
-    private final ArrayList<MovieUrl> mValues;
+    private final ArrayList<SearchResultDb> mValues;
     private final OnListFragmentInteractionListener mListener;
     private Activity mActivity;
     private String mKey;
     private int mPage;
 
-    public MovieListAdapter(Activity context, ArrayList<MovieUrl> items, OnListFragmentInteractionListener listener) {
+    public MovieListAdapter(Activity context, ArrayList<SearchResultDb> items, OnListFragmentInteractionListener listener) {
         mActivity = context;
         mValues = items;
         mListener = listener;
@@ -57,13 +60,21 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         if (getItemViewType(position) == ITEM_TYPE_CONTENT) {
             final ContentViewHolder holder = (ContentViewHolder)viewHolder;
             holder.mItem = mValues.get(position);
-            holder.mIdView.setText(mValues.get(position).tag);
-            holder.mContentView.setText(String.format(mActivity.getString(R.string.movie_item_author), mValues.get(position).author));
-            holder.mDateView.setText(mValues.get(position).date);
+            holder.mIdView.setText(mValues.get(position).getTag());
+            holder.mContentView.setText(String.format(mActivity.getString(R.string.movie_item_author), mValues.get(position).getAuthor()));
+            holder.mDateView.setText(DateUtil.determineDateFormat(mValues.get(position).getDate()));
+            holder.mFavoriteView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    /* 添加收藏 */
+                    SearchResultHelper.getInstance().add(holder.mItem);
+                    ToastHelper.show(v.getContext(), v.getContext().getResources().getString(R.string.toast_add_favorite));
+                }
+            });
             holder.mContentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MainActivity.doUrl(mActivity, holder.mItem.authorUrl);
+                    MainActivity.doUrl(mActivity, holder.mItem.getAuthorUrl());
                 }
             });
             holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +85,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                         // fragment is attached to one) that an item has been selected.
                         mListener.onListFragmentInteraction(holder.mItem);
                     }
-                    MainActivity.doUrl(mActivity, holder.mItem.url);
+                    MainActivity.doUrl(mActivity, holder.mItem.getUrl());
                 }
             });
         } else {
@@ -106,7 +117,8 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         public final TextView mIdView;
         public final TextView mContentView;
         public final TextView mDateView;
-        public MovieUrl mItem;
+        public final ImageView mFavoriteView;
+        public SearchResultDb mItem;
 
         public ContentViewHolder(View view) {
             super(view);
@@ -114,6 +126,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             mIdView = (TextView) view.findViewById(R.id.tv_name);
             mContentView = (TextView) view.findViewById(R.id.tv_author);
             mDateView = (TextView) view.findViewById(R.id.tv_date);
+            mFavoriteView = (ImageView) view.findViewById(R.id.iv_favorite);
         }
 
         @Override

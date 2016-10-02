@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/selector_movie_item"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="10dp">
 
     <!--<ImageView-->
@@ -14,41 +14,57 @@
     <!--/>-->
 
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="top"
-        android:text="name"
-        android:textColor="@color/text_red"
-        android:textSize="@dimen/text_size_4"
-        android:textAppearance="?attr/textAppearanceListItem" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|top"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_gravity="center_vertical"
+            android:text="name"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/text_size_4" />
+
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:src="@drawable/ic_add_favorite"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size_3"
+            android:singleLine="true"
             android:text="@string/movie_item_author"
+            android:textAppearance="?attr/textAppearanceListItem"
             android:textColor="@drawable/selector_text"
-            android:paddingBottom="8dp"
-            android:textAppearance="?attr/textAppearanceListItem" />
+            android:textSize="@dimen/text_size_3" />
 
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size_2"
+            android:layout_alignParentRight="true"
             android:text="@string/movie_item_date"
+            android:textAppearance="?attr/textAppearanceListItem"
             android:textColor="@color/text_gray"
-            android:textAppearance="?attr/textAppearanceListItem" />
-    </LinearLayout>
+            android:textSize="@dimen/text_size_2" />
+    </RelativeLayout>
 </LinearLayout>

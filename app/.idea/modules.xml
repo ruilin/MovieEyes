@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1076995540/MovieEyes.iml" filepath="$PROJECT_DIR$/.idea/modules/1076995540/MovieEyes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1755729317/PushSDK.iml" filepath="$PROJECT_DIR$/.idea/modules/1755729317/PushSDK.iml" group="PushSDK" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1123842007/sugar.iml" filepath="$PROJECT_DIR$/.idea/modules/-1123842007/sugar.iml" group="sugar" />
+    </modules>
+  </component>
+</project>

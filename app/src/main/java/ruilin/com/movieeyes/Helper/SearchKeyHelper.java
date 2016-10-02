@@ -31,7 +31,7 @@ public class SearchKeyHelper {
     }
 
     public void add(String key) {
-        SearchRecordDb record = new SearchRecordDb(key, null, System.currentTimeMillis());
+        SearchRecordDb record = new SearchRecordDb(key, null);
         if (mList != null) {
             mList.add(record);
         }
@@ -40,12 +40,7 @@ public class SearchKeyHelper {
 
     public List<SearchRecordDb> getList() {
         if (mList == null) {
-            mList = new ArrayList<>();
-            try {
-                mList.addAll(SugarRecord.listAll(SearchRecordDb.class));
-            } catch (SQLiteException e) {
-                e.printStackTrace();
-            }
+            mList = SugarRecord.listAll(SearchRecordDb.class);
         }
         return mList;
     }

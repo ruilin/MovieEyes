@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Date;
 import java.util.List;
 
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
@@ -48,6 +49,12 @@ public class RecordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         final ContentViewHolder holder = (ContentViewHolder) viewHolder;
         holder.mItem = mValues.get(position);
         holder.mKeyTv.setText(mValues.get(position).getKey());
+        String date = mValues.get(position).getTime();
+        if (date != null) {
+            holder.mTimeTv.setText(date);
+        } else {
+            holder.mTimeTv.setText("--");
+        }
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +85,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public class ContentViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mKeyTv;
+        public final TextView mTimeTv;
         public final ImageView mSelectView;
         public final ImageView mDeleteView;
         public SearchRecordDb mItem;
@@ -86,6 +94,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             super(view);
             mView = view;
             mKeyTv = (TextView) view.findViewById(R.id.tv_key);
+            mTimeTv = (TextView) view.findViewById(R.id.tv_time);
             mSelectView = (ImageView) view.findViewById(R.id.iv_select);
             mDeleteView = (ImageView) view.findViewById(R.id.iv_delete);
         }

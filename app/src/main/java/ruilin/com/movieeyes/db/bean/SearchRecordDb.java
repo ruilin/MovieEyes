@@ -5,6 +5,9 @@ import com.orm.dsl.Table;
 import com.orm.dsl.Unique;
 
 import java.io.Serializable;
+import java.util.Date;
+
+import ruilin.com.movieeyes.util.DateUtil;
 
 /**
  * Created by ruilin on 16/10/1.
@@ -16,16 +19,16 @@ public class SearchRecordDb extends SugarRecord implements Serializable {
     @Unique
     private String key;
 
-    private long time;
+    private String time;
 
     private String url;
 
     public SearchRecordDb(){}
 
-    public SearchRecordDb(String key, String url, long time) {
+    public SearchRecordDb(String key, String url) {
         this.key = key;
         this.url = url;
-        this.time = time;
+        setTime(System.currentTimeMillis());
     }
 
     public void setKey(String key) {
@@ -37,10 +40,10 @@ public class SearchRecordDb extends SugarRecord implements Serializable {
     }
 
     public void setTime(long time) {
-        this.time = time;
+        this.time = DateUtil.timeToDate(time);
     }
 
-    public long getTime() {
+    public String getTime() {
         return time;
     }
 
