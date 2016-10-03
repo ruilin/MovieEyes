@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -43,6 +44,7 @@ import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
+import ruilin.com.movieeyes.base.AppInfo;
 import ruilin.com.movieeyes.base.BaseActivity;
 import ruilin.com.movieeyes.db.bean.SearchRecordDb;
 import ruilin.com.movieeyes.db.bean.SearchResultDb;
@@ -243,7 +245,12 @@ public class MainActivity extends BaseActivity implements OnClickListener,
         } else if (id == R.id.nav_share) {
             ShareHelper.share(this, getResources().getString(R.string.hot_search_tips)+"WWW");
         } else if (id == R.id.nav_about) {
-
+            Resources res = getResources();
+            DialogHelper.showTips(this,
+                    res.getString(R.string.app_name)+" "+ AppInfo.getVersionName(this),
+                    "程序猿GG正在加班改进中," +
+                            "\n请您多多支持哟!!喵~~"
+                            );
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

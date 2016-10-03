@@ -37,7 +37,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="left"
-            android:src="@drawable/ic_add_favorite"
+            android:src="@android:drawable/ic_input_add"
             />
     </LinearLayout>
 
