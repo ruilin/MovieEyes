@@ -60,27 +60,28 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="bottom"
-                            android:paddingBottom="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
                             android:paddingLeft="@dimen/common_margin"
                             android:paddingRight="@dimen/common_margin"
-                            android:paddingTop="1dp"
-                            android:orientation="horizontal">
+                            android:paddingTop="10dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/ic_tag" />
 
                             <TextView
                                 android:id="@+id/tv_title"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:gravity="bottom"
-                                android:layout_marginRight="5dp"
                                 android:text="@string/hot_search_key"
                                 android:textColor="@color/text_black"
                                 android:textSize="16.0sp" />
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/ic_tag" />
                         </LinearLayout>
 
                         <ruilin.com.movieeyes.widget.TagView.TagListView xmlns:f="http://schemas.android.com/apk/res-auto"
@@ -100,7 +101,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="12dp"
                             android:text="@string/hot_search_tips"
                             android:textColor="@color/text_gray"
                             android:textSize="@dimen/text_size_2" />

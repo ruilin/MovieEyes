@@ -5,7 +5,10 @@
     android:background="@drawable/selector_movie_item"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
 
     <!--<ImageView-->
     <!--android:layout_width="wrap_content"-->
@@ -34,10 +37,10 @@
 
         <ImageView
             android:id="@+id/iv_favorite"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_gravity="left"
-            android:src="@android:drawable/ic_input_add"
+            android:src="@drawable/ic_favorite_add"
             />
     </LinearLayout>
 

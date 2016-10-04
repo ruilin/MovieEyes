@@ -24,13 +24,14 @@
             android:layout_weight="1"
             android:text="@string/main_search_result_tips"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_4" />
+            android:textSize="@dimen/text_size_3" />
 
         <Button
             android:id="@+id/bt_close"
             style="?android:textAppearanceSmall"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:padding="5dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/ic_close" />
     </LinearLayout>

@@ -55,7 +55,8 @@ import ruilin.com.movieeyes.modle.SearchKey;
 /**
  * @author Ruilin
  */
-public class MainActivity extends BaseActivity implements OnClickListener,
+public class
+MainActivity extends BaseActivity implements OnClickListener,
         NavigationView.OnNavigationItemSelectedListener,
         MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
@@ -243,13 +244,13 @@ public class MainActivity extends BaseActivity implements OnClickListener,
         } else if (id == R.id.nav_record) {
             RecordActivity.start(this);
         } else if (id == R.id.nav_share) {
-            ShareHelper.share(this, getResources().getString(R.string.hot_search_tips)+"WWW");
+            ShareHelper.share(this, getResources().getString(R.string.hot_search_tips)+"https://www.pgyer.com/search");
         } else if (id == R.id.nav_about) {
             Resources res = getResources();
             DialogHelper.showTips(this,
                     res.getString(R.string.app_name)+" "+ AppInfo.getVersionName(this),
-                    "程序猿GG正在加班改进中," +
-                            "\n请您多多支持哟!!喵~~"
+                    "程序猿正在加班改进中," +
+                            "\n请您多多支持哦!!"
                             );
         }
 

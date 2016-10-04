@@ -30,7 +30,7 @@
             android:value="57e8915267e58eccde000122" />
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="10000" />
+            android:value="${CHANNEL_NAME}" />
         <!-- 友盟推送 -->
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"

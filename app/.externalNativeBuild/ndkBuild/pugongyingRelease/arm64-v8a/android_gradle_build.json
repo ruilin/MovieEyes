@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/Users/ruilin/Program/Tools/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/pugongyingRelease/obj NDK_LIBS_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/pugongying/release/lib clean"
+  ],
+  "libraries": {
+    "movieeyes-pugongyingRelease-arm64-v8a": {
+      "buildCommand": "/Users/ruilin/Program/Tools/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/pugongyingRelease/obj NDK_LIBS_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/pugongying/release/lib /Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/arm64-v8a/libmovieeyes.so",
+      "toolchain": "toolchain-arm64-v8a",
+      "abi": "arm64-v8a",
+      "artifactName": "movieeyes",
+      "files": [
+        {
+          "src": "/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/jni_main.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fstrict-aliasing\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-I/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Users/ruilin/Program/Tools/android-ndk-r10e/platforms/android-21/arch-arm64/usr/include\""
+        }
+      ],
+      "output": "/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/arm64-v8a/libmovieeyes.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-arm64-v8a": {
+      "cCompilerExecutable": "/Users/ruilin/Program/Tools/android-ndk-r10e/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

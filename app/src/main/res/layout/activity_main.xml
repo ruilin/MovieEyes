@@ -72,7 +72,7 @@
                             android:inputType="text"
                             android:maxLines="1"
                             android:singleLine="true"
-                            android:text="大话西游" />
+                             />
 
                     </android.support.design.widget.TextInputLayout>
 

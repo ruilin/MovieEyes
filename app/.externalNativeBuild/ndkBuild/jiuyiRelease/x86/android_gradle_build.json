@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/Users/ruilin/Program/Tools/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/jiuyiRelease/obj NDK_LIBS_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/jiuyi/release/lib clean"
+  ],
+  "libraries": {
+    "movieeyes-jiuyiRelease-x86": {
+      "buildCommand": "/Users/ruilin/Program/Tools/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/jiuyiRelease/obj NDK_LIBS_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/jiuyi/release/lib /Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86/libmovieeyes.so",
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "movieeyes",
+      "files": [
+        {
+          "src": "/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/jni_main.c",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-fstack-protector\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fstrict-aliasing\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-I/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Users/ruilin/Program/Tools/android-ndk-r10e/platforms/android-16/arch-x86/usr/include\""
+        }
+      ],
+      "output": "/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86/libmovieeyes.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cCompilerExecutable": "/Users/ruilin/Program/Tools/android-ndk-r10e/toolchains/x86-4.8/prebuilt/darwin-x86_64/bin/i686-linux-android-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

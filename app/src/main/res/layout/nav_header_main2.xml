@@ -32,13 +32,13 @@
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:text="Search for cloud"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorAccent" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="zruilin@126.com"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorAccent" />
     </LinearLayout>
 </LinearLayout>

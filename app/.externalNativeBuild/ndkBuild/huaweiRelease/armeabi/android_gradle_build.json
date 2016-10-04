@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/Users/ruilin/Program/Tools/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/huaweiRelease/obj NDK_LIBS_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/huawei/release/lib clean"
+  ],
+  "libraries": {
+    "movieeyes-huaweiRelease-armeabi": {
+      "buildCommand": "/Users/ruilin/Program/Tools/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/Android.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/huaweiRelease/obj NDK_LIBS_OUT\u003d/Volumes/T/program/code/workspace_git/MovieEyes/app/build/intermediates/ndkBuild/huawei/release/lib /Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi/libmovieeyes.so",
+      "toolchain": "toolchain-armeabi",
+      "abi": "armeabi",
+      "artifactName": "movieeyes",
+      "files": [
+        {
+          "src": "/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni/jni_main.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-mthumb\" \"-Os\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fno-strict-aliasing\" \"-finline-limit\u003d64\" \"-I/Volumes/T/program/code/workspace_git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Users/ruilin/Program/Tools/android-ndk-r10e/platforms/android-16/arch-arm/usr/include\""
+        }
+      ],
+      "output": "/Volumes/T/program/code/workspace_git/MovieEyes/app/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi/libmovieeyes.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi": {
+      "cCompilerExecutable": "/Users/ruilin/Program/Tools/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

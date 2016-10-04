@@ -1,6 +1,12 @@
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 
+################common###############
+-keep class ruilin.com.movieeyes.db.bean.** { *; } #java bean不参与混淆
+-keep class ruilin.com.movieeyes.modle.** { *; } #java bean不参与混淆
+-keep class ruilin.com.movieeyes.widget.** { *; }
+-keep class org.jsoup.** {*;}
+
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses
 -verbose
@@ -179,3 +185,5 @@
 }
 # -----------
 -dontwarn okio.**
+
+
