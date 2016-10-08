@@ -38,8 +38,8 @@ public class MovieApplication extends Application implements Application.Activit
 
         initUMStatistics();
         initUMPush();
-//        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
-        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, true);
+        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
+//        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, true);
     }
 
     @Override

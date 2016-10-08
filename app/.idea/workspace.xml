@@ -10,493 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ca482f7-b30a-47d3-9b81-77097462ef08" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/arm64-v8a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/armeabi-v7a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/armeabi/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/armeabi/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/armeabi/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/mips/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/mips/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/mips/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/mips64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/mips64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/mips64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/x86/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/x86/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/x86/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/x86_64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/x86_64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/obj/local/x86_64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/arm64-v8a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi-v7a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/armeabi/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/mips/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/mips/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/mips/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/mips64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/mips64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/mips64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/x86/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/x86/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/x86/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/x86_64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/x86_64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/obj/local/x86_64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/arm64-v8a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/armeabi-v7a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/armeabi/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/armeabi/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/armeabi/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/mips/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/mips/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/mips/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/mips64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/mips64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/mips64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86_64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86_64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/obj/local/x86_64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/arm64-v8a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/arm64-v8a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/armeabi-v7a/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/armeabi/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/armeabi/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/armeabi/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/mips/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/mips/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/mips/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/mips64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/mips64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/mips64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/x86/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/x86/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/x86/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/x86_64/libmovieeyes.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/x86_64/objs/movieeyes/jni_main.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/obj/local/x86_64/objs/movieeyes/jni_main.o.d" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/outputs/aar/PushSDK-debug.aar" afterPath="$PROJECT_DIR$/../PushSDK/build/outputs/aar/PushSDK-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/outputs/aar/PushSDK-release.aar" afterPath="$PROJECT_DIR$/../PushSDK/build/outputs/aar/PushSDK-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/arm64-v8a/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/arm64-v8a/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/arm64-v8a/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/arm64-v8a/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi-v7a/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi-v7a/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips64/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips64/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips64/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips64/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86_64/libmovieeyes.so" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86_64/libmovieeyes.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86_64/objs/movieeyes/jni_main.o" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86_64/objs/movieeyes/jni_main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-GooglePlay-release-1.1.apk" afterPath="$PROJECT_DIR$/app-GooglePlay-release-1.1.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/gradle.xml" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/generated/source/buildConfig/androidTest/debug/com/umeng/message/lib/test/BuildConfig.java" afterPath="$PROJECT_DIR$/../PushSDK/build/generated/source/buildConfig/androidTest/debug/com/umeng/message/lib/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/generated/source/buildConfig/debug/com/umeng/message/lib/BuildConfig.java" afterPath="$PROJECT_DIR$/../PushSDK/build/generated/source/buildConfig/debug/com/umeng/message/lib/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/generated/source/buildConfig/release/com/umeng/message/lib/BuildConfig.java" afterPath="$PROJECT_DIR$/../PushSDK/build/generated/source/buildConfig/release/com/umeng/message/lib/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/bundles/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/bundles/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/bundles/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/bundles/release/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeReleaseAssets/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeReleaseAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeReleaseShaders/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeReleaseShaders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageReleaseResources/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/packageReleaseResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/manifests/aapt/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/manifests/aapt/release/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/arm64-v8a/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/arm64-v8a/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi-v7a/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/armeabi/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips64/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/mips64/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86_64/objs/movieeyes/jni_main.o.d" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/obj/local/x86_64/objs/movieeyes/jni_main.o.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/GooglePlayRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/huaweiRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/jiuyiRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/pugongyingRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/qqRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/umengRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/wandoujiaRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiDebug/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/arm64-v8a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/arm64-v8a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/arm64-v8a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/arm64-v8a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/arm64-v8a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/arm64-v8a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi-v7a/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi-v7a/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi-v7a/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi-v7a/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi-v7a/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi-v7a/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/armeabi/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/mips64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86_64/android_gradle_build.json" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86_64/android_gradle_build.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86_64/ndkBuild_build_command.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86_64/ndkBuild_build_command.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86_64/ndkBuild_build_output.txt" afterPath="$PROJECT_DIR$/.externalNativeBuild/ndkBuild/xiaomiRelease/x86_64/ndkBuild_build_output.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/tbs_sdk_thirdapp_v2_3_0_1048_36801_sharewithdownload_obfs_20160829_200437.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard-rules.pro" afterPath="$PROJECT_DIR$/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/WebViewActivity.java" afterPath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/WebViewActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/BasePageActivity.java" afterPath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/BasePageActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java" afterPath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" afterPath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/activity_web.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_hot.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_hot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -532,28 +53,82 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+            <state relative-caret-position="264">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+              <folding>
+                <element signature="e#1192#1210#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="WebViewActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/WebViewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#1433#1644#0" expanded="true" />
+                <element signature="e#1643#1644#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
+              <folding>
+                <element signature="e#9167#9215#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BasePageActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/BasePageActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/AdHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="308">
+              <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -577,21 +152,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/intermediates/manifests/full/GooglePlay/debug/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity_web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -610,39 +175,6 @@
           </provider>
           <provider editor-type-id="android-designer2">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_splash.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_splash.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/dimens.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="70" column="50" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -5966,7 +5498,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="E:\Code\Workspace\git\MovieEyes\app" value="5903592445356" />
+        <entry key="E:\Code\Workspace\git\MovieEyes\app" value="5903592896064" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -6389,18 +5921,20 @@
         <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/PermissionHelper.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/SplashActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_hot.xml" />
         <option value="$PROJECT_DIR$/build/intermediates/manifests/full/GooglePlay/debug/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/AdHelper.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/AdHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/BasePageActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/WebViewActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -6421,7 +5955,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -6500,6 +6034,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieEyes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieEyes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -6512,7 +6064,7 @@
     <property name="device.picker.selection" value="722bf99d" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="SearchEverywhereHistoryKey" value="activity_w&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_web.xml&#10;activity_m&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_main.xml&#10;string.xml&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/values/strings.xml&#10;activity_s&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_splash.xml&#10;activity_main&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_main.xml&#10;MainAc&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java&#10;frag&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/fragment_hot.xml&#10;Mo&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java&#10;Main&#9;PSI&#9;JAVA://ruilin.com.movieeyes.activity.MainActivity&#10;hot&#9;PSI&#9;JAVA://ruilin.com.movieeyes.fragment.HotFragment&#10;fragment_hot&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/fragment_hot.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Movie&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java&#10;Main&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java&#10;Mainac&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java&#10;activity_w&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_web.xml&#10;activity_m&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_main.xml&#10;string.xml&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/values/strings.xml&#10;activity_s&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_splash.xml&#10;activity_main&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_main.xml&#10;MainAc&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java&#10;frag&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/fragment_hot.xml&#10;Mo&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java&#10;hot&#9;PSI&#9;JAVA://ruilin.com.movieeyes.fragment.HotFragment&#10;fragment_hot&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/fragment_hot.xml" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/res/drawable" />
     <property name="ExportApk.ApkPath" value="E:\Code\Workspace\git\MovieEyes\app" />
@@ -6837,7 +6389,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -7017,39 +6569,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding>
-            <element signature="e#3152#3170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="106" column="43" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="250" column="75" selection-start-line="250" selection-start-column="75" selection-end-line="250" selection-end-column="75" />
           <folding />
         </state>
       </provider>
@@ -7092,10 +6615,26 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/AdHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+        <state relative-caret-position="264">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/intermediates/manifests/full/GooglePlay/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1252">
+          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -7116,18 +6655,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/intermediates/manifests/full/GooglePlay/debug/AndroidManifest.xml">
+    <entry file="jar://$PROJECT_DIR$/libs/tbs_sdk_thirdapp_v2.3.0.1048_36801_sharewithdownload_obfs_20160829_200437.jar!/com/tencent/smtt/sdk/WebView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+        <state relative-caret-position="132">
+          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -7135,20 +6674,58 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/WebViewActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/BasePageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+        <state relative-caret-position="484">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/AdHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/WebViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="449">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1433#1644#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
+          <folding>
+            <element signature="e#9167#9215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="e#1192#1210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
   </component>

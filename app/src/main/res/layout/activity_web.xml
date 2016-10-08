@@ -4,9 +4,13 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webview" />
+    <!--<WebView-->
+        <!--android:id="@+id/webview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/tbsContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

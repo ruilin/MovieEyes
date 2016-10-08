@@ -33,6 +33,8 @@ public abstract class BasePageActivity extends BaseActivity {
         mContentLayout = (LinearLayout)findViewById(R.id.ll_base_content);
         View contentView = getLayoutInflater().inflate(setContentView(), null);
         mContentLayout.addView(contentView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        init();
     }
 
     protected String setTitle() {
@@ -48,6 +50,7 @@ public abstract class BasePageActivity extends BaseActivity {
         });
     }
     protected abstract @LayoutRes int setContentView();
+    protected void init(){};
 
     public void close() {
         finish();
