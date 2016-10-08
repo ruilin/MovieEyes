@@ -5,10 +5,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -16,8 +18,12 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import net.youmi.android.normal.banner.BannerManager;
+import net.youmi.android.normal.banner.BannerViewListener;
+
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Helper.AdHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
@@ -90,25 +96,8 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
             }
         });
 
-        AdView mAdView = (AdView) contentView.findViewById(R.id.adView);
-//        mAdView.setAdUnitId(getString(R.string.banner_ad_unit_id));
-//        mAdView.setAdSize(AdSize.WIDE_SKYSCRAPER);
-        final View progressBar = contentView.findViewById(R.id.pb_ad);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                progressBar.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                super.onAdFailedToLoad(errorCode);
-                progressBar.setVisibility(View.GONE);
-            }
-        });
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        AdHelper.initAdmob(contentView);
+//        AdHelper.initYoumi(contentView);
 
         /* 解决scrollview 与 SwipeRefreshLayout 滚动冲突 */
         if (scrollView != null) {

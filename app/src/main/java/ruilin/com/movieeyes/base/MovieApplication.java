@@ -9,6 +9,12 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
+import net.youmi.android.AdManager;
+
+import ruilin.com.movieeyes.BuildConfig;
+
+import static anetwork.channel.http.NetworkSdkSetting.context;
+
 /**
  * Created by Ruilin on 2016/9/13.
  */
@@ -32,6 +38,8 @@ public class MovieApplication extends Application implements Application.Activit
 
         initUMStatistics();
         initUMPush();
+//        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
+        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, true);
     }
 
     @Override

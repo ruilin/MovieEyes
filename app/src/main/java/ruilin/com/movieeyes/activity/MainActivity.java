@@ -36,6 +36,7 @@ import android.widget.Toast;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.Helper.AdHelper;
 import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
@@ -84,6 +85,7 @@ MainActivity extends BaseActivity implements OnClickListener,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
+
         mMovieList = new ArrayList<>();
         Button searchButton = (Button) findViewById(R.id.button_search);
         searchButton.setOnClickListener(new OnClickListener() {
@@ -146,6 +148,8 @@ MainActivity extends BaseActivity implements OnClickListener,
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        AdHelper.initYoumi(this);
     }
 
     @Override
@@ -244,7 +248,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         } else if (id == R.id.nav_record) {
             RecordActivity.start(this);
         } else if (id == R.id.nav_share) {
-            ShareHelper.share(this, getResources().getString(R.string.hot_search_tips)+"https://www.pgyer.com/search");
+            ShareHelper.share(this, getResources().getString(R.string.share_connent));
         } else if (id == R.id.nav_about) {
             Resources res = getResources();
             DialogHelper.showTips(this,

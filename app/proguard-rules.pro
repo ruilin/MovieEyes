@@ -6,6 +6,9 @@
 -keep class ruilin.com.movieeyes.modle.** { *; } #java bean不参与混淆
 -keep class ruilin.com.movieeyes.widget.** { *; }
 -keep class org.jsoup.** {*;}
+-keep public class android.support.**{
+    *;
+}
 
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses

@@ -68,6 +68,7 @@
     <string name="toast_delete_favorite_finish">收藏夹已清空</string>
     <string name="dialog_title_delete_favorite">清空收藏夹</string>
     <string name="dialog_message_delete_favorite">是否确定删除所有收藏数据？</string>
+    <string name="share_connent">网盘搜索引擎，一键获取海量的免费高清电影、小说等资源！点击下载：https://www.pgyer.com/search</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

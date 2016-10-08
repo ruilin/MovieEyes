@@ -42,6 +42,36 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!-- 广告位 start -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/write"
+                    >
+
+                    <ImageView
+                        android:id="@+id/pb_ad"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_main_title" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/ll_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_horizontal">
+                    </LinearLayout>
+
+                </FrameLayout>
+                <!-- 广告位 end -->
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/bg_divider"
+                    />
                 <LinearLayout
                     android:id="@+id/ll_result"
                     android:layout_width="match_parent"
