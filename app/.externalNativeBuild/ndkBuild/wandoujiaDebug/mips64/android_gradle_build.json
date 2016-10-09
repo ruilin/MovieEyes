@@ -3,11 +3,11 @@
     "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk"
   ],
   "cleanCommands": [
-    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips64 NDK_ALL_ABIS\u003dmips64 NDEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\wandoujiaDebug\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\wandoujia\\debug\\lib clean"
+    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips64 NDK_ALL_ABIS\u003dmips64 NDEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\WanDouJiaDebug\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\WanDouJia\\debug\\lib clean"
   ],
   "libraries": {
-    "movieeyes-wandoujiaDebug-mips64": {
-      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips64 NDK_ALL_ABIS\u003dmips64 NDEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\wandoujiaDebug\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\wandoujia\\debug\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\wandoujiaDebug\\obj/local/mips64/libmovieeyes.so",
+    "movieeyes-WanDouJiaDebug-mips64": {
+      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips64 NDK_ALL_ABIS\u003dmips64 NDEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\WanDouJiaDebug\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\WanDouJia\\debug\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\WanDouJiaDebug\\obj/local/mips64/libmovieeyes.so",
       "toolchain": "toolchain-mips64",
       "abi": "mips64",
       "artifactName": "movieeyes",
@@ -17,7 +17,7 @@
           "flags": "\"-fpic\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-g\" \"-O2\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-21/arch-mips64/usr/include\""
         }
       ],
-      "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\wandoujiaDebug\\obj\\local\\mips64\\libmovieeyes.so"
+      "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\WanDouJiaDebug\\obj\\local\\mips64\\libmovieeyes.so"
     }
   },
   "toolchains": {

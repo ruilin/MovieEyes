@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk"
+  ],
+  "cleanCommands": [
+    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\KuAnDebug\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\KuAn\\debug\\lib clean"
+  ],
+  "libraries": {
+    "movieeyes-KuAnDebug-armeabi": {
+      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\KuAnDebug\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\KuAn\\debug\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\KuAnDebug\\obj/local/armeabi/libmovieeyes.so",
+      "toolchain": "toolchain-armeabi",
+      "abi": "armeabi",
+      "artifactName": "movieeyes",
+      "files": [
+        {
+          "src": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\jni_main.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-16/arch-arm/usr/include\""
+        }
+      ],
+      "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\KuAnDebug\\obj\\local\\armeabi\\libmovieeyes.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi": {
+      "cCompilerExecutable": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\build\\..\\toolchains\\arm-linux-androideabi-4.9\\prebuilt\\windows-x86_64\\bin\\arm-linux-androideabi-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

@@ -59,7 +59,7 @@ public class UMHelper {
             @Override
             public void onSuccess(String deviceToken) {
                 //注册成功会返回device token
-                Log.i("xxx", "xxxxxxxxxxxxxx >> "+deviceToken);
+//                Log.i("xxx", "xxxxxxxxxxxxxx >> "+deviceToken);
             }
 
             @Override
@@ -68,13 +68,17 @@ public class UMHelper {
             }
         });
 
+        /**
+         * 该Handler是在BroadcastReceiver中被调用，故
+         * 如果需启动Activity，需添加Intent.FLAG_ACTIVITY_NEW_TASK
+         * */
         UmengNotificationClickHandler notificationClickHandler = new UmengNotificationClickHandler() {
             @Override
             public void dealWithCustomAction(final Context context, final UMessage msg) {
                 String key = msg.extra.get("search_key");
                 SearchRecordDb sKey = key != null ? new SearchRecordDb(key, "") : null;
-                MainActivity.start(context, sKey);
-                DialogHelper.showTips(context, msg.title, msg.custom);
+                MainActivity.startForceSearch(context.getApplicationContext(), sKey);
+                DialogHelper.showTips(context.getApplicationContext(), msg.title, msg.custom);
             }
         };
         mPushAgent.setNotificationClickHandler(notificationClickHandler);

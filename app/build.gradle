@@ -65,14 +65,17 @@ android {
     }
     //渠道Flavors，我这里写了一些常用的
     productFlavors {
+        PuGongYing {}
+        KuAn {}
+        QiHu {}
+        SouHu {}
+        QQ {}
+        Baidu {}
+        Umeng {}
         GooglePlay {}
-        pugongying {}
-        umeng {}
-        wandoujia {}
-        xiaomi {}
-        qq {}
+        WanDouJia {}
+        XiaoMi {}
         huawei {}
-        jiuyi {}
     }
     productFlavors.all { flavor ->
         flavor.manifestPlaceholders = [CHANNEL_NAME: name]

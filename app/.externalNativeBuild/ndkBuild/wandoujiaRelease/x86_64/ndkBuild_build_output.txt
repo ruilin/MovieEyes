@@ -1,5 +1,5 @@
-md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib\x86_64" >NUL 2>NUL || rem
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [x86_64] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib/x86_64/libmovieeyes.so"
-copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\wandoujiaRelease\obj\local\x86_64\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib\x86_64\libmovieeyes.so" > NUL
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib/x86_64/libmovieeyes.so
+md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib\x86_64" >NUL 2>NUL || rem
+C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [x86_64] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib/x86_64/libmovieeyes.so"
+copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\WanDouJiaRelease\obj\local\x86_64\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib\x86_64\libmovieeyes.so" > NUL
+C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/x86_64-4.9/prebuilt/windows-x86_64/bin/x86_64-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib/x86_64/libmovieeyes.so
 process_begin: CreateProcess(NULL, "", ...) failed.

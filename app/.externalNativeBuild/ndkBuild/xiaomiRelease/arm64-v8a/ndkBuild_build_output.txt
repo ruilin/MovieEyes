@@ -1,5 +1,5 @@
-md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\xiaomi\release\lib\arm64-v8a" >NUL 2>NUL || rem
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [arm64-v8a] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\xiaomi\release\lib/arm64-v8a/libmovieeyes.so"
-copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\xiaomiRelease\obj\local\arm64-v8a\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\xiaomi\release\lib\arm64-v8a\libmovieeyes.so" > NUL
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64/bin/aarch64-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\xiaomi\release\lib/arm64-v8a/libmovieeyes.so
+md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\XiaoMi\release\lib\arm64-v8a" >NUL 2>NUL || rem
+C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [arm64-v8a] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\XiaoMi\release\lib/arm64-v8a/libmovieeyes.so"
+copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\XiaoMiRelease\obj\local\arm64-v8a\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\XiaoMi\release\lib\arm64-v8a\libmovieeyes.so" > NUL
+C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64/bin/aarch64-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\XiaoMi\release\lib/arm64-v8a/libmovieeyes.so
 process_begin: CreateProcess(NULL, "", ...) failed.

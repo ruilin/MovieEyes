@@ -3,11 +3,11 @@
     "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk"
   ],
   "cleanCommands": [
-    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\qqRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\qq\\release\\lib clean"
+    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\QQRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\QQ\\release\\lib clean"
   ],
   "libraries": {
-    "movieeyes-qqRelease-armeabi-v7a": {
-      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\qqRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\qq\\release\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\qqRelease\\obj/local/armeabi-v7a/libmovieeyes.so",
+    "movieeyes-QQRelease-armeabi-v7a": {
+      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\QQRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\QQ\\release\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\QQRelease\\obj/local/armeabi-v7a/libmovieeyes.so",
       "toolchain": "toolchain-armeabi-v7a",
       "abi": "armeabi-v7a",
       "artifactName": "movieeyes",
@@ -17,7 +17,7 @@
           "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-16/arch-arm/usr/include\""
         }
       ],
-      "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\qqRelease\\obj\\local\\armeabi-v7a\\libmovieeyes.so"
+      "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\QQRelease\\obj\\local\\armeabi-v7a\\libmovieeyes.so"
     }
   },
   "toolchains": {

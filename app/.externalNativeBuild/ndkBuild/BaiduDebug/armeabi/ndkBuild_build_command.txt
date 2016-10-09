@@ -1,0 +1,15 @@
+Executable : C:\ruilin\Tools\adt-bundle-windows-x86_64-20140702\sdk\ndk-bundle\ndk-build.cmd
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=E:\Code\Workspace\git\MovieEyes\app\src\main\jni\Android.mk
+APP_ABI=armeabi
+NDK_ALL_ABIS=armeabi
+NDEBUG=1
+APP_PLATFORM=android-16
+NDK_OUT=E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\BaiduDebug\obj
+NDK_LIBS_OUT=E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\Baidu\debug\lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-n
+jvmArgs : 
+

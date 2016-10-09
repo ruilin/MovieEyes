@@ -1,5 +1,5 @@
-md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib\mips" >NUL 2>NUL || rem
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [mips] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib/mips/libmovieeyes.so"
-copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\wandoujiaRelease\obj\local\mips\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib\mips\libmovieeyes.so" > NUL
-C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/bin/mipsel-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\wandoujia\release\lib/mips/libmovieeyes.so
+md "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib\mips" >NUL 2>NUL || rem
+C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [mips] "Install        ": "libmovieeyes.so => E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib/mips/libmovieeyes.so"
+copy /b/y "E:\Code\Workspace\git\MovieEyes\app\.externalNativeBuild\ndkBuild\WanDouJiaRelease\obj\local\mips\libmovieeyes.so" "E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib\mips\libmovieeyes.so" > NUL
+C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/bin/mipsel-linux-android-strip --strip-unneeded  E:\Code\Workspace\git\MovieEyes\app\build\intermediates\ndkBuild\WanDouJia\release\lib/mips/libmovieeyes.so
 process_begin: CreateProcess(NULL, "", ...) failed.

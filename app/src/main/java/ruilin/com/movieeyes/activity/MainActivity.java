@@ -67,6 +67,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         MovieListFragment.OnListFragmentInteractionListener, HotFragment.OnHotKeyClickedListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private final static String PARAM_KEY = "PARAM_KEY";
+    private final static String PARAM_FORCE_SEARCH = "PARAM_FORCE_SEARCH";
     private final static int FRAGMENT_TYPE_MOVIE_SEARCH = 0;
     private final static int FRAGMENT_TYPE_HOT_KEY = 1;
 
@@ -83,6 +84,14 @@ MainActivity extends BaseActivity implements OnClickListener,
     public static void start(Context context, SearchRecordDb key) {
         Intent intent = new Intent(context, MainActivity.class);
         intent.putExtra(PARAM_KEY, key);
+        context.startActivity(intent);
+    }
+
+    public static void startForceSearch(Context context, SearchRecordDb key) {
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.putExtra(PARAM_FORCE_SEARCH, true);
+        intent.putExtra(PARAM_KEY, key);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
@@ -174,6 +183,16 @@ MainActivity extends BaseActivity implements OnClickListener,
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        if (intent != null) {
+            if (intent.getBooleanExtra(PARAM_FORCE_SEARCH, false)) {
+                SearchRecordDb key = (SearchRecordDb) intent.getSerializableExtra(PARAM_KEY);
+                if (key != null) {
+                    doSearch(key.getKey(), 1);
+                    setIntent(null);
+                    return;
+                }
+            }
+        }
         setIntent(intent);
     }
 
@@ -271,8 +290,15 @@ MainActivity extends BaseActivity implements OnClickListener,
 
     public static void closeImm(Activity activity) {
         /* 关闭键盘 */
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+        try {
+            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            View focus = activity.getCurrentFocus();
+            if (imm != null && focus != null) {
+                imm.hideSoftInputFromWindow(focus.getWindowToken(), 0);
+            }
+        } catch (Exception e) {
+
+        }
     }
 
     public void setFragment(int type) {
