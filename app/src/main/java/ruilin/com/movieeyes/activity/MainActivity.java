@@ -98,8 +98,8 @@ MainActivity extends BaseActivity implements OnClickListener,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SplashActivity.close();
         initView();
-
         mMovieList = new ArrayList<>();
         Button searchButton = (Button) findViewById(R.id.button_search);
         searchButton.setOnClickListener(new OnClickListener() {

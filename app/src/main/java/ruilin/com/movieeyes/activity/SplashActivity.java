@@ -33,12 +33,15 @@ public class SplashActivity extends Activity {
 	private Context mContext;
 	
 	private PermissionHelper mPermissionHelper;
-	
+
+	private static SplashActivity sInstance;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
 		mContext = this;
+		sInstance = this;
 		// 设置全屏
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		// 移除标题栏
@@ -155,5 +158,20 @@ public class SplashActivity extends Activity {
 						Log.i(TAG, String.format("是否是网页广告？%s", isWebPage ? "是" : "不是"));
 					}
 				});
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		sInstance = null;
+	}
+
+	public static void close() {
+		if (sInstance != null) {
+			try {
+				sInstance.finish();
+			} catch (Exception e) {
+			}
+		}
 	}
 }

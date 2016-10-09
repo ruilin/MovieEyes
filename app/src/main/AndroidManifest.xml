@@ -51,17 +51,17 @@
             android:name=".activity.WellcomeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar" />
-        <!--<activity-->
-            <!--android:name=".activity.SplashActivity"-->
-            <!--android:configChanges="keyboard|keyboardHidden|screenSize|orientation"-->
-            <!--android:label="@string/app_name"-->
-            <!--android:screenOrientation="portrait" >-->
-            <!--<intent-filter >-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter >-->
-        <!--</activity >-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -70,11 +70,11 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustUnspecified|stateHidden">
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter >-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter >-->
         </activity>
         <activity
             android:name=".activity.WebViewActivity"

@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="@color/write"
-	>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write">
 
-	<RelativeLayout
-		android:id="@+id/rl_splash"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_marginBottom="80dp"
-		>
+    <RelativeLayout
+        android:id="@+id/rl_splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp">
 
-		<View
-			android:id="@+id/view_divider"
-			android:layout_width="match_parent"
-			android:layout_height="3dp"
-			android:layout_alignParentBottom="true"
-			android:background="@drawable/bg_divider"
-			/>
-	</RelativeLayout >
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_divider" />
+    </RelativeLayout>
 
-</RelativeLayout >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="zruilin@126.com"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_3" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
