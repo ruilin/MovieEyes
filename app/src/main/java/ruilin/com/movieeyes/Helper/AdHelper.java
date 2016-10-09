@@ -9,6 +9,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import net.youmi.android.AdManager;
 import net.youmi.android.normal.banner.BannerManager;
 import net.youmi.android.normal.banner.BannerViewListener;
 
@@ -44,7 +45,10 @@ public class AdHelper {
 //        mAdView.loadAd(adRequest);
 //    }
 
-    public static void initYoumi(Activity activity) {
+    public static void initYoumi(Context context) {
+        AdManager.getInstance(context).init("51e07d0de01cb66f", "e985ad03f56b4dcc", false, true);// BuildConfig.DEBUG
+    }
+    public static void setYoumi(Activity activity) {
         // 获取广告条
         View bannerView = BannerManager.getInstance(activity)
                 .getBannerView(new BannerViewListener() {

@@ -33,9 +33,12 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import net.youmi.android.AdManager;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import ruilin.com.movieeyes.BuildConfig;
 import ruilin.com.movieeyes.Helper.AdHelper;
 import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
@@ -52,6 +55,8 @@ import ruilin.com.movieeyes.db.bean.SearchResultDb;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.SearchKey;
+
+import static anetwork.channel.http.NetworkSdkSetting.context;
 
 /**
  * @author Ruilin
@@ -75,10 +80,10 @@ MainActivity extends BaseActivity implements OnClickListener,
     private int mCurrentFraType;
     private ArrayList<SearchResultDb> mMovieList;
 
-    public static void start(Activity activity, SearchRecordDb key) {
-        Intent intent = new Intent(activity, MainActivity.class);
+    public static void start(Context context, SearchRecordDb key) {
+        Intent intent = new Intent(context, MainActivity.class);
         intent.putExtra(PARAM_KEY, key);
-        activity.startActivity(intent);
+        context.startActivity(intent);
     }
 
     @Override
@@ -149,7 +154,8 @@ MainActivity extends BaseActivity implements OnClickListener,
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        AdHelper.initYoumi(this);
+//        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
+        AdHelper.setYoumi(this);
     }
 
     @Override

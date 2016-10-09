@@ -1,15 +1,9 @@
 package ruilin.com.movieeyes.base;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.message.PushAgent;
-
-import static anetwork.channel.http.NetworkSdkSetting.context;
+import ruilin.com.movieeyes.Helper.UMHelper;
 
 /**
  * Created by Ruilin on 2016/9/26.
@@ -21,21 +15,18 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PushAgent agent = PushAgent.getInstance(context);
-        if (agent != null) {
-            agent.onAppStart();
-        }
+        UMHelper.setPushStart(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
+        UMHelper.setPushResume(this);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
+        UMHelper.setPushPause(this);
     }
 }

@@ -161,23 +161,26 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         @Override
         protected void onPostExecute(final Integer resultCode) {
             showProgress(false);
-            switch (resultCode) {
-                case JsoupHelper.RESULT_CODE_SUCCESS:
-                    mTagListView.setTags(mHotkeyList);
-                    mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
-                    if (!isFirst) {
-                        ToastHelper.show(getActivity(), getResources().getString(R.string.hot_search_load_finish));
-                    } else {
-                        isFirst = false;
-                    }
-                    break;
-                case JsoupHelper.RESULT_CODE_TIMEOUT:
-                    ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_timeout_tips));
-                    break;
-                case JsoupHelper.RESULT_CODE_ERROR:
-                default:
-                    ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_error_tips));
-                    break;
+            try {
+                switch (resultCode) {
+                    case JsoupHelper.RESULT_CODE_SUCCESS:
+                        mTagListView.setTags(mHotkeyList);
+                        mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
+                        if (!isFirst) {
+                            ToastHelper.show(getActivity(), getResources().getString(R.string.hot_search_load_finish));
+                        } else {
+                            isFirst = false;
+                        }
+                        break;
+                    case JsoupHelper.RESULT_CODE_TIMEOUT:
+                        ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_timeout_tips));
+                        break;
+                    case JsoupHelper.RESULT_CODE_ERROR:
+                    default:
+                        ToastHelper.show(getActivity(), getResources().getString(R.string.main_net_error_tips));
+                        break;
+                }
+            } catch (Exception e) {
             }
         }
 
