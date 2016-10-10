@@ -28,6 +28,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -37,6 +38,7 @@ import net.youmi.android.AdManager;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.List;
 
 import ruilin.com.movieeyes.BuildConfig;
 import ruilin.com.movieeyes.Helper.AdHelper;
@@ -127,6 +129,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         mFragmentLayout = (LinearLayout) findViewById(R.id.ll_result);
 
         updateKeyTips();
+
         mKeyView.setThreshold(1);
         mKeyView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -275,12 +278,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         } else if (id == R.id.nav_share) {
             ShareHelper.share(this, getResources().getString(R.string.share_connent));
         } else if (id == R.id.nav_about) {
-            Resources res = getResources();
-            DialogHelper.showTips(this,
-                    res.getString(R.string.app_name)+" "+ AppInfo.getVersionName(this),
-                    "程序猿正在加班改进中," +
-                            "\n请您多多支持哦!!"
-                            );
+            DialogHelper.showAbout(this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -330,7 +328,7 @@ MainActivity extends BaseActivity implements OnClickListener,
 
     private void updateKeyTips() {
         SearchAdapter adapter = new SearchAdapter<>(MainActivity.this,
-                android.R.layout.simple_dropdown_item_1line, SearchKeyHelper.getInstance().getList(),
+                android.R.layout.simple_dropdown_item_1line, SearchKeyHelper.getInstance().genStringList(),
                 SearchAdapter.ALL);//速度优先
         mKeyView.setAdapter(adapter);
     }
@@ -467,7 +465,7 @@ MainActivity extends BaseActivity implements OnClickListener,
                         mMovieFra.update(key, page);
                     }
                     SearchKeyHelper.getInstance().add(key);
-                    updateKeyTips();
+//                    updateKeyTips();
                     break;
                 case JsoupHelper.RESULT_CODE_EMPTY:
                     if (page == JsoupHelper.FIRST_PAGE_NUM) {

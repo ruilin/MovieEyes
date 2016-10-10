@@ -19,6 +19,8 @@ import net.youmi.android.normal.spot.SplashViewSettings;
 import net.youmi.android.normal.spot.SpotListener;
 import net.youmi.android.normal.spot.SpotManager;
 
+import java.util.Random;
+
 import ruilin.com.movieeyes.Helper.PermissionHelper;
 import ruilin.com.movieeyes.R;
 
@@ -40,6 +42,13 @@ public class SplashActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
+//		Random random = new Random();
+//		boolean ifShow = (random.nextInt(10) % 2) != 0;
+//		if (!ifShow) {
+//			MainActivity.start(this, null);
+//			finish();
+//			return;
+//		}
 		mContext = this;
 		sInstance = this;
 		// 设置全屏
@@ -53,22 +62,22 @@ public class SplashActivity extends Activity {
 		mPermissionHelper.setOnApplyPermissionListener(new PermissionHelper.OnApplyPermissionListener() {
 			@Override
 			public void onAfterApplyAllPermission() {
-				Log.i(TAG, "All of requested permissions has been granted, so run app logic.");
+//				Log.i(TAG, "All of requested permissions has been granted, so run app logic.");
 				runApp();
 			}
 		});
 		if (Build.VERSION.SDK_INT < 23) {
 			// 如果系统版本低于23，直接跑应用的逻辑
-			Log.d(TAG, "The api level of system is lower than 23, so run app logic directly.");
+//			Log.d(TAG, "The api level of system is lower than 23, so run app logic directly.");
 			runApp();
 		} else {
 			// 如果权限全部申请了，那就直接跑应用逻辑
 			if (mPermissionHelper.isAllRequestedPermissionGranted()) {
-				Log.d(TAG, "All of requested permissions has been granted, so run app logic directly.");
+//				Log.d(TAG, "All of requested permissions has been granted, so run app logic directly.");
 				runApp();
 			} else {
 				// 如果还有权限为申请，而且系统版本大于23，执行申请权限逻辑
-				Log.i(TAG, "Some of requested permissions hasn't been granted, so apply permissions first.");
+//				Log.i(TAG, "Some of requested permissions hasn't been granted, so apply permissions first.");
 				mPermissionHelper.applyPermissions();
 			}
 		}
@@ -120,29 +129,29 @@ public class SplashActivity extends Activity {
 
 					@Override
 					public void onShowSuccess() {
-						Log.d(TAG, "开屏展示成功");
+//						Log.d(TAG, "开屏展示成功");
 						splashLayout.setVisibility(View.VISIBLE);
 						splashLayout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.anim_splash_enter));
 					}
 
 					@Override
 					public void onShowFailed(int errorCode) {
-						Log.d(TAG, "开屏展示失败");
+//						Log.d(TAG, "开屏展示失败");
 						switch (errorCode) {
 						case ErrorCode.NON_NETWORK:
-							Log.e(TAG, "无网络");
+//							Log.e(TAG, "无网络");
 							break;
 						case ErrorCode.NON_AD:
-							Log.e(TAG, "无广告");
+//							Log.e(TAG, "无广告");
 							break;
 						case ErrorCode.RESOURCE_NOT_READY:
-							Log.e(TAG, "资源还没准备好");
+//							Log.e(TAG, "资源还没准备好");
 							break;
 						case ErrorCode.SHOW_INTERVAL_LIMITED:
-							Log.e(TAG, "展示间隔限制");
+//							Log.e(TAG, "展示间隔限制");
 							break;
 						case ErrorCode.WIDGET_NOT_IN_VISIBILITY_STATE:
-							Log.e(TAG, "控件处在不可见状态");
+//							Log.e(TAG, "控件处在不可见状态");
 							break;
 						}
 					}
@@ -154,8 +163,8 @@ public class SplashActivity extends Activity {
 
 					@Override
 					public void onSpotClicked(boolean isWebPage) {
-						Log.d(TAG, "开屏被点击");
-						Log.i(TAG, String.format("是否是网页广告？%s", isWebPage ? "是" : "不是"));
+//						Log.d(TAG, "开屏被点击");
+//						Log.i(TAG, String.format("是否是网页广告？%s", isWebPage ? "是" : "不是"));
 					}
 				});
 	}

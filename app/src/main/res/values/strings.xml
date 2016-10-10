@@ -18,7 +18,7 @@
     <string name="action_search">搜  索</string>
     <string name="main_search_result_tips">搜索结果：</string>
     <string name="main_net_timeout_tips">连接超时</string>
-    <string name="main_net_error_tips">连接失败,请检查网络</string>
+    <string name="main_net_error_tips">服务器繁忙，请稍后再试</string>
     <string name="main_net_empty">找不到相关内容</string>
     <string name="main_net_no_next_page">已经是最后一页了</string>
     <string name="main_search_null_tips">请输入关键字搜索</string>

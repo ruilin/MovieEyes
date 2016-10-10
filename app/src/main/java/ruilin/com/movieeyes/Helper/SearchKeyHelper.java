@@ -1,13 +1,8 @@
 package ruilin.com.movieeyes.Helper;
 
-import android.database.sqlite.SQLiteException;
-
 import com.orm.SugarRecord;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
 import java.util.List;
 
 import ruilin.com.movieeyes.db.bean.SearchRecordDb;
@@ -43,6 +38,15 @@ public class SearchKeyHelper {
             mList = SugarRecord.listAll(SearchRecordDb.class);
         }
         return mList;
+    }
+
+    public List<String> genStringList() {
+        ArrayList<String> list = new ArrayList<>();
+        List<SearchRecordDb> mainList = getList();
+        for (SearchRecordDb item : mainList) {
+            list.add(item.getKey());
+        }
+        return list;
     }
 
     public boolean delete(SearchRecordDb item) {
