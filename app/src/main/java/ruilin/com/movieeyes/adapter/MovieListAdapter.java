@@ -5,12 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import ruilin.com.movieeyes.Helper.SearchResultHelper;
+import ruilin.com.movieeyes.Helper.ShareHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.activity.MainActivity;
@@ -71,6 +71,13 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     ToastHelper.show(v.getContext(), v.getContext().getResources().getString(R.string.toast_add_favorite));
                 }
             });
+            holder.mSendView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    /* 发送 */
+                    ShareHelper.share(mActivity, v.getResources().getString(R.string.share_send) + holder.mItem.getUrl());
+                }
+            });
             holder.mContentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -117,7 +124,8 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         public final TextView mIdView;
         public final TextView mContentView;
         public final TextView mDateView;
-        public final ImageView mFavoriteView;
+        public final View mFavoriteView;
+        public final View mSendView;
         public SearchResultDb mItem;
 
         public ContentViewHolder(View view) {
@@ -126,7 +134,8 @@ public class MovieListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             mIdView = (TextView) view.findViewById(R.id.tv_name);
             mContentView = (TextView) view.findViewById(R.id.tv_author);
             mDateView = (TextView) view.findViewById(R.id.tv_date);
-            mFavoriteView = (ImageView) view.findViewById(R.id.iv_favorite);
+            mFavoriteView = view.findViewById(R.id.iv_favorite);
+            mSendView = view.findViewById(R.id.iv_send);
         }
 
         @Override

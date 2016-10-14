@@ -70,13 +70,13 @@ public class DialogHelper {
         tv.setText("程序猿正在加班改进中," +
                 "请您多多支持哦!!" +
                 "\nwww.pgyer.com/search");
-        tv.setTextSize(res.getDimensionPixelOffset(R.dimen.text_size_1));
+        tv.setTextSize(16);
         tv.setAutoLinkMask(Linkify.ALL);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         int padding = (int)ViewUtil.dip2px(activity, 20);
         tv.setPadding(padding, padding, padding, padding);
         builder.setIcon(R.drawable.ic_tips)
-                .setTitle(AppInfo.getVersionName(activity))
+                .setTitle(res.getString(R.string.app_name) + " v" + AppInfo.getVersionName(activity))
                 .setView(tv)
                 .setPositiveButton("点赞", new DialogInterface.OnClickListener() {
                     @Override
