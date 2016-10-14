@@ -13,11 +13,17 @@ import android.view.ViewTreeObserver;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.FindCallback;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import ruilin.com.movieeyes.Helper.AdHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.ToastHelper;
+import ruilin.com.movieeyes.Helper.leancloud.LeanCloudHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.base.BaseFragment;
 import ruilin.com.movieeyes.modle.SearchKey;
@@ -76,7 +82,9 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         mSwipeLayout.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimary,
                 android.R.color.holo_orange_light, android.R.color.holo_red_light);
 
-        new LoadHotKeyTask().execute();
+//        new LoadHotKeyTask().execute();
+
+        loadHotTag();
 
         mTagListView.setOnTagClickListener(new TagListView.OnTagClickListener() {
             @Override
@@ -132,11 +140,36 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
 
     @Override
     public void onRefresh() {
-        new LoadHotKeyTask().execute();
+//        new LoadHotKeyTask().execute();
+        loadHotTag();
     }
 
     private void showProgress(boolean show) {
         mSwipeLayout.setRefreshing(show);
+    }
+
+    public void loadHotTag() {
+        LeanCloudHelper.selectHotTag(new FindCallback<AVObject>() {
+            @Override
+            public void done(List<AVObject> list, AVException e) {
+                showProgress(false);
+                if (list == null) {
+                    return;
+                }
+                if (mHotkeyList == null) {
+                    mHotkeyList = new ArrayList<>();
+                }
+                mHotkeyList.clear();
+                for (AVObject item : list) {
+                    SearchKey key = new SearchKey();
+                    key.setKey(item.getString("key"));
+                    mHotkeyList.add(key);
+                }
+                mTagListView.setTags(mHotkeyList);
+                mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
+            }
+
+        });
     }
 
     public class LoadHotKeyTask extends AsyncTask<Void, Void, Integer> {

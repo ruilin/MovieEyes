@@ -106,4 +106,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.google.android.gms:play-services:9.4.0'
+    // LeanCloud 基础包
+    compile ('cn.leancloud.android:avoscloud-sdk:v3.+')
 }

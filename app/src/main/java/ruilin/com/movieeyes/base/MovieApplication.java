@@ -6,10 +6,9 @@ import android.os.Bundle;
 
 import com.orm.SugarContext;
 
-import net.youmi.android.AdManager;
-
 import ruilin.com.movieeyes.Helper.AdHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
+import ruilin.com.movieeyes.Helper.leancloud.LeanCloudHelper;
 
 /**
  * Created by Ruilin on 2016/9/13.
@@ -35,7 +34,7 @@ public class MovieApplication extends Application implements Application.Activit
         UMHelper.initUMStatistics(this);
         UMHelper.initUMPush(this);
         AdHelper.initYoumi(this);
-
+        LeanCloudHelper.init(this);
     }
 
     @Override

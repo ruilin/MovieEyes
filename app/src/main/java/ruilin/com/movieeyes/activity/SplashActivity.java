@@ -115,7 +115,7 @@ public class SplashActivity extends Activity {
 
 					@Override
 					public void onShowSuccess() {
-//						Log.d(TAG, "开屏展示成功");
+						Log.d(TAG, "开屏展示成功");
 						splashLayout.setVisibility(View.VISIBLE);
 						splashLayout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.anim_splash_enter));
 					}
@@ -125,32 +125,32 @@ public class SplashActivity extends Activity {
 						Log.d(TAG, "开屏展示失败");
 						switch (errorCode) {
 							case ErrorCode.NON_NETWORK:
-//								Log.e(TAG, "无网络");
+								Log.e(TAG, "无网络");
 								break;
 							case ErrorCode.NON_AD:
-//								Log.e(TAG, "无广告");
+								Log.e(TAG, "无广告");
 								break;
 							case ErrorCode.RESOURCE_NOT_READY:
-//								Log.e(TAG, "资源还没准备好");
+								Log.e(TAG, "资源还没准备好");
 								break;
 							case ErrorCode.SHOW_INTERVAL_LIMITED:
-//								Log.e(TAG, "展示间隔限制");
+								Log.e(TAG, "展示间隔限制");
 								break;
 							case ErrorCode.WIDGET_NOT_IN_VISIBILITY_STATE:
-//								Log.e(TAG, "控件处在不可见状态");
+								Log.e(TAG, "控件处在不可见状态");
 								break;
 						}
 					}
 
 					@Override
 					public void onSpotClosed() {
-//						Log.d(TAG, "开屏被关闭");
+						Log.d(TAG, "开屏被关闭");
 					}
 
 					@Override
 					public void onSpotClicked(boolean isWebPage) {
-//						Log.d(TAG, "开屏被点击");
-//						Log.i(TAG, String.format("是否是网页广告？%s", isWebPage ? "是" : "不是"));
+						Log.d(TAG, "开屏被点击");
+						Log.i(TAG, String.format("是否是网页广告？%s", isWebPage ? "是" : "不是"));
 					}
 				});
 	}
