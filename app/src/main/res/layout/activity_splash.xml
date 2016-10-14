@@ -28,8 +28,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginRight="5dp"
             android:src="@mipmap/ic_launcher" />
 
@@ -43,14 +43,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
                 android:textColor="@color/text_black"
-                android:textSize="@dimen/text_size_5" />
+                android:textSize="@dimen/text_size_4" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="zruilin@126.com"
                 android:textColor="@color/text_gray"
-                android:textSize="@dimen/text_size_3" />
+                android:textSize="@dimen/text_size_2" />
         </LinearLayout>
     </LinearLayout>
 

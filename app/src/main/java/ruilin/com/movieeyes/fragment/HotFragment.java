@@ -4,22 +4,14 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
-import net.youmi.android.normal.banner.BannerManager;
-import net.youmi.android.normal.banner.BannerViewListener;
 
 import java.util.ArrayList;
 
@@ -81,7 +73,7 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
 
         mSwipeLayout.setOnRefreshListener(this);
-        mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
+        mSwipeLayout.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimary,
                 android.R.color.holo_orange_light, android.R.color.holo_red_light);
 
         new LoadHotKeyTask().execute();
@@ -97,7 +89,6 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         });
 
 //        AdHelper.initAdmob(contentView);
-//        AdHelper.initYoumi(contentView);
 
         /* 解决scrollview 与 SwipeRefreshLayout 滚动冲突 */
         if (scrollView != null) {
@@ -117,6 +108,12 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
             }, 1500);
         }
         return contentView;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        AdHelper.setYoumi(getActivity());
     }
 
     @Override

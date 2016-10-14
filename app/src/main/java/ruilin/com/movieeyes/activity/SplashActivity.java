@@ -122,7 +122,7 @@ public class SplashActivity extends Activity {
 
 					@Override
 					public void onShowFailed(int errorCode) {
-//						Log.d(TAG, "开屏展示失败");
+						Log.d(TAG, "开屏展示失败");
 						switch (errorCode) {
 							case ErrorCode.NON_NETWORK:
 //								Log.e(TAG, "无网络");

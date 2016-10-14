@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -28,20 +27,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import net.youmi.android.AdManager;
-
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.List;
 
-import ruilin.com.movieeyes.BuildConfig;
-import ruilin.com.movieeyes.Helper.AdHelper;
 import ruilin.com.movieeyes.Helper.DialogHelper;
 import ruilin.com.movieeyes.Helper.JsoupHelper;
 import ruilin.com.movieeyes.Helper.SearchKeyHelper;
@@ -50,15 +43,12 @@ import ruilin.com.movieeyes.Helper.ToastHelper;
 import ruilin.com.movieeyes.Helper.UMHelper;
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.adapter.SearchAdapter;
-import ruilin.com.movieeyes.base.AppInfo;
 import ruilin.com.movieeyes.base.BaseActivity;
 import ruilin.com.movieeyes.db.bean.SearchRecordDb;
 import ruilin.com.movieeyes.db.bean.SearchResultDb;
 import ruilin.com.movieeyes.fragment.HotFragment;
 import ruilin.com.movieeyes.fragment.MovieListFragment;
 import ruilin.com.movieeyes.modle.SearchKey;
-
-import static anetwork.channel.http.NetworkSdkSetting.context;
 
 /**
  * @author Ruilin
@@ -167,7 +157,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         navigationView.setNavigationItemSelectedListener(this);
 
 //        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
-        AdHelper.setYoumi(this);
+//        AdHelper.setYoumi(this);
     }
 
     @Override
