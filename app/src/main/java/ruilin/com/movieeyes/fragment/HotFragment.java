@@ -167,6 +167,11 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
                 }
                 mTagListView.setTags(mHotkeyList);
                 mTitleTv.setText(String.format(mTitleTv.getContext().getString(R.string.hot_search_key), mHotkeyList.size()));
+                if (!isFirst) {
+                    ToastHelper.show(getActivity(), getResources().getString(R.string.hot_search_load_finish));
+                } else {
+                    isFirst = false;
+                }
             }
 
         });

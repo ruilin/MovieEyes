@@ -6,91 +6,13 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3fe23bc-5565-4b1c-b66f-47638f9279fc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/YoumiSdk_v6_3_0_2016_09_08.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/analytics_6_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/avoscloud_sdk_v3_14_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_umeng_message_v3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/design_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/fastjson_1_1_39_leancloud.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_analytics_impl_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_auth_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_auth_common_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_auth_module_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_common_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_config_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_crash_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_database_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_database_connection_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_iid_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_messaging_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_storage_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/firebase_storage_common_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ijkplayer_armv7a_0_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ijkplayer_java_0_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jsoup_1_9_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_23_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okhttp_2_6_0_leancloud.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okio_1_6_0_leancloud.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_ads_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_ads_lite_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_impl_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appinvite_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_auth_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_auth_base_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_cast_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_cast_framework_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_clearcut_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_contextmanager_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_drive_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_fitness_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_games_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gass_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_identity_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_iid_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_location_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_maps_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_nearby_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_places_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_plus_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_tagmanager_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_tagmanager_api_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_tasks_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_vision_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wallet_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_9_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/sugar_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_24_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/tbs_sdk_thirdapp_v2_3_0_1048_36801_sharewithdownload_obfs_20160829_200437.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/utdid4all_1_1_5_proguard.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/../PushSDK/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard-rules.pro" afterPath="$PROJECT_DIR$/proguard-rules.pro" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" afterPath="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" />
     </list>
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,11 +45,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="308">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="388" column="37" selection-start-line="388" selection-start-column="34" selection-end-line="388" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -148,31 +80,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
               <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HotFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2728">
-              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+            <state relative-caret-position="127">
+              <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5986#6042#0" expanded="true" />
+                <element signature="e#6150#6207#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindCallback.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.leancloud.android/avoscloud-sdk/v3.14.6/f8696e37fcfcb42aa970ab8692752cdf81ea16/avoscloud-sdk-v3.14.6.jar!/com/avos/avoscloud/FindCallback.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -182,7 +104,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#342#343#0" expanded="false" />
+                <element signature="e#372#373#0" expanded="false" />
+                <element signature="e#402#403#0" expanded="false" />
+                <element signature="e#428#429#0" expanded="false" />
+                <element signature="e#458#459#0" expanded="false" />
+                <element signature="e#484#485#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,7 +121,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
               <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#550#551#0" expanded="false" />
+                <element signature="e#582#583#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,7 +135,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
               <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#550#551#0" expanded="false" />
+                <element signature="e#582#583#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -7504,9 +7441,9 @@
         <option value="$PROJECT_DIR$/../build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/leancloud/LeanCloudHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/proguard-rules.pro" />
+        <option value="$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java" />
       </list>
     </option>
   </component>
@@ -7541,6 +7478,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieEyes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieEyes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieEyes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -7562,37 +7521,15 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieEyes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieEyes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MovieEyes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../thirdpart/ninegrid/NineGridImageView-master" />
     <property name="show.do.not.ask.upgrade.gradle.plugin.version" value="2.2.0" />
-    <property name="SearchEverywhereHistoryKey" value="Hotf&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java&#10;Movie&#9;PSI&#9;JAVA://ruilin.com.movieeyes.base.MovieApplication&#10;Mainac&#9;PSI&#9;JAVA://ruilin.com.movieeyes.activity.MainActivity&#10;activity_main&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_main.xml&#10;fragment_hot&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/fragment_hot.xml&#10;activity_s&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_splash.xml&#10;Spl&#9;PSI&#9;JAVA://ruilin.com.movieeyes.activity.SplashActivity&#10;Um&#9;PSI&#9;JAVA://ruilin.com.movieeyes.Helper.UMHelper&#10;Share&#9;PSI&#9;JAVA://ruilin.com.movieeyes.Helper.ShareHelper&#10;dialo&#9;PSI&#9;JAVA://ruilin.com.movieeyes.Helper.DialogHelper" />
+    <property name="SearchEverywhereHistoryKey" value="HOT&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java&#10;MainAct&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java&#10;Hotf&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java&#10;Movie&#9;PSI&#9;JAVA://ruilin.com.movieeyes.base.MovieApplication&#10;Mainac&#9;PSI&#9;JAVA://ruilin.com.movieeyes.activity.MainActivity&#10;activity_main&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_main.xml&#10;fragment_hot&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/fragment_hot.xml&#10;activity_s&#9;FILE&#9;file://E:/Code/Workspace/git/MovieEyes/app/src/main/res/layout/activity_splash.xml&#10;Spl&#9;PSI&#9;JAVA://ruilin.com.movieeyes.activity.SplashActivity&#10;Um&#9;PSI&#9;JAVA://ruilin.com.movieeyes.Helper.UMHelper&#10;Share&#9;PSI&#9;JAVA://ruilin.com.movieeyes.Helper.ShareHelper&#10;dialo&#9;PSI&#9;JAVA://ruilin.com.movieeyes.Helper.DialogHelper" />
     <property name="device.picker.selection" value="L7GM8TNZSKROA6LB" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="ExportApk.ApkPath" value="C:\Users\Administrator\Desktop" />
@@ -7909,7 +7846,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -7946,6 +7883,14 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -7974,9 +7919,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -7986,6 +7929,8 @@
           <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5986#6042#0" expanded="true" />
+            <element signature="e#6150#6207#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -8002,7 +7947,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -8010,7 +7962,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -8018,7 +7974,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../MovieEyes0/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/Helper/leancloud/LeanCloudHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2728">
+          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5986#6042#0" expanded="true" />
+            <element signature="e#6150#6207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.leancloud.android/avoscloud-sdk/v3.14.6/f8696e37fcfcb42aa970ab8692752cdf81ea16/avoscloud-sdk-v3.14.6.jar!/com/avos/avoscloud/FindCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/modle/SearchKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../MovieEyes0/app/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/base/MovieApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -8049,13 +8100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -8154,7 +8198,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -8162,7 +8210,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -8170,9 +8222,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -8180,24 +8230,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.leancloud.android/avoscloud-sdk/v3.14.6/f8696e37fcfcb42aa970ab8692752cdf81ea16/avoscloud-sdk-v3.14.6.jar!/com/avos/avoscloud/FindCallback.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2728">
-          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#484#485#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -8222,15 +8261,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="197" column="21" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="308">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="388" column="37" selection-start-line="388" selection-start-column="34" selection-end-line="388" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.leancloud.android/avoscloud-sdk/v3.14.6/f8696e37fcfcb42aa970ab8692752cdf81ea16/avoscloud-sdk-v3.14.6.jar!/com/avos/avoscloud/FindCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ruilin/com/movieeyes/fragment/HotFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5986#6042#0" expanded="true" />
+            <element signature="e#6150#6207#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
