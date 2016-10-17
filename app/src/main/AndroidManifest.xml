@@ -37,9 +37,9 @@
             android:name="UMENG_MESSAGE_SECRET"
             android:value="ce3b2f2347787b72c0ae287a570d6359" />
         <!-- Admob: Google Play Services. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <!--<meta-data-->
+            <!--android:name="com.google.android.gms.version"-->
+            <!--android:value="@integer/google_play_services_version" />-->
 
         <!-- SQLITE: SUGAR ORM -->
         <!--<meta-data android:name="DATABASE" android:value="sugar_example.db"/>-->
@@ -95,10 +95,10 @@
 
         <!-- 第三方 -->
         <!-- Admob: Include the AdActivity configChanges and theme. -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
+        <!--<activity-->
+            <!--android:name="com.google.android.gms.ads.AdActivity"-->
+            <!--android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"-->
+            <!--android:theme="@android:style/Theme.Translucent" />-->
         <!-- 有米 -->
         <activity
             android:name="net.youmi.android.AdBrowser"

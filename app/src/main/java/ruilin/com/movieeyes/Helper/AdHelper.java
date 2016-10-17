@@ -5,17 +5,15 @@ import android.content.Context;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import net.youmi.android.AdManager;
 import net.youmi.android.normal.banner.BannerManager;
 import net.youmi.android.normal.banner.BannerViewListener;
 
 import ruilin.com.movieeyes.R;
 
-import static anetwork.channel.http.NetworkSdkSetting.context;
+//import com.google.android.gms.ads.AdListener;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
 
 /**
  * Created by Ruilin on 2016/10/8.
