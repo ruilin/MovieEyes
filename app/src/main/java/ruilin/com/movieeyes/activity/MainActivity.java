@@ -156,6 +156,8 @@ MainActivity extends BaseActivity implements OnClickListener,
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        navigationView.findViewById(R.id.iv_nav_header).setOnClickListener(this);
+
 //        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
 //        AdHelper.setYoumi(this);
     }
@@ -259,7 +261,6 @@ MainActivity extends BaseActivity implements OnClickListener,
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_favorite) {
             // Handle the camera action
             FavoriteActivity.start(this);
@@ -376,6 +377,11 @@ MainActivity extends BaseActivity implements OnClickListener,
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.iv_nav_header:
+                LoginActivity.start(this);
+                break;
+        }
     }
 
     @Override
