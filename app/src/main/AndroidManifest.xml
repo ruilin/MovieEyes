@@ -54,10 +54,6 @@
         <!-- <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="ruilin.com.movieeyes.db.bean"/> -->
 
         <activity
-            android:name=".activity.WellcomeActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
             android:name=".activity.SplashActivity"
             android:configChanges="keyboard|keyboardHidden|screenSize|orientation"
             android:label="@string/app_name"
@@ -88,10 +84,14 @@
             android:name=".activity.WebViewActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity
-            android:name=".activity.PlayerActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape"/>
+        <!--<activity-->
+            <!--android:name=".activity.PlayerActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+            <!--android:screenOrientation="landscape"/>-->
+        <!--<activity-->
+            <!--android:name=".activity.WellcomeActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden"-->
+            <!--android:theme="@style/AppTheme.NoActionBar"/>-->
         <activity
             android:name=".activity.RecordActivity"
             android:screenOrientation="portrait"
@@ -128,7 +128,7 @@
         </receiver>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login">
         </activity>
     </application>

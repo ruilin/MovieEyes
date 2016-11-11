@@ -156,7 +156,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        navigationView.findViewById(R.id.iv_nav_header).setOnClickListener(this);
+        navigationView.getHeaderView(0).findViewById(R.id.iv_nav_header).setOnClickListener(this);
 
 //        AdManager.getInstance(this).init("041d98ac4aebd44e", "2f07918ccd819c43", false, BuildConfig.DEBUG);
 //        AdHelper.setYoumi(this);
