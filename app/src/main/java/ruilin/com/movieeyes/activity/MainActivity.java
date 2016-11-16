@@ -381,7 +381,7 @@ MainActivity extends BaseActivity implements OnClickListener,
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.iv_nav_header:
-                LoginActivity.start(this);
+//                LoginActivity.start(this);
                 break;
         }
     }
