@@ -33,13 +33,14 @@ import java.util.List;
 
 import ruilin.com.movieeyes.R;
 import ruilin.com.movieeyes.base.BaseActivity;
+import ruilin.com.movieeyes.base.BasePageActivity;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends BasePageActivity implements LoaderCallbacks<Cursor> {
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -68,10 +69,15 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         Intent intent = new Intent(activity, LoginActivity.class);
         activity.startActivity(intent);
     }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+    protected int setContentView() {
+        return R.layout.activity_login;
+    }
+
+    @Override
+    protected void init() {
+        super.init();
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();

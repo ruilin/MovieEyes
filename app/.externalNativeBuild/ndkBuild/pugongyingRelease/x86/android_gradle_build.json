@@ -3,18 +3,18 @@
     "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk"
   ],
   "cleanCommands": [
-    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\PuGongYing\\release\\lib clean"
+    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\PuGongYing\\release\\lib clean"
   ],
   "libraries": {
     "movieeyes-PuGongYingRelease-x86": {
-      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\PuGongYing\\release\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj/local/x86/libmovieeyes.so",
+      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\PuGongYing\\release\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj/local/x86/libmovieeyes.so",
       "toolchain": "toolchain-x86",
       "abi": "x86",
       "artifactName": "movieeyes",
       "files": [
         {
           "src": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\jni_main.c",
-          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-O2\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-16/arch-x86/usr/include\""
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-O2\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-9/arch-x86/usr/include\""
         }
       ],
       "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\PuGongYingRelease\\obj\\local\\x86\\libmovieeyes.so"

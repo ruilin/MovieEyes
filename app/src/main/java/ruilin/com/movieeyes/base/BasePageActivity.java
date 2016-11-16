@@ -41,7 +41,6 @@ public abstract class BasePageActivity extends BaseActivity {
         return null;
     }
     protected void initToolBar(Toolbar toolbar) {
-        toolbar.setNavigationIcon(android.R.drawable.ic_menu_close_clear_cancel);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

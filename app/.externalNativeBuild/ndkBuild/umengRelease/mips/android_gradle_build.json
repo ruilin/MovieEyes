@@ -3,18 +3,18 @@
     "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk"
   ],
   "cleanCommands": [
-    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\Umeng\\release\\lib clean"
+    "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d0 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\Umeng\\release\\lib clean"
   ],
   "libraries": {
     "movieeyes-UmengRelease-mips": {
-      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\Umeng\\release\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj/local/mips/libmovieeyes.so",
+      "buildCommand": "C:\\ruilin\\Tools\\adt-bundle-windows-x86_64-20140702\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\Android.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d0 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj NDK_LIBS_OUT\u003dE:\\Code\\Workspace\\git\\MovieEyes\\app\\build\\intermediates\\ndkBuild\\Umeng\\release\\lib E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj/local/mips/libmovieeyes.so",
       "toolchain": "toolchain-mips",
       "abi": "mips",
       "artifactName": "movieeyes",
       "files": [
         {
           "src": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\src\\main\\jni\\jni_main.c",
-          "flags": "\"-fpic\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-g\" \"-O2\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-16/arch-mips/usr/include\""
+          "flags": "\"-fpic\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-g\" \"-O2\" \"-DNDEBUG\" \"-IE:/Code/Workspace/git/MovieEyes/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-isystem\" \"C:/ruilin/Tools/adt-bundle-windows-x86_64-20140702/sdk/ndk-bundle/build//../platforms/android-9/arch-mips/usr/include\""
         }
       ],
       "output": "E:\\Code\\Workspace\\git\\MovieEyes\\app\\.externalNativeBuild\\ndkBuild\\UmengRelease\\obj\\local\\mips\\libmovieeyes.so"

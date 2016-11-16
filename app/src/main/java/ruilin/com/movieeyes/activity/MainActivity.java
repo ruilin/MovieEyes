@@ -199,6 +199,7 @@ MainActivity extends BaseActivity implements OnClickListener,
     }
 
     long mFirstClickTime;
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -217,7 +218,7 @@ MainActivity extends BaseActivity implements OnClickListener,
 
     private void setIconsVisible(Menu menu, boolean flag) {
         //判断menu是否为空
-        if(menu != null) {
+        if (menu != null) {
             try {
                 //如果不为空,就反射拿到menu的setOptionalIconsVisible方法
                 Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
@@ -241,14 +242,14 @@ MainActivity extends BaseActivity implements OnClickListener,
             case R.id.action_clear_record:
                 DialogHelper.show(this, res.getString(R.string.dialog_title_delete), res.getString(R.string.dialog_message_delete),
                         new DialogHelper.OnClickListener() {
-                    @Override
-                    public void onConfirm() {
+                            @Override
+                            public void onConfirm() {
                         /* 清除记录 */
-                        ToastHelper.show(MainActivity.this, getResources().getString(R.string.setting_clear_finish));
-                        SearchKeyHelper.getInstance().clear();
-                        updateKeyTips();
-                    }
-                });
+                                ToastHelper.show(MainActivity.this, getResources().getString(R.string.setting_clear_finish));
+                                SearchKeyHelper.getInstance().clear();
+                                updateKeyTips();
+                            }
+                        });
                 break;
             default:
                 break;
