@@ -34,17 +34,14 @@
 
     <ImageView
         android:id="@+id/iv_select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="6dp"
-        android:src="@android:drawable/ic_menu_search" />
+        style="@style/ItemImageButton"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_search_record" />
 
     <ImageView
         android:id="@+id/iv_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="6dp"
-        android:src="@android:drawable/ic_delete" />
+        style="@style/ItemImageButton"
+        android:src="@drawable/ic_favorite_remove" />
 
 
 </LinearLayout>

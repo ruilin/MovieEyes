@@ -129,7 +129,7 @@
 
         <activity
             android:name=".activity.LoginActivity"
-            android:label="@string/title_activity_login">
+            android:label="@string/login_title_activity_login">
         </activity>
     </application>
 

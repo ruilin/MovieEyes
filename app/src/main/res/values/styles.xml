@@ -26,6 +26,12 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="ItemImageButton">
+        <item name="android:layout_width">@dimen/item_button_icon_size</item>
+        <item name="android:layout_height">@dimen/item_button_icon_size</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
     <style name="line_horizontal">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>

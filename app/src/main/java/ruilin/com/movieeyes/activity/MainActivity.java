@@ -154,6 +154,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);   // 设置为彩色图标
         navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.getHeaderView(0).findViewById(R.id.iv_nav_header).setOnClickListener(this);

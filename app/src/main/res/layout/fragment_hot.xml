@@ -110,8 +110,8 @@
                             android:paddingTop="18dp">
 
                             <ImageView
-                                android:layout_width="22dp"
-                                android:layout_height="22dp"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
                                 android:src="@drawable/ic_tag" />
 
                             <TextView
@@ -121,7 +121,7 @@
                                 android:layout_marginLeft="5dp"
                                 android:gravity="bottom"
                                 android:text="@string/hot_search_key"
-                                android:textColor="@color/text_black"
+                                android:textColor="@color/text_brown"
                                 android:textSize="16.0sp" />
 
                         </LinearLayout>
