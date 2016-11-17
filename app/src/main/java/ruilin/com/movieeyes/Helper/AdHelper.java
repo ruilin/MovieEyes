@@ -47,29 +47,30 @@ public class AdHelper {
         AdManager.getInstance(context).init("51e07d0de01cb66f", "e985ad03f56b4dcc", false, true);// BuildConfig.DEBUG
     }
     public static void setYoumi(Activity activity) {
+        final View bannerLayout = activity.findViewById(R.id.fl_banner);
+
         // 获取广告条
         View bannerView = BannerManager.getInstance(activity)
                 .getBannerView(new BannerViewListener() {
                     @Override
                     public void onRequestSuccess() {
-
+                        bannerLayout.setVisibility(View.VISIBLE);
                     }
 
                     @Override
                     public void onSwitchBanner() {
-
+                        bannerLayout.setVisibility(View.VISIBLE);
                     }
 
                     @Override
                     public void onRequestFailed() {
-
+                        bannerLayout.setVisibility(View.GONE);
                     }
                 });
 
         // 获取要嵌入广告条的布局
-        LinearLayout bannerLayout = (LinearLayout) activity.findViewById(R.id.ll_banner);
-
+        LinearLayout adLayout = (LinearLayout) activity.findViewById(R.id.ll_banner);
         // 将广告条加入到布局中
-        bannerLayout.addView(bannerView);
+        adLayout.addView(bannerView);
     }
 }

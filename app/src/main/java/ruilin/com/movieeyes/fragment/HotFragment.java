@@ -42,6 +42,7 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     private TagListView mTagListView;
     private TextView mTitleTv;
     private ArrayList<SearchKey> mHotkeyList;
+    private View mBannerView;
     private boolean isFirst = true;
 
     public HotFragment() {
@@ -73,6 +74,7 @@ public class HotFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
         View contentView = inflater.inflate(R.layout.fragment_hot, container, false);
         mSwipeLayout = (SwipeRefreshLayout) contentView.findViewById(R.id.rl_update);
         mTagListView = (TagListView) contentView.findViewById(R.id.tagview);
+        mBannerView = contentView.findViewById(R.id.ll_banner);
         final SwipeRefreshLayout srLayout = (SwipeRefreshLayout) contentView.findViewById(R.id.rl_update);
         final ScrollView scrollView = (ScrollView) contentView.findViewById(R.id.sv_content);
         mTitleTv = (TextView) contentView.findViewById(R.id.tv_title);

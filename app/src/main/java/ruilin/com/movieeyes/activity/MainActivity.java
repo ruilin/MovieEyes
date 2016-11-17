@@ -269,7 +269,7 @@ MainActivity extends BaseActivity implements OnClickListener,
         } else if (id == R.id.nav_record) {
             RecordActivity.start(this);
         } else if (id == R.id.nav_share) {
-            ShareHelper.share(this, getResources().getString(R.string.share_connent));
+            ShareHelper.shareApp(this, getResources().getString(R.string.share_connent));
         } else if (id == R.id.nav_about) {
             DialogHelper.showAbout(this);
         }
