@@ -7,5 +7,5 @@
 /.idea
 /build
 /captures
-/externalNativeBuild/ndkBuild
+/externalNativeBuild
 *.apk
